@@ -1,171 +1,59 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
-## Project Overview
-
-This is a professional photography portfolio website built as a static web application using vanilla HTML5, CSS3, and JavaScript (ES6+). The project showcases photography through an intelligent masonry gallery layout with AI-powered categorization and is designed for deployment on Cloudflare Pages.
+Professional photography portfolio website built with vanilla HTML5, CSS3, and JavaScript. Features AI-powered photo categorization and advanced masonry gallery layout.
 
 ## Development Commands
 
-### Running the Application
+### Running Locally
 ```bash
-# Serve locally (Python 3)
-python3 -m http.server 8080
-# Access at http://localhost:8080
+python3 -m http.server 8080  # Serve at http://localhost:8080
 ```
 
-### Adding New Photos
+### Photo Management
 ```bash
 cd scripts
-./import.sh [album-name]
-```
-
-The import script automatically optimizes images, creates WebP versions, generates thumbnails, applies AI analysis for categorization, and updates the albums.json configuration.
-
-### Syncing Renamed Albums
-```bash
-cd scripts
-./import.sh --sync          # Sync via main import script
-./sync.sh                   # Dedicated sync script
-./sync.sh --dry-run        # Preview changes without applying them
-```
-
-When you rename album directories in Finder, run the sync command to automatically update albums.json with the new directory names and fix all image paths.
-
-### Build Tools
-```bash
-# In scripts/ directory
-npm install              # Install Sharp and other dependencies
-npm run import          # Run photo import script directly
+./import.sh [album-name]     # Add/process photos
+./import.sh --sync          # Sync renamed directories
+./import.sh --cleanup       # Remove orphaned entries
 ```
 
 ## Architecture
 
-### Technology Stack
-- **Frontend**: Pure HTML5, CSS3, Vanilla JavaScript (no frameworks)
-- **Image Processing**: Node.js with Sharp library for optimization
-- **AI Analysis**: Integrated photo analysis for automatic tagging
-- **Data Storage**: JSON-based metadata in `data/albums.json` with AI-generated tags
-- **CSS Architecture**: Advanced masonry layout with responsive landscape image handling
-- **Routing**: Cloudflare Pages compatible with `_redirects` configuration
+**Stack**: Vanilla HTML/CSS/JS, Node.js + Sharp for processing, JSON data storage
+**Deployment**: Cloudflare Pages static hosting with `_redirects` routing
 
-### Key Files Structure
-- **Pages**: `index.html` (gallery), `about.html`, `contact.html`, `album.html`
-- **Styles**: `assets/css/` - 4 modular CSS files (main, gallery, responsive, contact-form)
-- **Scripts**: `assets/js/` - 6 ES6 modules (gallery, masonry, album-loader, contact-form, mobile-menu, timeline)
-- **Configuration**: `data/albums.json` - Central metadata store with AI tags
-- **Routing**: `_redirects` - Cloudflare Pages routing configuration
-- **Tools**: `scripts/` - Photo import, AI analysis, and processing utilities
+### Key Files
+- **Pages**: `index.html`, `album.html`, `about.html`, `contact.html`
+- **Styles**: `assets/css/` - Modular CSS with masonry layout
+- **Scripts**: `assets/js/` - ES6 modules (gallery, masonry, timeline, mobile-menu)
+- **Data**: `data/albums.json` - Central metadata with AI tags
+- **Tools**: `scripts/` - Photo import and AI analysis utilities
 
-### CSS Architecture Pattern
-Advanced JavaScript-powered masonry layout with intelligent landscape image handling. Landscape images automatically span 2 columns on desktop (≥769px) for enhanced visual impact. CSS Variables for theming, modular responsive design.
+### CSS Features
+- JavaScript masonry layout with 2-column landscape image spanning
+- CSS Variables, responsive design (1-5 columns)
+- Sharp rectangles with black hover effects using Futura-style fonts
 
-### JavaScript Architecture Pattern
-Pure ES6+ modules with direct browser imports (no bundling). Smart masonry positioning algorithm handles multi-column items. Tag-based filtering system powered by AI analysis.
+### JavaScript Patterns
+- ES6+ modules, no build process required
+- Tag-based filtering with 7 AI categories
+- Timeline sidebar, album navigation, mobile responsive
 
-## Photo Management System
+## Photo System
 
-### Album Structure & AI Tagging
-Photos are organized in `data/albums.json` with comprehensive metadata including:
-- Image paths (WebP + JPEG fallbacks)
-- Titles, dates, dimensions, technical camera data
-- AI-powered categorization with multiple tags per photo
-- Accessibility alt-text and detailed scene analysis
-- Smart album categorization (Maritime, Golden Hour, Candid, Action, Nature, Events, Portraits)
+### AI Categories (7 filters)
+**Maritime**, **Golden Hour**, **Candid**, **Action**, **Nature**, **Events**, **Portraits**
 
-### Enhanced Image Processing Pipeline
-1. Source photos placed in designated directory
-2. `./scripts/import.sh` processes images via Sharp
-3. AI analysis generates accessibility alt-text and scene descriptions
-4. Automatic categorization based on content, lighting, and composition
-5. WebP optimization and thumbnail generation
-6. Updates albums.json with AI tags and metadata
-7. Maintains consistent naming with unique IDs
+### Processing Pipeline
+1. Place photos in album directories
+2. Run `./import.sh` - Sharp optimization + AI analysis
+3. Generates WebP + thumbnails, updates JSON with tags/metadata
+4. Albums accessible at `/album.html?id=[album-key]`
 
-### AI-Powered Category System
-**7 Intelligent Filter Categories:**
-- **Maritime**: Sailing, boats, marina photography (AI detects water vessels, sailing scenes)
-- **Golden Hour**: Sunset/sunrise lighting conditions (AI analyzes warm tones, lighting quality)
-- **Candid**: Documentary style, authentic moments (AI identifies unposed subjects)
-- **Action**: Sports, motion, dynamic shots (AI detects movement, shallow DoF)
-- **Nature**: Landscapes, wildlife, natural environments
-- **Events**: Weddings, celebrations, formal gatherings
-- **Portraits**: Individual and group photography
+### Directory Sync
+- Rename folders in Finder → Run `./sync.sh` to update JSON paths
+- Detects renames, updates all image paths automatically
 
-## Advanced Features
-
-### Intelligent Masonry Layout
-- **Responsive Design**: 1-5 columns based on screen size
-- **Landscape Enhancement**: Automatic 2-column span for landscape images on desktop
-- **Smart Positioning**: Advanced algorithm handles multi-column item placement
-- **Aspect Ratio Preservation**: Natural image proportions maintained
-
-### Enhanced Navigation & UX
-- **Albums Timeline**: Chronological sidebar component showing all albums with photo counts
-- **Click-to-Navigate**: Images link directly to their album pages
-- **Tag-Based Filtering**: AI-powered category system with 7 filter options
-- **Album Name Display**: Hover shows album name only (no technical filenames)
-
-### Gallery Interaction Patterns
-- **Smart Image Sizing**: Landscape images get prominent display treatment
-- **Intuitive Navigation**: Timeline provides quick album access
-- **Professional Presentation**: Clean hover states without technical details
-- **Mobile Responsive**: Touch-friendly interface with collapsible filters
-
-## Node.js Dependencies
-
-Located in `scripts/package.json`:
-- **Sharp ^0.33.0**: Image processing and optimization
-- **ExifTool-vendored**: EXIF data extraction and timezone handling
-- **@photostructure/tz-lookup**: Geographic timezone detection
-- **Luxon**: Date/time handling and formatting
-- **Ollama**: AI model integration for photo analysis
-- **ESLint ^8.0.0**: Code quality (dev dependency)
-- **Node.js**: Requires ^18.17.0 || ^20.3.0 || >=21.0.0
-
-## SEO & Performance Features
-
-- JSON-LD structured data for enhanced image galleries
-- Complete sitemap.xml with image references and categorization
-- WebP format with JPEG fallbacks for optimal performance
-- Hardware-accelerated CSS animations
-- Advanced masonry layout with efficient positioning
-- Lazy loading with intersection observers
-- Accessibility-first design with comprehensive alt-text
-
-## Deployment & Routing
-
-### Cloudflare Pages Configuration
-- **Static Hosting**: Optimized for Cloudflare Pages deployment
-- **URL Routing**: `_redirects` file handles SPA-style album navigation
-- **Build Compatibility**: No server-side processing required
-- **Performance**: CDN-optimized with automatic image optimization
-
-### Routing Patterns
-- `/` - Main gallery with tag filtering
-- `/album.html?id=[album-key]` - Individual album pages
-- `/about.html` - Photographer information
-- `/contact.html` - Contact form
-
-### Album URL Structure
-Albums use key-based routing:
-- `Mills Race 2023` → `/album.html?id=Mills%20Race%202023`
-- `nature` → `/album.html?id=nature`
-- `portraits` → `/album.html?id=portraits`
-
-## Key Integrations
-
-### AI Photo Analysis
-- **Scene Analysis**: Detailed technical and compositional analysis
-- **Automatic Tagging**: Content-based category assignment
-- **Accessibility**: Auto-generated descriptive alt-text
-- **Quality Assessment**: Lighting, composition, and mood analysis
-
-### Professional Photography Features
-- **EXIF Integration**: Camera settings, lens data, technical metadata
-- **Geographic Data**: Location and timezone handling
-- **Professional Metadata**: Capture dates, processing information
-- **Portfolio Organization**: Chronological and categorical organization
-
-This architecture supports a professional photography portfolio with intelligent categorization, enhanced user experience, and scalable content management.
+## Dependencies
+**Node.js**: Sharp, ExifTool, Ollama (AI), Luxon (dates)
+**Requires**: Node.js ^18.17.0 || ^20.3.0 || >=21.0.0
