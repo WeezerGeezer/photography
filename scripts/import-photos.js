@@ -3,6 +3,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 const sharp = require('sharp');
+const ImageAnalyzer = require('./image-analyzer.js');
 
 class PhotoImporter {
     constructor() {
@@ -11,23 +12,43 @@ class PhotoImporter {
         this.albumsDir = path.join(this.projectRoot, 'assets', 'images', 'albums');
         this.thumbnailsDir = path.join(this.projectRoot, 'assets', 'images', 'thumbnails');
         this.fullDir = path.join(this.projectRoot, 'assets', 'images', 'full');
-        
+
         // Image processing settings
         this.thumbnailSettings = {
             width: 800,
             quality: 85,
             format: 'webp'
         };
-        
+
         this.fullSettings = {
             width: 2000,
             quality: 90,
             format: 'webp'
         };
+
+        // Initialize image analyzer
+        this.analyzer = new ImageAnalyzer();
+        this.analyzerInitialized = false;
+    }
+
+    async initializeAnalyzer() {
+        if (!this.analyzerInitialized) {
+            try {
+                await this.analyzer.initialize();
+                this.analyzerInitialized = true;
+                console.log('🤖 Image analyzer initialized successfully');
+            } catch (error) {
+                console.warn(`⚠️  AI analysis unavailable: ${error.message}`);
+                console.log('📋 Proceeding with EXIF-only analysis...');
+            }
+        }
     }
 
     async run(albumName) {
         try {
+            // Initialize analyzer
+            await this.initializeAnalyzer();
+
             if (!albumName) {
                 // If no album name provided, scan for all available album folders
                 await this.scanAndImportAll();
@@ -251,11 +272,22 @@ class PhotoImporter {
     async processPhoto(photo, albumName) {
         const { filename, id, sourcePath } = photo;
         const fileExtension = path.parse(filename).ext.toLowerCase();
-        
+
         // Generate output filenames
         const outputName = `${id}.webp`;
         const thumbnailPath = path.join(this.thumbnailsDir, albumName, outputName);
         const fullPath = path.join(this.fullDir, albumName, outputName);
+
+        // Analyze original image for metadata (before processing)
+        let analysisResult = null;
+        if (this.analyzerInitialized) {
+            try {
+                console.log(`🔍 Analyzing ${filename} for enhanced metadata...`);
+                analysisResult = await this.analyzer.analyzeImage(sourcePath);
+            } catch (error) {
+                console.warn(`⚠️  Analysis failed for ${filename}: ${error.message}`);
+            }
+        }
 
         // Process thumbnail
         await sharp(sourcePath)
@@ -275,21 +307,64 @@ class PhotoImporter {
             .webp({ quality: this.fullSettings.quality })
             .toFile(fullPath);
 
-        // Get image metadata for title generation
-        const metadata = await sharp(sourcePath).metadata();
-        
-        return {
+        // Get basic image metadata from Sharp
+        const sharpMetadata = await sharp(sourcePath).metadata();
+
+        // Build enhanced metadata structure
+        const photoData = {
             id,
             title: this.generateTitle(filename),
             thumbnail: `assets/images/thumbnails/${albumName}/${outputName}`,
             full: `assets/images/full/${albumName}/${outputName}`,
             date: new Date().toISOString().split('T')[0], // Today's date in YYYY-MM-DD format
+
+            // Enhanced metadata structure
+            accessibility: {
+                altText: analysisResult?.accessibility?.altText || `Photo: ${this.generateTitle(filename)}`
+            },
+
+            technical: {
+                // Original EXIF data from source image
+                camera: analysisResult?.technical?.exif?.camera?.make ?
+                    `${analysisResult.technical.exif.camera.make} ${analysisResult.technical.exif.camera.model}`.trim() : null,
+                lens: analysisResult?.technical?.exif?.camera?.lens || null,
+                settings: this.formatCameraSettings(analysisResult?.technical?.exif?.settings),
+                sceneAnalysis: analysisResult?.technical?.sceneAnalysis || null,
+                summary: analysisResult?.technical?.summary || null,
+
+                // Processed image dimensions
+                dimensions: {
+                    width: sharpMetadata.width,
+                    height: sharpMetadata.height,
+                    aspectRatio: Math.round((sharpMetadata.width / sharpMetadata.height) * 100) / 100
+                }
+            },
+
+            // Location data if available
+            location: analysisResult?.technical?.exif?.location || null,
+
+            // File metadata
             metadata: {
-                width: metadata.width,
-                height: metadata.height,
-                originalFilename: filename
+                originalFilename: filename,
+                fileSize: analysisResult?.technical?.exif?.file?.size || null,
+                captureDate: analysisResult?.technical?.exif?.capture?.dateTime || null,
+                processingDate: new Date().toISOString()
             }
         };
+
+        return photoData;
+    }
+
+    formatCameraSettings(settings) {
+        if (!settings) return null;
+
+        const parts = [];
+        if (settings.shutterSpeed) parts.push(settings.shutterSpeed);
+        if (settings.aperture) parts.push(settings.aperture);
+        if (settings.iso) parts.push(`ISO ${settings.iso}`);
+        if (settings.focalLength) parts.push(settings.focalLength);
+
+        return parts.length > 0 ? parts.join(', ') : null;
     }
 
     generateTitle(filename) {
@@ -316,6 +391,15 @@ class PhotoImporter {
     }
 
     async cleanup() {
+        // Cleanup analyzer resources
+        if (this.analyzer) {
+            try {
+                await this.analyzer.cleanup();
+            } catch (error) {
+                console.warn('Warning during analyzer cleanup:', error.message);
+            }
+        }
+
         // Optional: Clean up source files after successful import
         // This is commented out for safety - uncomment if you want to move files instead of copy
         /*
@@ -331,7 +415,25 @@ class PhotoImporter {
 if (require.main === module) {
     const albumName = process.argv[2];
     const importer = new PhotoImporter();
-    importer.run(albumName);
+
+    // Handle graceful shutdown
+    process.on('SIGINT', async () => {
+        console.log('\n🛑 Shutting down...');
+        await importer.cleanup();
+        process.exit(0);
+    });
+
+    importer.run(albumName)
+        .then(() => {
+            console.log('✅ Import completed successfully');
+        })
+        .catch((error) => {
+            console.error('❌ Import failed:', error.message);
+            process.exit(1);
+        })
+        .finally(async () => {
+            await importer.cleanup();
+        });
 }
 
 module.exports = PhotoImporter;
