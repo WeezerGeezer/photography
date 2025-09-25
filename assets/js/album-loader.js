@@ -105,8 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const infoDiv = document.createElement('div');
         infoDiv.className = 'gallery-item-info';
         infoDiv.innerHTML = `
-            <h3>${image.title}</h3>
-            <p>${new Date(image.date).toLocaleDateString()}</p>
+            <p class="image-date">${new Date(image.date).toLocaleDateString()}</p>
         `;
 
         item.appendChild(img);
