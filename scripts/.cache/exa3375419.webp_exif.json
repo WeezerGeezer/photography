@@ -1,0 +1,42 @@
+{
+  "timestamp": "2025-09-25T02:27:44.083Z",
+  "imagePath": "../assets/images/full/example/exa3375419.webp",
+  "analysisType": "exif",
+  "result": {
+    "camera": {
+      "make": null,
+      "model": null,
+      "lens": null
+    },
+    "settings": {
+      "aperture": null,
+      "shutterSpeed": null,
+      "iso": null,
+      "focalLength": null,
+      "focalLengthIn35mm": null
+    },
+    "image": {
+      "width": 2000,
+      "height": 1333
+    },
+    "capture": {},
+    "location": null,
+    "file": {
+      "size": "393 kB",
+      "format": "WEBP",
+      "modified": {
+        "_ctor": "ExifDateTime",
+        "year": 2025,
+        "month": 9,
+        "day": 24,
+        "hour": 17,
+        "minute": 26,
+        "second": 11,
+        "tzoffsetMinutes": -240,
+        "rawValue": "2025:09:24 17:26:11-04:00",
+        "zoneName": "UTC-4",
+        "inferredZone": false
+      }
+    }
+  }
+}

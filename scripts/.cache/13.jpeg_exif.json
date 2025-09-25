@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-09-25T02:33:07.381Z",
+  "imagePath": "/Users/mitchellcarter/Documents/Github/photography-portfolio-standalone/assets/images/albums/example/13.jpeg",
+  "analysisType": "exif",
+  "result": {
+    "camera": {
+      "make": "SONY",
+      "model": "ILCE-6300",
+      "lens": "30mm F1.4 DC DN | Contemporary 016"
+    },
+    "settings": {
+      "aperture": "f/2",
+      "shutterSpeed": "1/4000",
+      "iso": 100,
+      "focalLength": "30.0 mmmm",
+      "focalLengthIn35mm": "45 mmmm"
+    },
+    "image": {
+      "width": 6000,
+      "height": 4000,
+      "orientation": 1,
+      "colorSpace": "sRGB",
+      "bitDepth": 8
+    },
+    "capture": {
+      "dateTime": {
+        "_ctor": "ExifDateTime",
+        "year": 2025,
+        "month": 2,
+        "day": 23,
+        "hour": 18,
+        "minute": 12,
+        "second": 20,
+        "tzoffsetMinutes": -360,
+        "rawValue": "2025:02:23 18:12:20",
+        "zoneName": "UTC-6",
+        "inferredZone": true
+      },
+      "exposureMode": "Auto",
+      "exposureProgram": "Aperture-priority AE",
+      "meteringMode": "Multi-segment",
+      "flash": "Off, Did not fire",
+      "whiteBalance": "Auto"
+    },
+    "location": null,
+    "file": {
+      "size": "3.9 MB",
+      "format": "JPEG",
+      "modified": {
+        "_ctor": "ExifDateTime",
+        "year": 2025,
+        "month": 9,
+        "day": 24,
+        "hour": 17,
+        "minute": 26,
+        "second": 11,
+        "tzoffsetMinutes": -240,
+        "rawValue": "2025:09:24 17:26:11-04:00",
+        "zoneName": "UTC-4",
+        "inferredZone": false
+      }
+    }
+  }
+}

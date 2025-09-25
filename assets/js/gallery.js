@@ -89,9 +89,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // Make images clickable to go to album page
         item.addEventListener('click', () => {
             if (image.album) {
-                // Convert album name to URL-friendly format
-                const albumSlug = image.album.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-                window.location.href = `album.html?album=${encodeURIComponent(albumSlug)}`;
+                // Map album titles to their keys in albums.json
+                const albumMapping = {
+                    'Mills Race 2023 Photography': 'Mills Race 2023',
+                    'Nature Photography': 'nature',
+                    'Portrait Photography': 'portraits',
+                    'Event Photography': 'events'
+                };
+
+                const albumId = albumMapping[image.album] || image.album;
+                window.location.href = `album.html?id=${encodeURIComponent(albumId)}`;
             }
         });
         

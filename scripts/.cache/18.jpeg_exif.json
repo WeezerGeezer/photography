@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-09-25T02:34:13.011Z",
+  "imagePath": "/Users/mitchellcarter/Documents/Github/photography-portfolio-standalone/assets/images/albums/example/18.jpeg",
+  "analysisType": "exif",
+  "result": {
+    "camera": {
+      "make": "SONY",
+      "model": "ILCE-6300",
+      "lens": "E PZ 18-105mm F4 G OSS"
+    },
+    "settings": {
+      "aperture": "f/4",
+      "shutterSpeed": "1/160",
+      "iso": 100,
+      "focalLength": "19.0 mmmm",
+      "focalLengthIn35mm": "28 mmmm"
+    },
+    "image": {
+      "width": 4000,
+      "height": 6000,
+      "orientation": 1,
+      "colorSpace": "sRGB",
+      "bitDepth": 8
+    },
+    "capture": {
+      "dateTime": {
+        "_ctor": "ExifDateTime",
+        "year": 2025,
+        "month": 6,
+        "day": 1,
+        "hour": 19,
+        "minute": 35,
+        "second": 19,
+        "tzoffsetMinutes": -300,
+        "rawValue": "2025:06:01 19:35:19",
+        "zoneName": "UTC-5",
+        "inferredZone": true
+      },
+      "exposureMode": "Auto",
+      "exposureProgram": "Program AE",
+      "meteringMode": "Multi-segment",
+      "flash": "Off, Did not fire",
+      "whiteBalance": "Auto"
+    },
+    "location": null,
+    "file": {
+      "size": "4.0 MB",
+      "format": "JPEG",
+      "modified": {
+        "_ctor": "ExifDateTime",
+        "year": 2025,
+        "month": 9,
+        "day": 24,
+        "hour": 17,
+        "minute": 26,
+        "second": 11,
+        "tzoffsetMinutes": -240,
+        "rawValue": "2025:09:24 17:26:11-04:00",
+        "zoneName": "UTC-4",
+        "inferredZone": false
+      }
+    }
+  }
+}
