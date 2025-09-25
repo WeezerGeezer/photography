@@ -189,6 +189,83 @@
     gap: 0.5rem;
 }
 
+/* Albums Timeline */
+.albums-timeline {
+    margin-top: 2rem;
+    margin-bottom: auto;
+}
+
+.albums-timeline h3 {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.timeline-item:hover {
+    background-color: var(--light-gray);
+    transform: translateX(4px);
+}
+
+.timeline-date {
+    font-size: 0.75rem;
+    color: var(--medium-gray);
+    font-weight: 500;
+    min-width: 60px;
+    text-align: right;
+}
+
+.timeline-details {
+    flex: 1;
+}
+
+.timeline-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+}
+
+.timeline-meta {
+    font-size: 0.7rem;
+    color: var(--medium-gray);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.timeline-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.timeline-count::before {
+    content: "📷";
+    font-size: 0.7rem;
+}
+
 /* Load More Button */
 .load-more-btn {
     display: block;

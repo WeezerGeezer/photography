@@ -25,18 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch(`/data/albums.json`);
             const data = await response.json();
-            
-            // Flatten all images from albums if filter is 'all'
+
+            // Flatten all images from albums
             let images = [];
-            if (filter === 'all') {
-                Object.values(data).forEach(album => {
-                    images = images.concat(album.images.map(img => ({
-                        ...img,
-                        album: album.title
-                    })));
-                });
-            } else {
-                images = data[filter]?.images || [];
+            Object.values(data).forEach(album => {
+                images = images.concat(album.images.map(img => ({
+                    ...img,
+                    album: album.title
+                })));
+            });
+
+            // Filter by tag if not 'all'
+            if (filter !== 'all') {
+                images = images.filter(img =>
+                    img.tags && img.tags.includes(filter)
+                );
             }
 
             // Sort by date
@@ -77,14 +80,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const infoDiv = document.createElement('div');
         infoDiv.className = 'gallery-item-info';
         infoDiv.innerHTML = `
-            <h3>${image.title}</h3>
-            ${image.album ? `<p>${image.album}</p>` : ''}
+            ${image.album ? `<h3>${image.album}</h3>` : ''}
         `;
 
         item.appendChild(img);
         item.appendChild(infoDiv);
-        
-        item.addEventListener('click', () => openLightbox(image));
+
+        // Make images clickable to go to album page
+        item.addEventListener('click', () => {
+            if (image.album) {
+                // Convert album name to URL-friendly format
+                const albumSlug = image.album.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                window.location.href = `album.html?album=${encodeURIComponent(albumSlug)}`;
+            }
+        });
         
         // Handle image load for proper masonry layout
         img.addEventListener('load', () => {
