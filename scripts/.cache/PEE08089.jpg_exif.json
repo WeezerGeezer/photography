@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-09-25T02:54:03.177Z",
+  "imagePath": "../assets/images/albums/Mills Race 2023/PEE08089.jpg",
+  "analysisType": "exif",
+  "result": {
+    "camera": {
+      "make": "SONY",
+      "model": "ILCE-6300",
+      "lens": "16mm F1.4 DC DN | Contemporary 017"
+    },
+    "settings": {
+      "aperture": "f/7.1",
+      "shutterSpeed": "1/200",
+      "iso": 100,
+      "focalLength": "16.0 mmmm",
+      "focalLengthIn35mm": "24 mmmm"
+    },
+    "image": {
+      "width": 4000,
+      "height": 6000,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "compression": "JPEG (old-style)"
+    },
+    "capture": {
+      "dateTime": {
+        "_ctor": "ExifDateTime",
+        "year": 2023,
+        "month": 6,
+        "day": 9,
+        "hour": 15,
+        "minute": 56,
+        "second": 56,
+        "tzoffsetMinutes": -240,
+        "rawValue": "2023:06:09 15:56:56",
+        "zoneName": "UTC-4",
+        "inferredZone": true
+      },
+      "exposureMode": "Auto",
+      "exposureProgram": "Program AE",
+      "meteringMode": "Multi-segment",
+      "flash": "Off, Did not fire",
+      "whiteBalance": "Auto"
+    },
+    "location": null,
+    "file": {
+      "size": "12 MB",
+      "format": "JPEG",
+      "modified": {
+        "_ctor": "ExifDateTime",
+        "year": 2023,
+        "month": 8,
+        "day": 28,
+        "hour": 21,
+        "minute": 46,
+        "second": 14,
+        "tzoffsetMinutes": -240,
+        "rawValue": "2023:08:28 21:46:14-04:00",
+        "zoneName": "UTC-4",
+        "inferredZone": false
+      }
+    }
+  }
+}

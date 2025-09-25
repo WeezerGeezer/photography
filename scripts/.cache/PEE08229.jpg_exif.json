@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-09-25T02:56:37.995Z",
+  "imagePath": "/Users/mitchellcarter/Documents/Github/photography-portfolio-standalone/assets/images/albums/Mills Race 2023/PEE08229.jpg",
+  "analysisType": "exif",
+  "result": {
+    "camera": {
+      "make": "SONY",
+      "model": "ILCE-6300",
+      "lens": "E PZ 18-105mm F4 G OSS"
+    },
+    "settings": {
+      "aperture": "f/11",
+      "shutterSpeed": "1/320",
+      "iso": 100,
+      "focalLength": "103.0 mmmm",
+      "focalLengthIn35mm": "154 mmmm"
+    },
+    "image": {
+      "width": 6000,
+      "height": 4000,
+      "colorSpace": "sRGB",
+      "bitDepth": 8,
+      "compression": "JPEG (old-style)"
+    },
+    "capture": {
+      "dateTime": {
+        "_ctor": "ExifDateTime",
+        "year": 2023,
+        "month": 6,
+        "day": 9,
+        "hour": 18,
+        "minute": 36,
+        "second": 57,
+        "tzoffsetMinutes": -240,
+        "rawValue": "2023:06:09 18:36:57",
+        "zoneName": "UTC-4",
+        "inferredZone": true
+      },
+      "exposureMode": "Auto",
+      "exposureProgram": "Program AE",
+      "meteringMode": "Multi-segment",
+      "flash": "Off, Did not fire",
+      "whiteBalance": "Auto"
+    },
+    "location": null,
+    "file": {
+      "size": "10 MB",
+      "format": "JPEG",
+      "modified": {
+        "_ctor": "ExifDateTime",
+        "year": 2023,
+        "month": 8,
+        "day": 29,
+        "hour": 2,
+        "minute": 58,
+        "second": 30,
+        "tzoffsetMinutes": -240,
+        "rawValue": "2023:08:29 02:58:30-04:00",
+        "zoneName": "UTC-4",
+        "inferredZone": false
+      }
+    }
+  }
+}

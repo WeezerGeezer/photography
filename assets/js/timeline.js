@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function createTimelineItem(item) {
         const timelineItem = document.createElement('a');
         timelineItem.className = 'timeline-item';
-        timelineItem.href = `album.html?album=${encodeURIComponent(item.key)}`;
+        timelineItem.href = `album.html?id=${encodeURIComponent(item.key)}`;
 
         // Format date
         const date = new Date(item.date);
