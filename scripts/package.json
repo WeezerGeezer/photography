@@ -5,10 +5,16 @@
   "main": "import-photos.js",
   "scripts": {
     "import": "node import-photos.js",
+    "analyze": "node image-analyzer.js",
+    "analyze-existing": "node analyze-existing.js",
+    "cleanup": "node cleanup-photos.js",
+    "cleanup-confirm": "node cleanup-photos.js --confirm",
     "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
-    "sharp": "^0.33.0"
+    "sharp": "^0.33.0",
+    "ollama": "^0.6.0",
+    "exiftool-vendored": "^28.0.0"
   },
   "devDependencies": {
     "eslint": "^8.0.0"
