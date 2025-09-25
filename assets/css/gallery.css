@@ -15,17 +15,21 @@
     border: 2px solid transparent;
     background-color: transparent;
     color: var(--text-color);
-    border-radius: 8px;
+    font-family: 'Futura PT', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+    border-radius: 0;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 0.9rem;
+    font-weight: 500;
     text-align: left;
+    letter-spacing: 0.02em;
 }
 
 .sidebar .filter-btn:hover {
-    color: var(--text-color);
-    border: 2px solid var(--text-color);
-    background-color: transparent;
+    color: var(--white);
+    background-color: #000000;
+    border: 2px solid #000000;
+    transform: translateX(4px);
 }
 
 .sidebar .filter-btn.active {
@@ -227,8 +231,9 @@
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-color);
+    font-family: 'Futura PT', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.1em;
 }
 
 .timeline-content {
@@ -242,16 +247,24 @@
     align-items: center;
     gap: 0.75rem;
     padding: 0.5rem;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+    border-radius: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     text-decoration: none;
     color: inherit;
+    font-family: 'Futura PT', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+    border: 1px solid transparent;
 }
 
 .timeline-item:hover {
-    background-color: var(--light-gray);
+    background-color: #000000;
+    color: var(--white);
     transform: translateX(4px);
+}
+
+.timeline-item:hover .timeline-date,
+.timeline-item:hover .timeline-title {
+    color: var(--white);
 }
 
 .timeline-date {
