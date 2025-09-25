@@ -37,20 +37,104 @@
     </script>
 </head>
 <body>
-    <header>
-        <nav>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="mobile-header-content">
             <div class="logo">
                 <a href="index.html">Photography Portfolio</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
     </header>
 
-    <main class="album-container">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" class="mobile-nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-filters">
+                <h3>Filter Photos</h3>
+                <div class="mobile-filter-buttons">
+                    <button class="filter-btn" data-filter="all" onclick="window.location.href='index.html'">All Photos</button>
+                    <button class="filter-btn" data-filter="Nature" onclick="window.location.href='index.html?filter=Nature'">Nature</button>
+                    <button class="filter-btn" data-filter="Portraits" onclick="window.location.href='index.html?filter=Portraits'">Portraits</button>
+                    <button class="filter-btn" data-filter="Events" onclick="window.location.href='index.html?filter=Events'">Events</button>
+                    <button class="filter-btn" data-filter="Maritime" onclick="window.location.href='index.html?filter=Maritime'">Maritime</button>
+                    <button class="filter-btn" data-filter="Golden Hour" onclick="window.location.href='index.html?filter=Golden Hour'">Golden Hour</button>
+                    <button class="filter-btn" data-filter="Candid" onclick="window.location.href='index.html?filter=Candid'">Candid</button>
+                    <button class="filter-btn" data-filter="Action" onclick="window.location.href='index.html?filter=Action'">Action</button>
+                </div>
+            </div>
+
+            <div class="mobile-social">
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="logo">
+                    <a href="index.html">Photography Portfolio</a>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-link">Gallery</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="gallery-filters">
+                    <h3>Filter Photos</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn" data-filter="all" onclick="window.location.href='index.html'">All Photos</button>
+                        <button class="filter-btn" data-filter="Nature" onclick="window.location.href='index.html?filter=Nature'">Nature</button>
+                        <button class="filter-btn" data-filter="Portraits" onclick="window.location.href='index.html?filter=Portraits'">Portraits</button>
+                        <button class="filter-btn" data-filter="Events" onclick="window.location.href='index.html?filter=Events'">Events</button>
+                        <button class="filter-btn" data-filter="Maritime" onclick="window.location.href='index.html?filter=Maritime'">Maritime</button>
+                        <button class="filter-btn" data-filter="Golden Hour" onclick="window.location.href='index.html?filter=Golden Hour'">Golden Hour</button>
+                        <button class="filter-btn" data-filter="Candid" onclick="window.location.href='index.html?filter=Candid'">Candid</button>
+                        <button class="filter-btn" data-filter="Action" onclick="window.location.href='index.html?filter=Action'">Action</button>
+                    </div>
+                </div>
+
+                <div class="albums-timeline">
+                    <h3>Albums Timeline</h3>
+                    <div class="timeline-content">
+                        <!-- Timeline items will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <div class="sidebar-footer">
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer">IG</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">FB</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">TW</a>
+                    </div>
+                    <p class="copyright">&copy; 2024</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="album-container">
         <nav class="breadcrumb">
             <ol>
                 <li><a href="index.html">Home</a></li>
@@ -73,10 +157,12 @@
             <!-- Images will be dynamically loaded here -->
         </section>
 
-        <div class="loading-spinner" id="loading-spinner">
-            <div class="spinner"></div>
-        </div>
-    </main>
+                <div class="loading-spinner" id="loading-spinner">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </main>
+    </div>
 
     <div class="lightbox" id="lightbox">
         <span class="close">&times;</span>
@@ -101,6 +187,8 @@
     </footer>
 
     <script src="assets/js/masonry.js"></script>
+    <script src="assets/js/timeline.js"></script>
+    <script src="assets/js/mobile-menu.js"></script>
     <script src="assets/js/album-loader.js"></script>
 </body>
 </html> 
