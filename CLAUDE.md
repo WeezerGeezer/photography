@@ -23,6 +23,16 @@ cd scripts
 
 The import script automatically optimizes images, creates WebP versions, generates thumbnails, applies AI analysis for categorization, and updates the albums.json configuration.
 
+### Syncing Renamed Albums
+```bash
+cd scripts
+./import.sh --sync          # Sync via main import script
+./sync.sh                   # Dedicated sync script
+./sync.sh --dry-run        # Preview changes without applying them
+```
+
+When you rename album directories in Finder, run the sync command to automatically update albums.json with the new directory names and fix all image paths.
+
 ### Build Tools
 ```bash
 # In scripts/ directory

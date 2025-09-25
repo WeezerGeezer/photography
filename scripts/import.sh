@@ -9,6 +9,7 @@ cd "$SCRIPT_DIR"
 # Initialize variables
 ALBUM_NAME=""
 CLEANUP_FLAG=""
+SYNC_FLAG=""
 SCAN_ALL=""
 
 # Parse arguments
@@ -17,6 +18,9 @@ for arg in "$@"; do
         --cleanup)
             CLEANUP_FLAG="true"
             ;;
+        --sync)
+            SYNC_FLAG="true"
+            ;;
         --help|-h)
             echo "📷 Photo Import Tool with Cleanup Support"
             echo ""
@@ -24,6 +28,7 @@ for arg in "$@"; do
             echo ""
             echo "Options:"
             echo "  --cleanup    Run cleanup before import to remove orphaned entries"
+            echo "  --sync       Sync renamed album directories with albums.json"
             echo "  --help, -h   Show this help message"
             echo ""
             echo "Examples:"
@@ -31,6 +36,7 @@ for arg in "$@"; do
             echo "  ./import.sh nature                # Import nature album"
             echo "  ./import.sh nature --cleanup      # Clean up first, then import nature"
             echo "  ./import.sh --cleanup             # Clean up, then scan all albums"
+            echo "  ./import.sh --sync                # Sync directory renames with JSON"
             echo ""
             echo "Cleanup removes orphaned entries from albums.json when source images are deleted"
             exit 0
@@ -62,6 +68,14 @@ fi
 if [ ! -d "node_modules" ]; then
     echo "📦 Installing dependencies..."
     npm install
+fi
+
+# Run sync if requested
+if [ "$SYNC_FLAG" = "true" ]; then
+    echo "📁 Running album directory sync..."
+    node sync-albums.js
+    echo ""
+    exit 0
 fi
 
 # Run cleanup if requested
