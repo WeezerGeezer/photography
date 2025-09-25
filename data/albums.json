@@ -13,6 +13,7 @@
                 "accessibility": {
                     "altText": "A man looking out a boat window."
                 },
+                "tags": ["Maritime", "Candid", "Portraits"],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "E PZ 18-105mm F4 G OSS",
@@ -54,6 +55,7 @@
                 "accessibility": {
                     "altText": "A sailboat on a body of water with people on board."
                 },
+                "tags": ["Maritime", "Action", "Events"],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "E PZ 18-105mm F4 G OSS",
@@ -95,6 +97,7 @@
                 "accessibility": {
                     "altText": "Two men preparing a sailboat on a sunny day."
                 },
+                "tags": ["Maritime", "Candid", "Events"],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "E PZ 18-105mm F4 G OSS",
@@ -136,6 +139,7 @@
                 "accessibility": {
                     "altText": "Sailboat sailing through clear blue sky."
                 },
+                "tags": ["Maritime", "Action"],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "E PZ 18-105mm F4 G OSS",
@@ -177,6 +181,7 @@
                 "accessibility": {
                     "altText": "The image features a serene scene of numerous sailboats docked in a marina at sunset, with the skyline visible in the background."
                 },
+                "tags": ["Maritime", "Golden Hour"],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "E PZ 18-105mm F4 G OSS",
@@ -218,6 +223,7 @@
                 "accessibility": {
                     "altText": "Sailboat with large white sail."
                 },
+                "tags": ["Maritime", "Action"],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "E PZ 18-105mm F4 G OSS",
@@ -259,6 +265,7 @@
                 "accessibility": {
                     "altText": "A man standing inside a boat cabin, looking out through an open window."
                 },
+                "tags": ["Maritime", "Candid", "Portraits"],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "30mm F1.4 DC DN | Contemporary 016",
@@ -300,6 +307,7 @@
                 "accessibility": {
                     "altText": "A tall sailboat with a white sail. The boat is in focus against a blurred background."
                 },
+                "tags": ["Maritime", "Action"],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "30mm F1.4 DC DN | Contemporary 016",
@@ -341,6 +349,7 @@
                 "accessibility": {
                     "altText": "A sailboat with a large number on its side, sailing in bright sunlight during sunset."
                 },
+                "tags": ["Maritime", "Golden Hour", "Action"],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "E PZ 18-105mm F4 G OSS",
@@ -385,21 +394,24 @@
                 "title": "Mountain Sunrise",
                 "thumbnail": "assets/images/thumbnails/nature/mountain-sunrise.webp",
                 "full": "assets/images/full/nature/mountain-sunrise.webp",
-                "date": "2024-02-11"
+                "date": "2024-02-11",
+                "tags": ["Nature", "Golden Hour"]
             },
             {
                 "id": "nat002",
                 "title": "Forest Path",
                 "thumbnail": "assets/images/thumbnails/nature/forest-path.webp",
                 "full": "assets/images/full/nature/forest-path.webp",
-                "date": "2024-02-10"
+                "date": "2024-02-10",
+                "tags": ["Nature"]
             },
             {
                 "id": "nat003",
                 "title": "Ocean Waves",
                 "thumbnail": "assets/images/thumbnails/nature/ocean-waves.webp",
                 "full": "assets/images/full/nature/ocean-waves.webp",
-                "date": "2024-02-09"
+                "date": "2024-02-09",
+                "tags": ["Nature", "Action"]
             }
         ]
     },
@@ -413,21 +425,24 @@
                 "title": "Professional Headshot",
                 "thumbnail": "assets/images/thumbnails/portraits/headshot.webp",
                 "full": "assets/images/full/portraits/headshot.webp",
-                "date": "2024-02-08"
+                "date": "2024-02-08",
+                "tags": ["Portraits"]
             },
             {
                 "id": "port002",
                 "title": "Natural Light Portrait",
                 "thumbnail": "assets/images/thumbnails/portraits/natural-light.webp",
                 "full": "assets/images/full/portraits/natural-light.webp",
-                "date": "2024-02-07"
+                "date": "2024-02-07",
+                "tags": ["Portraits"]
             },
             {
                 "id": "port003",
                 "title": "Studio Portrait",
                 "thumbnail": "assets/images/thumbnails/portraits/studio.webp",
                 "full": "assets/images/full/portraits/studio.webp",
-                "date": "2024-02-06"
+                "date": "2024-02-06",
+                "tags": ["Portraits"]
             }
         ]
     },
@@ -441,21 +456,24 @@
                 "title": "Wedding Ceremony",
                 "thumbnail": "assets/images/thumbnails/events/wedding.webp",
                 "full": "assets/images/full/events/wedding.webp",
-                "date": "2024-02-05"
+                "date": "2024-02-05",
+                "tags": ["Events", "Candid"]
             },
             {
                 "id": "evt002",
                 "title": "Corporate Conference",
                 "thumbnail": "assets/images/thumbnails/events/conference.webp",
                 "full": "assets/images/full/events/conference.webp",
-                "date": "2024-02-04"
+                "date": "2024-02-04",
+                "tags": ["Events"]
             },
             {
                 "id": "evt003",
                 "title": "Birthday Celebration",
                 "thumbnail": "assets/images/thumbnails/events/birthday.webp",
                 "full": "assets/images/full/events/birthday.webp",
-                "date": "2024-02-03"
+                "date": "2024-02-03",
+                "tags": ["Events", "Candid"]
             }
         ]
     },
@@ -474,7 +492,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "1.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa10375419",
@@ -486,7 +505,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "10.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa11375419",
@@ -498,7 +518,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "11.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa12375419",
@@ -510,7 +531,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "12.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa13375419",
@@ -522,7 +544,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "13.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa14375419",
@@ -534,7 +557,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "14.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa15375419",
@@ -546,7 +570,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "15.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa16375419",
@@ -558,7 +583,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "16.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa17375419",
@@ -570,7 +596,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "17.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa18375419",
@@ -582,7 +609,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "18.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa19375419",
@@ -594,7 +622,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "19.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa2375419",
@@ -606,7 +635,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "2.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa20375419",
@@ -618,7 +648,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "20.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa21375419",
@@ -630,7 +661,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "21.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa22375419",
@@ -642,7 +674,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "22.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa23375419",
@@ -654,7 +687,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "23.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa24375419",
@@ -666,7 +700,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "24.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa25375419",
@@ -678,7 +713,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "25.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa26375419",
@@ -690,7 +726,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "26.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa27375419",
@@ -702,7 +739,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "27.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa28375419",
@@ -714,7 +752,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "28.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa3375419",
@@ -726,7 +765,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "3.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa4375419",
@@ -738,7 +778,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "4.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa5375419",
@@ -750,7 +791,8 @@
                     "width": 5338,
                     "height": 3559,
                     "originalFilename": "5.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa6375419",
@@ -762,7 +804,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "6.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa7375419",
@@ -774,7 +817,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "7.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa8375419",
@@ -786,7 +830,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "8.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa9375419",
@@ -798,7 +843,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "9.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa1394586",
@@ -810,7 +856,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "1.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa10394586",
@@ -822,7 +869,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "10.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa11394586",
@@ -834,7 +882,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "11.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa12394586",
@@ -846,7 +895,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "12.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa13394586",
@@ -858,7 +908,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "13.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa14394586",
@@ -870,7 +921,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "14.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa15394586",
@@ -882,7 +934,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "15.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa16394586",
@@ -894,7 +947,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "16.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa17394586",
@@ -906,7 +960,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "17.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa18394586",
@@ -918,7 +973,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "18.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa19394586",
@@ -930,7 +986,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "19.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa2394586",
@@ -942,7 +999,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "2.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa20394586",
@@ -954,7 +1012,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "20.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa21394586",
@@ -966,7 +1025,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "21.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa22394586",
@@ -978,7 +1038,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "22.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa23394586",
@@ -990,7 +1051,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "23.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa24394586",
@@ -1002,7 +1064,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "24.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa25394586",
@@ -1014,7 +1077,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "25.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa26394586",
@@ -1026,7 +1090,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "26.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa27394586",
@@ -1038,7 +1103,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "27.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa28394586",
@@ -1050,7 +1116,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "28.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa3394586",
@@ -1062,7 +1129,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "3.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa4394586",
@@ -1074,7 +1142,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "4.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa5394586",
@@ -1086,7 +1155,8 @@
                     "width": 5338,
                     "height": 3559,
                     "originalFilename": "5.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa6394586",
@@ -1098,7 +1168,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "6.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa7394586",
@@ -1110,7 +1181,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "7.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa8394586",
@@ -1122,7 +1194,8 @@
                     "width": 6000,
                     "height": 4000,
                     "originalFilename": "8.jpeg"
-                }
+                },
+                "tags": []
             },
             {
                 "id": "exa9394586",
@@ -1134,7 +1207,8 @@
                     "width": 4000,
                     "height": 6000,
                     "originalFilename": "9.jpeg"
-                }
+                },
+                "tags": []
             }
         ]
     }
