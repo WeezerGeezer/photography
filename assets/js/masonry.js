@@ -78,6 +78,10 @@ class MasonryLayout {
         let itemWidth = this.actualColumnWidth;
         let columnsSpanned = 1;
 
+        // Temporarily show the item to prevent cramming effect
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+
         // Check if image is landscape and screen is wide enough for double width
         if (img && this.columnCount >= 2 && window.innerWidth >= 769) {
             const isLandscape = img.naturalWidth > img.naturalHeight ||
@@ -120,46 +124,53 @@ class MasonryLayout {
         item.style.top = `${y}px`;
         item.style.width = `${itemWidth}px`;
         
-        // Wait for images to load to get accurate height based on natural aspect ratio
+        // Handle image sizing - give unloaded images a reasonable default first
         if (img) {
             if (img.complete && img.naturalWidth > 0) {
                 // Image already loaded, calculate height from natural dimensions
                 const aspectRatio = img.naturalHeight / img.naturalWidth;
                 const calculatedHeight = itemWidth * aspectRatio;
-                
+
                 // Set a reasonable min/max height to prevent extreme ratios
                 const minHeight = 150;
                 const maxHeight = 600;
                 const constrainedHeight = Math.max(minHeight, Math.min(maxHeight, calculatedHeight));
-                
+
                 img.style.height = `${constrainedHeight}px`;
                 img.style.objectFit = 'cover';
-                
+
                 this.updateColumnHeight(item, shortestColumnIndex, columnsSpanned);
             } else {
-                // Wait for image to load to get natural dimensions
+                // Set a reasonable default height immediately to prevent cramming
+                img.style.height = '250px';
+                img.style.objectFit = 'cover';
+
+                // Initially position with default height
+                this.updateColumnHeight(item, shortestColumnIndex, columnsSpanned);
+
+                // Wait for image to load to get natural dimensions and reposition
                 const handleImageLoad = () => {
                     // Calculate height based on natural aspect ratio
                     const aspectRatio = img.naturalHeight / img.naturalWidth;
                     const calculatedHeight = itemWidth * aspectRatio;
-                    
+
                     // Set a reasonable min/max height to prevent extreme ratios
                     const minHeight = 150;
                     const maxHeight = 600;
                     const constrainedHeight = Math.max(minHeight, Math.min(maxHeight, calculatedHeight));
-                    
+
                     img.style.height = `${constrainedHeight}px`;
-                    img.style.objectFit = 'cover';
-                    
-                    this.updateColumnHeight(item, shortestColumnIndex, columnsSpanned);
+
+                    // Re-layout the entire masonry to adjust for the size change
+                    setTimeout(() => this.layout(), 50);
                 };
-                
+
                 img.addEventListener('load', handleImageLoad, { once: true });
-                
+
                 // Fallback in case image fails to load
                 img.addEventListener('error', () => {
-                    img.style.height = '250px'; // Default height
-                    this.updateColumnHeight(item, shortestColumnIndex, columnsSpanned);
+                    img.style.height = '250px'; // Keep default height
+                    setTimeout(() => this.layout(), 50);
                 }, { once: true });
             }
         } else {

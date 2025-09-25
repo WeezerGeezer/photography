@@ -152,12 +152,18 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         
-        // Layout the items with a delay to ensure images are added to DOM and start loading
+        // Wait for images to start loading before initial layout
+        // Use a longer delay to ensure lazy-loaded images have begun loading
         setTimeout(() => {
             if (masonry) {
                 masonry.layout();
+
+                // Additional layout after a bit more time to catch any delayed image loads
+                setTimeout(() => {
+                    masonry.layout();
+                }, 500);
             }
-        }, 200);
+        }, 100);
     }
 
     // Lightbox functionality
