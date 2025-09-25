@@ -74,26 +74,58 @@ class MasonryLayout {
     }
 
     positionItem(item, index) {
-        // Find the shortest column
-        const shortestColumnIndex = this.columns.indexOf(Math.min(...this.columns));
-        
+        const img = item.querySelector('img');
+        let itemWidth = this.actualColumnWidth;
+        let columnsSpanned = 1;
+
+        // Check if image is landscape and screen is wide enough for double width
+        if (img && this.columnCount >= 2 && window.innerWidth >= 769) {
+            const isLandscape = img.naturalWidth > img.naturalHeight ||
+                               (img.complete && img.offsetWidth > img.offsetHeight);
+
+            if (isLandscape) {
+                columnsSpanned = Math.min(2, this.columnCount); // Use 2 columns or max available
+                itemWidth = (this.actualColumnWidth * columnsSpanned) + (this.options.gutter * (columnsSpanned - 1));
+            }
+        }
+
+        // Find the best column position for items that span multiple columns
+        let shortestColumnIndex = 0;
+        if (columnsSpanned === 1) {
+            shortestColumnIndex = this.columns.indexOf(Math.min(...this.columns));
+        } else {
+            // For multi-column items, find the position with the lowest maximum height
+            let bestPosition = 0;
+            let bestHeight = Infinity;
+
+            for (let i = 0; i <= this.columnCount - columnsSpanned; i++) {
+                const maxHeightInSpan = Math.max(...this.columns.slice(i, i + columnsSpanned));
+                if (maxHeightInSpan < bestHeight) {
+                    bestHeight = maxHeightInSpan;
+                    bestPosition = i;
+                }
+            }
+            shortestColumnIndex = bestPosition;
+        }
+
         // Calculate position
         const x = shortestColumnIndex * (this.actualColumnWidth + this.options.gutter);
-        const y = this.columns[shortestColumnIndex];
-        
+        const y = columnsSpanned === 1 ?
+                  this.columns[shortestColumnIndex] :
+                  Math.max(...this.columns.slice(shortestColumnIndex, shortestColumnIndex + columnsSpanned));
+
         // Position the item
         item.style.position = 'absolute';
         item.style.left = `${x}px`;
         item.style.top = `${y}px`;
-        item.style.width = `${this.actualColumnWidth}px`;
+        item.style.width = `${itemWidth}px`;
         
         // Wait for images to load to get accurate height based on natural aspect ratio
-        const img = item.querySelector('img');
         if (img) {
             if (img.complete && img.naturalWidth > 0) {
                 // Image already loaded, calculate height from natural dimensions
                 const aspectRatio = img.naturalHeight / img.naturalWidth;
-                const calculatedHeight = this.actualColumnWidth * aspectRatio;
+                const calculatedHeight = itemWidth * aspectRatio;
                 
                 // Set a reasonable min/max height to prevent extreme ratios
                 const minHeight = 150;
@@ -103,13 +135,13 @@ class MasonryLayout {
                 img.style.height = `${constrainedHeight}px`;
                 img.style.objectFit = 'cover';
                 
-                this.updateColumnHeight(item, shortestColumnIndex);
+                this.updateColumnHeight(item, shortestColumnIndex, columnsSpanned);
             } else {
                 // Wait for image to load to get natural dimensions
                 const handleImageLoad = () => {
                     // Calculate height based on natural aspect ratio
                     const aspectRatio = img.naturalHeight / img.naturalWidth;
-                    const calculatedHeight = this.actualColumnWidth * aspectRatio;
+                    const calculatedHeight = itemWidth * aspectRatio;
                     
                     // Set a reasonable min/max height to prevent extreme ratios
                     const minHeight = 150;
@@ -119,7 +151,7 @@ class MasonryLayout {
                     img.style.height = `${constrainedHeight}px`;
                     img.style.objectFit = 'cover';
                     
-                    this.updateColumnHeight(item, shortestColumnIndex);
+                    this.updateColumnHeight(item, shortestColumnIndex, columnsSpanned);
                 };
                 
                 img.addEventListener('load', handleImageLoad, { once: true });
@@ -127,25 +159,36 @@ class MasonryLayout {
                 // Fallback in case image fails to load
                 img.addEventListener('error', () => {
                     img.style.height = '250px'; // Default height
-                    this.updateColumnHeight(item, shortestColumnIndex);
+                    this.updateColumnHeight(item, shortestColumnIndex, columnsSpanned);
                 }, { once: true });
             }
         } else {
-            this.updateColumnHeight(item, shortestColumnIndex);
+            this.updateColumnHeight(item, shortestColumnIndex, columnsSpanned);
         }
     }
 
-    updateColumnHeight(item, columnIndex) {
+    updateColumnHeight(item, columnIndex, columnsSpanned = 1) {
         // Get the actual height of the item
         const itemHeight = item.offsetHeight;
-        
-        // Update column height
-        this.columns[columnIndex] += itemHeight + this.options.gutter;
-        
+
+        // For multi-column items, find the current max height in the span and set all to that + item height
+        const currentMaxInSpan = columnsSpanned === 1 ?
+            this.columns[columnIndex] :
+            Math.max(...this.columns.slice(columnIndex, columnIndex + columnsSpanned));
+
+        const newHeight = currentMaxInSpan + itemHeight + this.options.gutter;
+
+        // Update heights for all spanned columns
+        for (let i = 0; i < columnsSpanned; i++) {
+            if (columnIndex + i < this.columns.length) {
+                this.columns[columnIndex + i] = newHeight;
+            }
+        }
+
         // Update container height
         const maxHeight = Math.max(...this.columns);
         this.container.style.height = `${maxHeight}px`;
-        
+
         // Show the item with fade-in effect
         item.classList.add('loaded');
     }
