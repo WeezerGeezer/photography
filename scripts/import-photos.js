@@ -158,7 +158,7 @@ class PhotoImporter {
         const title = albumName
             .split(/[-_]/)
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ') + ' Photography';
+            .join(' ');
 
         // Generate description based on album name
         const descriptions = {
