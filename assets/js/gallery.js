@@ -86,23 +86,10 @@ document.addEventListener('DOMContentLoaded', () => {
         item.appendChild(img);
         item.appendChild(infoDiv);
 
-        // Make images clickable to go to individual photo page
+        // Make images clickable to open lightbox
         item.addEventListener('click', () => {
-            if (image.album) {
-                // Map album titles to their keys in albums.json
-                const albumMapping = {
-                    'Mills Race 2023': 'Mills Race 2023'
-                };
-
-                const albumId = albumMapping[image.album] || image.album;
-                const photoUrl = `photo.html?album=${encodeURIComponent(albumId)}&id=${encodeURIComponent(image.id)}`;
-
-                if (window.pageTransitions) {
-                    window.pageTransitions.navigateToPage(photoUrl);
-                } else {
-                    window.location.href = photoUrl;
-                }
-            }
+            currentIndex = currentImages.findIndex(i => i.id === image.id);
+            openLightbox();
         });
         
         // Handle image load for proper masonry layout
@@ -195,35 +182,35 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update image info with EXIF data
         const imageInfo = lightbox.querySelector('.image-info');
 
-        // Build EXIF metadata display
+        // Build EXIF data display
         let exifHTML = '';
         if (image.technical) {
             exifHTML = `
-                <div class="image-meta">
-                    <div class="meta-group">
-                        <span class="meta-label">Camera</span>
-                        <span class="meta-value">${image.technical.camera || 'Unknown'}</span>
+                <div class="exif-data">
+                    <div class="exif-item">
+                        <span class="exif-label">Camera</span>
+                        <span class="exif-value">${image.technical.camera || 'Unknown'}</span>
                     </div>
-                    <div class="meta-group">
-                        <span class="meta-label">Lens</span>
-                        <span class="meta-value">${image.technical.lens || 'Unknown'}</span>
+                    <div class="exif-item">
+                        <span class="exif-label">Lens</span>
+                        <span class="exif-value">${image.technical.lens || 'Unknown'}</span>
                     </div>
-                    <div class="meta-group">
-                        <span class="meta-label">Settings</span>
-                        <span class="meta-value">${image.technical.settings || 'N/A'}</span>
+                    <div class="exif-item">
+                        <span class="exif-label">Settings</span>
+                        <span class="exif-value">${image.technical.settings || 'N/A'}</span>
                     </div>
-                    <div class="meta-group">
-                        <span class="meta-label">Date</span>
-                        <span class="meta-value">${new Date(image.date).toLocaleDateString()}</span>
+                    <div class="exif-item">
+                        <span class="exif-label">Date</span>
+                        <span class="exif-value">${new Date(image.date).toLocaleDateString()}</span>
                     </div>
                 </div>
             `;
         } else {
             exifHTML = `
-                <div class="image-meta">
-                    <div class="meta-group">
-                        <span class="meta-label">Date</span>
-                        <span class="meta-value">${new Date(image.date).toLocaleDateString()}</span>
+                <div class="exif-data">
+                    <div class="exif-item">
+                        <span class="exif-label">Date</span>
+                        <span class="exif-value">${new Date(image.date).toLocaleDateString()}</span>
                     </div>
                 </div>
             `;
