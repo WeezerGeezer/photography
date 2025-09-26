@@ -92,7 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update main image
         photoImage.src = photo.full;
         photoImage.alt = photo.accessibility?.altText || photo.title;
-        photoTitle.textContent = photo.title;
+
+        // Filter out camera-generated filenames that start with 'PEE'
+        const displayTitle = photo.title && photo.title.startsWith('PEE') ? 'Photo' : photo.title;
+        photoTitle.textContent = displayTitle;
 
         // Update download link
         downloadBtn.href = photo.full;
