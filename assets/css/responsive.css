@@ -155,10 +155,21 @@
     }
 
     /* About Page Mobile */
+    .about-container {
+        padding: 2rem 1rem;
+    }
+
     .about-hero {
         flex-direction: column;
         text-align: center;
-        gap: 1rem;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        padding: 2rem 0;
+    }
+
+    .social-connect {
+        padding: 2rem 1rem;
+        margin: 0 -1rem;
     }
 
     .profile-image img,
