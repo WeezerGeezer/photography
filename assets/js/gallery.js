@@ -88,8 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Make images clickable to open lightbox
         item.addEventListener('click', () => {
-            currentIndex = currentImages.findIndex(i => i.id === image.id);
-            openLightbox();
+            openLightbox(image);
         });
         
         // Handle image load for proper masonry layout
