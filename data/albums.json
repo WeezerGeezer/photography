@@ -1211,5 +1211,12 @@
                 "tags": []
             }
         ]
+    },
+    "dsi-memories": {
+        "title": "DSi Memories",
+        "description": "Nostalgic photos from my Nintendo DSi camera days",
+        "cover": "dsi-memories/cover.jpg",
+        "date": "2008-03-01",
+        "images": []
     }
 }

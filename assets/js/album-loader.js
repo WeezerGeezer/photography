@@ -88,7 +88,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function createAlbumItem(image) {
         const item = document.createElement('div');
         item.className = 'gallery-item';
-        
+
+        // Add DSi overlay class if this is a DSi photo
+        const urlParams = new URLSearchParams(window.location.search);
+        const albumId = urlParams.get('id');
+        if (albumId === 'dsi-memories') {
+            item.classList.add('dsi-photo');
+        }
+
         // Create img element with load handler for masonry layout
         const img = document.createElement('img');
         img.src = image.thumbnail;

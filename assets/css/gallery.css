@@ -3,10 +3,54 @@
     margin-bottom: auto;
 }
 
+/* Filter Toggle Button */
+.filter-toggle-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid transparent;
+    background-color: transparent;
+    color: var(--text-color);
+    font-family: 'Futura PT', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: left;
+    letter-spacing: 0.02em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.filter-toggle-btn:hover {
+    color: var(--white);
+    background-color: #000000;
+    border: 2px solid #000000;
+    transform: translateX(4px);
+}
+
+.filter-toggle-btn .chevron {
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.filter-toggle-btn.expanded .chevron {
+    transform: rotate(180deg);
+}
+
 .sidebar .filter-buttons {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar .filter-buttons.expanded {
+    max-height: 500px;
 }
 
 /* Sidebar Filter Buttons */
@@ -357,4 +401,24 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* DSi Overlay */
+.gallery-item.dsi-photo {
+    position: relative;
+}
+
+.gallery-item.dsi-photo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/dsi-overlay.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    z-index: 1;
 } 

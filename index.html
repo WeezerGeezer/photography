@@ -85,8 +85,11 @@
             </nav>
 
             <div class="mobile-filters">
-                <h3>Filter Photos</h3>
-                <div class="mobile-filter-buttons">
+                <button class="filter-toggle-btn mobile-filter-toggle" id="mobile-filter-toggle">
+                    <span>Filter Photos</span>
+                    <span class="chevron">▼</span>
+                </button>
+                <div class="mobile-filter-buttons" id="mobile-filter-buttons">
                     <button class="filter-btn active" data-filter="all">All Photos</button>
                     <button class="filter-btn" data-filter="Nature">Nature</button>
                     <button class="filter-btn" data-filter="Portraits">Portraits</button>
@@ -124,8 +127,11 @@
                 </nav>
 
                 <div class="gallery-filters">
-                    <h3>Filter Photos</h3>
-                    <div class="filter-buttons">
+                    <button class="filter-toggle-btn" id="filter-toggle">
+                        <span>Filter Photos</span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="filter-buttons" id="filter-buttons">
                         <button class="filter-btn active" data-filter="all">All Photos</button>
                         <button class="filter-btn" data-filter="Nature">Nature</button>
                         <button class="filter-btn" data-filter="Portraits">Portraits</button>
@@ -181,6 +187,7 @@
     <script src="assets/js/masonry.js"></script>
     <script src="assets/js/mobile-menu.js"></script>
     <script src="assets/js/timeline.js"></script>
+    <script src="assets/js/filter-toggle.js"></script>
     <script>
         // Debug: Check if masonry loaded
         console.log('Masonry available:', typeof window.MasonryLayout);

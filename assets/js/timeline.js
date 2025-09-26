@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const timelineItems = Object.entries(data)
                 .filter(([key, album]) => key !== 'example') // Filter out example album
                 .map(([key, album]) => {
-                    // Find the most recent photo date in this album
-                    let mostRecentDate = '1900-01-01';
-                    if (album.images && album.images.length > 0) {
-                        mostRecentDate = album.images.reduce((latest, img) => {
+                    // Use album date if provided, otherwise find most recent photo date
+                    let displayDate = album.date || '1900-01-01';
+                    if (!album.date && album.images && album.images.length > 0) {
+                        displayDate = album.images.reduce((latest, img) => {
                             return img.date > latest ? img.date : latest;
                         }, '1900-01-01');
                     }
@@ -31,12 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     return {
                         key: key,
                         title: album.title,
-                        date: mostRecentDate,
+                        date: displayDate,
                         imageCount: album.images ? album.images.length : 0,
-                        description: album.description
+                        description: album.description,
+                        isDsi: key === 'dsi-memories'
                     };
                 })
-                .sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort by most recent first
+                .sort((a, b) => {
+                    // DSi memories always goes to bottom
+                    if (a.isDsi) return 1;
+                    if (b.isDsi) return -1;
+                    return new Date(b.date) - new Date(a.date);
+                });
 
             // Clear existing timeline
             timelineContainer.innerHTML = '';
