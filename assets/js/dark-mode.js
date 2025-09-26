@@ -30,7 +30,6 @@ class DarkMode {
         const toggleButton = document.createElement('button');
         toggleButton.className = 'theme-toggle';
         toggleButton.innerHTML = `
-            <span class="theme-icon">🌙</span>
             <span class="theme-text">Dark Mode</span>
         `;
         toggleButton.setAttribute('aria-label', 'Toggle dark mode');
@@ -52,7 +51,6 @@ class DarkMode {
         const toggleButton = document.createElement('button');
         toggleButton.className = 'theme-toggle mobile-nav-link';
         toggleButton.innerHTML = `
-            <span class="theme-icon">🌙</span>
             <span class="theme-text">Dark Mode</span>
         `;
         toggleButton.setAttribute('aria-label', 'Toggle dark mode');
@@ -89,19 +87,13 @@ class DarkMode {
 
         // Update sidebar toggle
         if (this.sidebarToggle) {
-            const icon = this.sidebarToggle.querySelector('.theme-icon');
             const text = this.sidebarToggle.querySelector('.theme-text');
-
-            if (icon) icon.textContent = isDark ? '☀️' : '🌙';
             if (text) text.textContent = isDark ? 'Light Mode' : 'Dark Mode';
         }
 
         // Update mobile toggle
         if (this.mobileToggle) {
-            const icon = this.mobileToggle.querySelector('.theme-icon');
             const text = this.mobileToggle.querySelector('.theme-text');
-
-            if (icon) icon.textContent = isDark ? '☀️' : '🌙';
             if (text) text.textContent = isDark ? 'Light Mode' : 'Dark Mode';
         }
     }

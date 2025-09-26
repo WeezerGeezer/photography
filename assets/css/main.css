@@ -143,7 +143,6 @@ a:hover {
     font-weight: 500;
     font-family: 'Futura PT', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
     justify-content: flex-start;
-    gap: 0.5rem;
 }
 
 .sidebar .theme-toggle:hover {
