@@ -223,11 +223,62 @@
 .image-info {
     position: absolute;
     bottom: 20px;
-    left: 0;
-    right: 0;
-    text-align: center;
+    left: 20px;
+    right: 20px;
     color: var(--white);
     padding: 1rem;
+    background: rgba(0,0,0,0.7);
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.image-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.image-info .image-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.image-info .meta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.image-info .meta-label {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.image-info .meta-value {
+    font-size: 0.9rem;
+    color: var(--white);
+    font-weight: 400;
+}
+
+.image-info .image-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.image-info .tag {
+    background: rgba(255,255,255,0.2);
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    color: var(--white);
 }
 
 /* Album Specific Styles */

@@ -153,9 +153,54 @@ document.addEventListener('DOMContentLoaded', () => {
             lightboxImg.src = image.full;
             lightboxImg.alt = image.title;
             
+            // Build EXIF metadata display
+            let exifHTML = '';
+            if (image.technical) {
+                exifHTML = `
+                    <div class="image-meta">
+                        <div class="meta-group">
+                            <span class="meta-label">Camera</span>
+                            <span class="meta-value">${image.technical.camera || 'Unknown'}</span>
+                        </div>
+                        <div class="meta-group">
+                            <span class="meta-label">Lens</span>
+                            <span class="meta-value">${image.technical.lens || 'Unknown'}</span>
+                        </div>
+                        <div class="meta-group">
+                            <span class="meta-label">Settings</span>
+                            <span class="meta-value">${image.technical.settings || 'N/A'}</span>
+                        </div>
+                        <div class="meta-group">
+                            <span class="meta-label">Date</span>
+                            <span class="meta-value">${new Date(image.date).toLocaleDateString()}</span>
+                        </div>
+                    </div>
+                `;
+            } else {
+                exifHTML = `
+                    <div class="image-meta">
+                        <div class="meta-group">
+                            <span class="meta-label">Date</span>
+                            <span class="meta-value">${new Date(image.date).toLocaleDateString()}</span>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Build tags display
+            let tagsHTML = '';
+            if (image.tags && image.tags.length > 0) {
+                tagsHTML = `
+                    <div class="image-tags">
+                        ${image.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                `;
+            }
+
             imageInfo.innerHTML = `
                 <h3 class="image-title">${image.title}</h3>
-                <p class="image-date">${new Date(image.date).toLocaleDateString()}</p>
+                ${exifHTML}
+                ${tagsHTML}
             `;
 
             // Update navigation visibility
