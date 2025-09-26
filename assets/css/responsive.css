@@ -25,6 +25,22 @@
     .gallery-container {
         padding: 1rem;
     }
+
+    /* Mobile Filter Toggle */
+    .mobile-filter-buttons {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-filter-buttons.expanded {
+        max-height: 400px;
+    }
+
+    .mobile-filter-toggle {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
 }
 
 /* Base Mobile Styles (320px - 480px) */
