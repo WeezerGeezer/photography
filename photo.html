@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional photography - view individual photo with technical details">
+    <title>Photo - Photography Portfolio</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="Photo - Photography Portfolio">
+    <meta property="og:description" content="Professional photography - view with technical details">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Photo - Photography Portfolio">
+    <meta name="twitter:description" content="Professional photography - view with technical details">
+    <meta name="twitter:image" content="">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="mobile-header-content">
+            <div class="logo">
+                <a href="index.html">Photography Portfolio</a>
+            </div>
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" class="mobile-nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-social">
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="logo">
+                    <a href="index.html">Photography Portfolio</a>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-link">Gallery</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="albums-timeline">
+                    <h3>Albums Timeline</h3>
+                    <div class="timeline-content">
+                        <!-- Timeline items will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <div class="sidebar-footer">
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer">IG</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">FB</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">TW</a>
+                    </div>
+                    <p class="copyright">&copy; 2024</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content page-transition">
+            <div class="photo-container">
+                <div class="breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Gallery</a></li>
+                        <li><span id="album-breadcrumb">Album</span></li>
+                        <li id="photo-breadcrumb">Photo</li>
+                    </ol>
+                </div>
+
+                <div class="photo-detail">
+                    <div class="photo-image-container">
+                        <img id="photo-image" src="" alt="" class="photo-detail-image">
+                        <div class="photo-actions">
+                            <button id="fullscreen-btn" class="action-btn">Fullscreen</button>
+                            <button id="share-btn" class="action-btn">Share</button>
+                            <a id="download-btn" class="action-btn" download>Download</a>
+                        </div>
+                    </div>
+
+                    <div class="photo-metadata">
+                        <h1 id="photo-title">Photo Title</h1>
+                        <div id="photo-info" class="photo-info">
+                            <!-- Photo metadata will be loaded here -->
+                        </div>
+                        <div class="photo-navigation">
+                            <a id="prev-photo" class="nav-btn">&larr; Previous</a>
+                            <a id="album-link" class="nav-btn">Back to Album</a>
+                            <a id="next-photo" class="nav-btn">Next &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="loading-spinner" class="loading-indicator">
+                    <div class="spinner"></div>
+                    <p>Loading photo...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/mobile-menu.js"></script>
+    <script src="assets/js/timeline.js"></script>
+    <script src="assets/js/page-transitions.js"></script>
+    <script src="assets/js/photo-detail.js"></script>
+</body>
+</html>
