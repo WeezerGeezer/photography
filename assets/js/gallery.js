@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         item.appendChild(img);
         item.appendChild(infoDiv);
 
-        // Make images clickable to go to album page
+        // Make images clickable to go to individual photo page
         item.addEventListener('click', () => {
             if (image.album) {
                 // Map album titles to their keys in albums.json
@@ -98,7 +98,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
 
                 const albumId = albumMapping[image.album] || image.album;
-                window.location.href = `album.html?id=${encodeURIComponent(albumId)}`;
+                const photoUrl = `photo.html?album=${encodeURIComponent(albumId)}&id=${encodeURIComponent(image.id)}`;
+
+                if (window.pageTransitions) {
+                    window.pageTransitions.navigateToPage(photoUrl);
+                } else {
+                    window.location.href = photoUrl;
+                }
             }
         });
         
@@ -115,9 +121,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (loading) return;
         loading = true;
 
-        // Show loading indicator when appending (infinite scroll)
+        // Show appropriate loading state
         if (append && loadingIndicator) {
+            // Show spinner for infinite scroll
             loadingIndicator.style.display = 'flex';
+        } else if (!append && galleryGrid.children.length === 0) {
+            // Show skeleton for initial load
+            showSkeletonLoader();
         }
 
         const result = await fetchImages(filter, page);
@@ -136,11 +146,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         galleryGrid.appendChild(fragment);
         
-        // Hide loading indicator
+        // Hide loading indicators
+        hideSkeletonLoader();
         if (loadingIndicator) {
             loadingIndicator.style.display = 'none';
         }
-        
+
         loading = false;
         
         // Initialize or update masonry layout
@@ -348,6 +359,38 @@ document.addEventListener('DOMContentLoaded', () => {
             page++;
             renderGallery(currentFilter, true);
         });
+    }
+
+    // Skeleton loader functions
+    function showSkeletonLoader() {
+        const existingSkeleton = document.querySelector('.skeleton-container');
+        if (existingSkeleton) return;
+
+        const skeletonContainer = document.createElement('div');
+        skeletonContainer.className = 'skeleton-container';
+
+        // Create skeleton items with varied heights for realism
+        const skeletonHeights = ['skeleton-image', 'skeleton-image tall', 'skeleton-image landscape', 'skeleton-image tall', 'skeleton-image', 'skeleton-image landscape'];
+
+        for (let i = 0; i < 12; i++) {
+            const skeletonItem = document.createElement('div');
+            skeletonItem.className = 'skeleton-item';
+
+            const skeletonImage = document.createElement('div');
+            skeletonImage.className = skeletonHeights[i % skeletonHeights.length];
+
+            skeletonItem.appendChild(skeletonImage);
+            skeletonContainer.appendChild(skeletonItem);
+        }
+
+        galleryGrid.parentNode.insertBefore(skeletonContainer, galleryGrid);
+    }
+
+    function hideSkeletonLoader() {
+        const skeleton = document.querySelector('.skeleton-container');
+        if (skeleton) {
+            skeleton.remove();
+        }
     }
 
     // Initialize gallery and infinite scroll

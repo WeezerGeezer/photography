@@ -137,13 +137,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let currentIndex = 0;
 
-        // Open lightbox
+        // Open photo detail page
         document.querySelectorAll('.gallery-item').forEach((item, index) => {
             item.addEventListener('click', () => {
-                currentIndex = index;
-                updateLightboxImage();
-                lightbox.classList.add('active');
-                document.body.style.overflow = 'hidden';
+                const imageId = images[index].id;
+                const photoUrl = `photo.html?album=${encodeURIComponent(albumId)}&id=${encodeURIComponent(imageId)}`;
+
+                if (window.pageTransitions) {
+                    window.pageTransitions.navigateToPage(photoUrl);
+                } else {
+                    window.location.href = photoUrl;
+                }
             });
         });
 

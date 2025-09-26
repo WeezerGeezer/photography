@@ -10,9 +10,29 @@ document.addEventListener('DOMContentLoaded', () => {
         return; // Timeline component not present on this page
     }
 
+    // Show timeline skeleton
+    function showTimelineSkeleton() {
+        timelineContainer.innerHTML = `
+            <div class="timeline-skeleton">
+                ${Array.from({length: 6}, () => `
+                    <div class="timeline-skeleton-item">
+                        <div class="timeline-skeleton-date"></div>
+                        <div class="timeline-skeleton-content">
+                            <div class="timeline-skeleton-title"></div>
+                            <div class="timeline-skeleton-meta"></div>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+
     // Fetch albums and create timeline
     async function loadTimeline() {
         try {
+            // Show skeleton while loading
+            showTimelineSkeleton();
+
             const response = await fetch('/data/albums.json');
             const data = await response.json();
 
