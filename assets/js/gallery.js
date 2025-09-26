@@ -91,10 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (image.album) {
                 // Map album titles to their keys in albums.json
                 const albumMapping = {
-                    'Mills Race 2023 Photography': 'Mills Race 2023',
-                    'Nature Photography': 'nature',
-                    'Portrait Photography': 'portraits',
-                    'Event Photography': 'events'
+                    'Mills Race 2023': 'Mills Race 2023'
                 };
 
                 const albumId = albumMapping[image.album] || image.album;
