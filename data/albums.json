@@ -1,7 +1,7 @@
 {
     "Mills Race 2023": {
-        "title": "Mills Race 2023 Photography",
-        "description": "A collection of Mills Race 2023 photography",
+        "title": "Mills Race 2023",
+        "description": "Capturing the excitement and maritime spirit of the Mills Race sailing competition. From preparing the boats to racing across the water, these images document the skill, teamwork, and passion of competitive sailing.",
         "cover": "Mills Race 2023/cover.jpg",
         "images": [
             {
@@ -381,99 +381,6 @@
                     },
                     "processingDate": "2025-09-25T02:58:25.203Z"
                 }
-            }
-        ]
-    },
-    "nature": {
-        "title": "Nature Photography",
-        "description": "Capturing the beauty of landscapes and wildlife",
-        "cover": "nature/cover.jpg",
-        "images": [
-            {
-                "id": "nat001",
-                "title": "Mountain Sunrise",
-                "thumbnail": "assets/images/thumbnails/nature/mountain-sunrise.webp",
-                "full": "assets/images/full/nature/mountain-sunrise.webp",
-                "date": "2024-02-11",
-                "tags": ["Nature", "Golden Hour"]
-            },
-            {
-                "id": "nat002",
-                "title": "Forest Path",
-                "thumbnail": "assets/images/thumbnails/nature/forest-path.webp",
-                "full": "assets/images/full/nature/forest-path.webp",
-                "date": "2024-02-10",
-                "tags": ["Nature"]
-            },
-            {
-                "id": "nat003",
-                "title": "Ocean Waves",
-                "thumbnail": "assets/images/thumbnails/nature/ocean-waves.webp",
-                "full": "assets/images/full/nature/ocean-waves.webp",
-                "date": "2024-02-09",
-                "tags": ["Nature", "Action"]
-            }
-        ]
-    },
-    "portraits": {
-        "title": "Portrait Photography",
-        "description": "Professional portraits and candid moments",
-        "cover": "portraits/cover.jpg",
-        "images": [
-            {
-                "id": "port001",
-                "title": "Professional Headshot",
-                "thumbnail": "assets/images/thumbnails/portraits/headshot.webp",
-                "full": "assets/images/full/portraits/headshot.webp",
-                "date": "2024-02-08",
-                "tags": ["Portraits"]
-            },
-            {
-                "id": "port002",
-                "title": "Natural Light Portrait",
-                "thumbnail": "assets/images/thumbnails/portraits/natural-light.webp",
-                "full": "assets/images/full/portraits/natural-light.webp",
-                "date": "2024-02-07",
-                "tags": ["Portraits"]
-            },
-            {
-                "id": "port003",
-                "title": "Studio Portrait",
-                "thumbnail": "assets/images/thumbnails/portraits/studio.webp",
-                "full": "assets/images/full/portraits/studio.webp",
-                "date": "2024-02-06",
-                "tags": ["Portraits"]
-            }
-        ]
-    },
-    "events": {
-        "title": "Event Photography",
-        "description": "Capturing special moments at weddings, parties, and corporate events",
-        "cover": "events/cover.jpg",
-        "images": [
-            {
-                "id": "evt001",
-                "title": "Wedding Ceremony",
-                "thumbnail": "assets/images/thumbnails/events/wedding.webp",
-                "full": "assets/images/full/events/wedding.webp",
-                "date": "2024-02-05",
-                "tags": ["Events", "Candid"]
-            },
-            {
-                "id": "evt002",
-                "title": "Corporate Conference",
-                "thumbnail": "assets/images/thumbnails/events/conference.webp",
-                "full": "assets/images/full/events/conference.webp",
-                "date": "2024-02-04",
-                "tags": ["Events"]
-            },
-            {
-                "id": "evt003",
-                "title": "Birthday Celebration",
-                "thumbnail": "assets/images/thumbnails/events/birthday.webp",
-                "full": "assets/images/full/events/birthday.webp",
-                "date": "2024-02-03",
-                "tags": ["Events", "Candid"]
             }
         ]
     },
