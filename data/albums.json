@@ -1125,5 +1125,47 @@
         "cover": "dsi-memories/cover.jpg",
         "date": "2008-03-01",
         "images": []
+    },
+    "client-a8f5f167f44f4964e6c998dee827110c": {
+        "title": "Sample Wedding Photos",
+        "description": "Your beautiful wedding day photos are ready for download. These images capture the joy, emotion, and memorable moments from your special celebration.",
+        "isPrivate": true,
+        "expiryDate": "2025-12-31",
+        "clientInfo": {
+            "name": "John & Sarah Smith",
+            "deliveryDate": "2025-09-26"
+        },
+        "images": [
+            {
+                "id": "sample-wedding-01",
+                "title": "First Dance",
+                "thumbnail": "assets/images/thumbnails/Mills Race 2023/Milpee08109947616.webp",
+                "full": "assets/images/full/Mills Race 2023/Milpee08109947616.webp",
+                "date": "2025-09-20",
+                "accessibility": {
+                    "altText": "Bride and groom sharing their first dance"
+                }
+            },
+            {
+                "id": "sample-wedding-02",
+                "title": "Ceremony Kiss",
+                "thumbnail": "assets/images/thumbnails/Mills Race 2023/Milpee08198947616.webp",
+                "full": "assets/images/full/Mills Race 2023/Milpee08198947616.webp",
+                "date": "2025-09-20",
+                "accessibility": {
+                    "altText": "Couple's first kiss as married couple"
+                }
+            },
+            {
+                "id": "sample-wedding-03",
+                "title": "Reception Celebration",
+                "thumbnail": "assets/images/thumbnails/Mills Race 2023/Milpee08203947617.webp",
+                "full": "assets/images/full/Mills Race 2023/Milpee08203947617.webp",
+                "date": "2025-09-20",
+                "accessibility": {
+                    "altText": "Wedding reception with guests celebrating"
+                }
+            }
+        ]
     }
 }
