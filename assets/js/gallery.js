@@ -225,8 +225,11 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
+        // Filter out camera-generated filenames that start with 'PEE'
+        const displayTitle = image.title && image.title.startsWith('PEE') ? '' : (image.album || image.title);
+
         imageInfo.innerHTML = `
-            <h3 class="image-title">${image.album || image.title}</h3>
+            ${displayTitle ? `<h3 class="image-title">${displayTitle}</h3>` : ''}
             ${exifHTML}
             ${tagsHTML}
         `;
