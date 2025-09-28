@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-09-28T20:35:52.131Z",
+  "imagePath": "/Users/mitchellcarter/Documents/Github/photography-portfolio-standalone/assets/images/albums/DSi Early Work/Bridal Shower.jpeg",
+  "analysisType": "exif",
+  "result": {
+    "camera": {
+      "make": "Nintendo",
+      "model": "NintendoDS",
+      "lens": null
+    },
+    "settings": {
+      "aperture": null,
+      "shutterSpeed": null,
+      "iso": null,
+      "focalLength": null,
+      "focalLengthIn35mm": null
+    },
+    "image": {
+      "width": 640,
+      "height": 480,
+      "orientation": 1,
+      "colorSpace": "sRGB",
+      "bitDepth": 8
+    },
+    "capture": {
+      "dateTime": {
+        "_ctor": "ExifDateTime",
+        "year": 2010,
+        "month": 3,
+        "day": 5,
+        "hour": 13,
+        "minute": 32,
+        "second": 23,
+        "tzoffsetMinutes": -360,
+        "rawValue": "2010:03:05 13:32:23",
+        "zoneName": "UTC-6",
+        "inferredZone": true
+      }
+    },
+    "location": null,
+    "file": {
+      "size": "79 kB",
+      "format": "JPEG",
+      "modified": {
+        "_ctor": "ExifDateTime",
+        "year": 2025,
+        "month": 9,
+        "day": 28,
+        "hour": 16,
+        "minute": 31,
+        "second": 12,
+        "tzoffsetMinutes": -240,
+        "rawValue": "2025:09:28 16:31:12-04:00",
+        "zoneName": "UTC-4",
+        "inferredZone": false
+      }
+    }
+  }
+}

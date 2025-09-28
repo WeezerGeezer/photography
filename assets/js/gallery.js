@@ -26,9 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(`/data/albums.json`);
             const data = await response.json();
 
-            // Flatten all images from albums
+            // Flatten all images from albums (excluding private albums)
             let images = [];
             Object.values(data).forEach(album => {
+                // Skip private albums
+                if (album.isPrivate) return;
+
                 images = images.concat(album.images.map(img => ({
                     ...img,
                     album: album.title

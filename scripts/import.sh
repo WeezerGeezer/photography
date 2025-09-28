@@ -11,6 +11,7 @@ ALBUM_NAME=""
 CLEANUP_FLAG=""
 SYNC_FLAG=""
 SCAN_ALL=""
+NO_AI_FLAG=""
 
 # Parse arguments
 for arg in "$@"; do
@@ -21,6 +22,9 @@ for arg in "$@"; do
         --sync)
             SYNC_FLAG="true"
             ;;
+        --no-ai)
+            NO_AI_FLAG="true"
+            ;;
         --help|-h)
             echo "📷 Photo Import Tool with Cleanup Support"
             echo ""
@@ -29,12 +33,14 @@ for arg in "$@"; do
             echo "Options:"
             echo "  --cleanup    Run cleanup before import to remove orphaned entries"
             echo "  --sync       Sync renamed album directories with albums.json"
+            echo "  --no-ai      Skip AI analysis for faster processing"
             echo "  --help, -h   Show this help message"
             echo ""
             echo "Examples:"
             echo "  ./import.sh                       # Scan and import all albums (interactive)"
             echo "  ./import.sh nature                # Import nature album"
             echo "  ./import.sh nature --cleanup      # Clean up first, then import nature"
+            echo "  ./import.sh nature --no-ai        # Import nature album without AI analysis"
             echo "  ./import.sh --cleanup             # Clean up, then scan all albums"
             echo "  ./import.sh --sync                # Sync directory renames with JSON"
             echo ""
@@ -101,7 +107,11 @@ if [ -z "$ALBUM_NAME" ]; then
     read -p "Would you like to scan and import all albums? (y/n): " response
     if [[ "$response" =~ ^[Yy]$ ]]; then
         echo "🔍 Scanning all album folders..."
-        node import-photos.js
+        if [ "$NO_AI_FLAG" = "true" ]; then
+            node import-photos.js --no-ai
+        else
+            node import-photos.js
+        fi
     else
         echo "Operation cancelled."
         exit 0
@@ -109,5 +119,9 @@ if [ -z "$ALBUM_NAME" ]; then
 else
     # Import specific album
     echo "🚀 Starting photo import for album: $ALBUM_NAME"
-    node import-photos.js "$ALBUM_NAME"
+    if [ "$NO_AI_FLAG" = "true" ]; then
+        node import-photos.js "$ALBUM_NAME" --no-ai
+    else
+        node import-photos.js "$ALBUM_NAME"
+    fi
 fi
