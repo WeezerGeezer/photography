@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Convert albums to timeline format and sort by most recent photo date
             const timelineItems = Object.entries(data)
-                .filter(([key, album]) => key !== 'example' && !album.isPrivate) // Filter out example and private albums
+                .filter(([key, album]) => key !== 'example') // Filter out example album only
                 .map(([key, album]) => {
                     // Use album date if provided, otherwise find most recent photo date
                     let displayDate = album.date || '1900-01-01';
