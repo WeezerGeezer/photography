@@ -81,9 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 200);
 
         // Initialize lightbox or DSi viewer for album images
+        console.log('Album ID:', albumId, 'DSi viewer available:', !!window.DSiViewer);
         if (albumId === 'DSi Early Work' && window.DSiViewer) {
+            console.log('Initializing DSi viewer for', albumId);
             initializeDSiViewer(album.images);
         } else {
+            console.log('Initializing standard lightbox for', albumId);
             initializeLightbox(album.images);
         }
     }
@@ -262,19 +265,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize DSi viewer for DSi album
     function initializeDSiViewer(images) {
+        console.log('Initializing DSi viewer with', images.length, 'images');
         let dsiViewer = null;
 
         // Create DSi viewer instance
         if (window.DSiViewer) {
-            dsiViewer = new window.DSiViewer();
+            try {
+                dsiViewer = new window.DSiViewer();
+                console.log('DSi viewer instance created successfully');
+            } catch (error) {
+                console.error('Error creating DSi viewer:', error);
+            }
+        } else {
+            console.error('DSiViewer class not available');
         }
 
         // Open DSi viewer when gallery items are clicked
         document.querySelectorAll('.gallery-item').forEach((item, index) => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
+                console.log('DSi photo clicked, index:', index);
                 if (dsiViewer) {
                     dsiViewer.open(images, index);
+                } else {
+                    console.error('DSi viewer not available');
                 }
             });
         });
