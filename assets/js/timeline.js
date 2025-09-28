@@ -82,7 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function createTimelineItem(item) {
         const timelineItem = document.createElement('a');
         timelineItem.className = 'timeline-item';
-        timelineItem.href = `album.html?id=${encodeURIComponent(item.key)}`;
+
+        // Special handling for DSi album - link to dedicated page
+        if (item.key === 'DSi Early Work') {
+            timelineItem.href = 'dsi.html';
+        } else {
+            timelineItem.href = `album.html?id=${encodeURIComponent(item.key)}`;
+        }
 
         // Format date
         const date = new Date(item.date);

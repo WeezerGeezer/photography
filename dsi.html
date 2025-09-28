@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSi Early Work - Mitchell Carter</title>
+    <meta name="description" content="Nostalgic photos from my Nintendo DSi camera days - low resolution charm and experimental photography">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #000;
+            color: white;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* DSi Container */
+        .dsi-container {
+            position: relative;
+            width: 500px;
+            height: 750px;
+            background-image: url('/assets/images/dsi/dsi-frame.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Top Screen (Photo Display) */
+        .dsi-top-screen {
+            position: absolute;
+            top: 12%;
+            left: 12%;
+            width: 76%;
+            height: 32%;
+            background: #000;
+            overflow: hidden;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dsi-photo {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Bottom Screen (Navigation) */
+        .dsi-bottom-screen {
+            position: absolute;
+            top: 55%;
+            left: 18%;
+            width: 64%;
+            height: 32%;
+            background: #000;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .dsi-nav-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15%;
+        }
+
+        .dsi-nav-arrow {
+            background: none;
+            border: none;
+            color: #00ff00;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 20px;
+            border-radius: 50%;
+            background: rgba(0, 255, 0, 0.1);
+            transition: all 0.2s ease;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+        }
+
+        .dsi-nav-arrow:hover {
+            background: rgba(0, 255, 0, 0.2);
+            transform: scale(1.1);
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        .dsi-nav-arrow:active {
+            transform: scale(0.95);
+        }
+
+        .dsi-nav-arrow:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .dsi-counter {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 10px;
+            color: #00ff00;
+            text-shadow: 0 0 4px #00ff00;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        /* Loading State */
+        .loading {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 12px;
+            color: #00ff00;
+            text-shadow: 0 0 8px #00ff00;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Back Button */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #00ff00;
+            color: #00ff00;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 8px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 255, 0, 0.2);
+            transform: scale(1.05);
+            text-shadow: 0 0 8px #00ff00;
+        }
+
+        /* Error State */
+        .error {
+            color: #ff4444;
+            text-shadow: 0 0 8px #ff4444;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .dsi-container {
+                width: 350px;
+                height: 525px;
+            }
+
+            .dsi-nav-arrow {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+
+            .dsi-counter {
+                font-size: 8px;
+            }
+
+            .back-button {
+                font-size: 6px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dsi-container {
+                width: 280px;
+                height: 420px;
+            }
+
+            .dsi-nav-arrow {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+
+            .dsi-counter {
+                font-size: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-button">← BACK</a>
+
+    <div class="dsi-container">
+        <!-- Top Screen -->
+        <div class="dsi-top-screen">
+            <div class="loading" id="loading">LOADING...</div>
+            <img class="dsi-photo" id="dsi-photo" src="" alt="" style="display: none;" />
+        </div>
+
+        <!-- Bottom Screen -->
+        <div class="dsi-bottom-screen">
+            <div class="dsi-nav-container">
+                <button class="dsi-nav-arrow" id="dsi-prev">◀</button>
+                <div class="dsi-counter" id="dsi-counter">--/--</div>
+                <button class="dsi-nav-arrow" id="dsi-next">▶</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class DSiViewer {
+            constructor() {
+                this.currentIndex = 0;
+                this.images = [];
+                this.loading = document.getElementById('loading');
+                this.photo = document.getElementById('dsi-photo');
+                this.counter = document.getElementById('dsi-counter');
+                this.prevBtn = document.getElementById('dsi-prev');
+                this.nextBtn = document.getElementById('dsi-next');
+
+                this.init();
+            }
+
+            async init() {
+                try {
+                    await this.loadImages();
+                    this.setupEventListeners();
+                    this.showPhoto(0);
+                } catch (error) {
+                    this.showError('Failed to load DSi photos');
+                    console.error('Error loading DSi photos:', error);
+                }
+            }
+
+            async loadImages() {
+                const response = await fetch('/data/albums.json');
+                const data = await response.json();
+
+                const dsiAlbum = data['DSi Early Work'];
+                if (!dsiAlbum) {
+                    throw new Error('DSi Early Work album not found');
+                }
+
+                this.images = dsiAlbum.images;
+                console.log(`Loaded ${this.images.length} DSi photos`);
+            }
+
+            setupEventListeners() {
+                this.prevBtn.addEventListener('click', () => this.prev());
+                this.nextBtn.addEventListener('click', () => this.next());
+
+                // Keyboard controls
+                document.addEventListener('keydown', (e) => {
+                    switch (e.key) {
+                        case 'ArrowLeft':
+                            this.prev();
+                            break;
+                        case 'ArrowRight':
+                            this.next();
+                            break;
+                        case 'Escape':
+                            window.location.href = '/';
+                            break;
+                    }
+                });
+
+                // Touch/swipe support
+                let touchStartX = 0;
+                this.photo.addEventListener('touchstart', (e) => {
+                    touchStartX = e.touches[0].clientX;
+                });
+
+                this.photo.addEventListener('touchend', (e) => {
+                    const touchEndX = e.changedTouches[0].clientX;
+                    const deltaX = touchEndX - touchStartX;
+
+                    if (Math.abs(deltaX) > 50) {
+                        if (deltaX > 0) {
+                            this.prev();
+                        } else {
+                            this.next();
+                        }
+                    }
+                });
+            }
+
+            showPhoto(index) {
+                if (index < 0 || index >= this.images.length) return;
+
+                this.currentIndex = index;
+                const image = this.images[index];
+
+                // Hide loading, show photo
+                this.loading.style.display = 'none';
+                this.photo.style.display = 'block';
+                this.photo.src = image.full;
+                this.photo.alt = image.accessibility?.altText || image.title;
+
+                // Update counter
+                const counter = `${String(index + 1).padStart(2, '0')}/${String(this.images.length).padStart(2, '0')}`;
+                this.counter.textContent = counter;
+
+                // Update button states
+                this.prevBtn.disabled = index <= 0;
+                this.nextBtn.disabled = index >= this.images.length - 1;
+
+                console.log(`Showing photo ${index + 1}/${this.images.length}: ${image.title}`);
+            }
+
+            prev() {
+                if (this.currentIndex > 0) {
+                    this.showPhoto(this.currentIndex - 1);
+                }
+            }
+
+            next() {
+                if (this.currentIndex < this.images.length - 1) {
+                    this.showPhoto(this.currentIndex + 1);
+                }
+            }
+
+            showError(message) {
+                this.loading.textContent = message;
+                this.loading.classList.add('error');
+                this.counter.textContent = 'ERROR';
+                this.counter.classList.add('error');
+            }
+        }
+
+        // Initialize DSi viewer when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new DSiViewer();
+        });
+    </script>
+</body>
+</html>
