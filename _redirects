@@ -5,13 +5,9 @@
 # Handle photo routing
 /photo/* /photo.html 200
 
-# Handle client gallery routing
-/client/* /client-gallery.html 200
-
 # Handle single page application routing
 /album.html* /album.html 200
 /photo.html* /photo.html 200
-/client-gallery.html* /client-gallery.html 200
 
 # Fallback for any 404s - redirect to main gallery
 /* /index.html 404

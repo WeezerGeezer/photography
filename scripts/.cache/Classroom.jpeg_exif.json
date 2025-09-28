@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-09-28T20:36:46.038Z",
+  "imagePath": "/Users/mitchellcarter/Documents/Github/photography-portfolio-standalone/assets/images/albums/DSi Early Work/Classroom.jpeg",
+  "analysisType": "exif",
+  "result": {
+    "camera": {
+      "make": "Nintendo",
+      "model": "NintendoDS",
+      "lens": null
+    },
+    "settings": {
+      "aperture": null,
+      "shutterSpeed": null,
+      "iso": null,
+      "focalLength": null,
+      "focalLengthIn35mm": null
+    },
+    "image": {
+      "width": 640,
+      "height": 480,
+      "orientation": 1,
+      "colorSpace": "sRGB",
+      "bitDepth": 8
+    },
+    "capture": {
+      "dateTime": {
+        "_ctor": "ExifDateTime",
+        "year": 2010,
+        "month": 2,
+        "day": 19,
+        "hour": 12,
+        "minute": 31,
+        "second": 49,
+        "tzoffsetMinutes": -360,
+        "rawValue": "2010:02:19 12:31:49",
+        "zoneName": "UTC-6",
+        "inferredZone": true
+      }
+    },
+    "location": null,
+    "file": {
+      "size": "59 kB",
+      "format": "JPEG",
+      "modified": {
+        "_ctor": "ExifDateTime",
+        "year": 2025,
+        "month": 9,
+        "day": 28,
+        "hour": 16,
+        "minute": 31,
+        "second": 12,
+        "tzoffsetMinutes": -240,
+        "rawValue": "2025:09:28 16:31:12-04:00",
+        "zoneName": "UTC-4",
+        "inferredZone": false
+      }
+    }
+  }
+}

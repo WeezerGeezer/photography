@@ -13,7 +13,11 @@
                 "accessibility": {
                     "altText": "A man looking out a boat window."
                 },
-                "tags": ["Maritime", "Candid", "Portraits"],
+                "tags": [
+                    "Maritime",
+                    "Candid",
+                    "Portraits"
+                ],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "E PZ 18-105mm F4 G OSS",
@@ -55,7 +59,11 @@
                 "accessibility": {
                     "altText": "A sailboat on a body of water with people on board."
                 },
-                "tags": ["Maritime", "Action", "Events"],
+                "tags": [
+                    "Maritime",
+                    "Action",
+                    "Events"
+                ],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "E PZ 18-105mm F4 G OSS",
@@ -97,7 +105,11 @@
                 "accessibility": {
                     "altText": "Two men preparing a sailboat on a sunny day."
                 },
-                "tags": ["Maritime", "Candid", "Events"],
+                "tags": [
+                    "Maritime",
+                    "Candid",
+                    "Events"
+                ],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "E PZ 18-105mm F4 G OSS",
@@ -139,7 +151,10 @@
                 "accessibility": {
                     "altText": "Sailboat sailing through clear blue sky."
                 },
-                "tags": ["Maritime", "Action"],
+                "tags": [
+                    "Maritime",
+                    "Action"
+                ],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "E PZ 18-105mm F4 G OSS",
@@ -181,7 +196,10 @@
                 "accessibility": {
                     "altText": "The image features a serene scene of numerous sailboats docked in a marina at sunset, with the skyline visible in the background."
                 },
-                "tags": ["Maritime", "Golden Hour"],
+                "tags": [
+                    "Maritime",
+                    "Golden Hour"
+                ],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "E PZ 18-105mm F4 G OSS",
@@ -223,7 +241,10 @@
                 "accessibility": {
                     "altText": "Sailboat with large white sail."
                 },
-                "tags": ["Maritime", "Action"],
+                "tags": [
+                    "Maritime",
+                    "Action"
+                ],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "E PZ 18-105mm F4 G OSS",
@@ -265,7 +286,11 @@
                 "accessibility": {
                     "altText": "A man standing inside a boat cabin, looking out through an open window."
                 },
-                "tags": ["Maritime", "Candid", "Portraits"],
+                "tags": [
+                    "Maritime",
+                    "Candid",
+                    "Portraits"
+                ],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "30mm F1.4 DC DN | Contemporary 016",
@@ -307,7 +332,10 @@
                 "accessibility": {
                     "altText": "A tall sailboat with a white sail. The boat is in focus against a blurred background."
                 },
-                "tags": ["Maritime", "Action"],
+                "tags": [
+                    "Maritime",
+                    "Action"
+                ],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "30mm F1.4 DC DN | Contemporary 016",
@@ -349,7 +377,11 @@
                 "accessibility": {
                     "altText": "A sailboat with a large number on its side, sailing in bright sunlight during sunset."
                 },
-                "tags": ["Maritime", "Golden Hour", "Action"],
+                "tags": [
+                    "Maritime",
+                    "Golden Hour",
+                    "Action"
+                ],
                 "technical": {
                     "camera": "SONY ILCE-6300",
                     "lens": "E PZ 18-105mm F4 G OSS",
@@ -1119,51 +1151,1895 @@
             }
         ]
     },
-    "dsi-memories": {
-        "title": "DSi Memories",
-        "description": "Nostalgic photos from my Nintendo DSi camera days",
-        "cover": "dsi-memories/cover.jpg",
-        "date": "2008-03-01",
-        "images": []
-    },
-    "client-a8f5f167f44f4964e6c998dee827110c": {
-        "title": "Sample Wedding Photos",
-        "description": "Your beautiful wedding day photos are ready for download. These images capture the joy, emotion, and memorable moments from your special celebration.",
+    "DSi Early Work": {
+        "title": "DSi Early Work",
+        "description": "Nostalgic photos from my Nintendo DSi camera days - low resolution charm and experimental photography",
+        "cover": "DSi Early Work/cover.jpg",
         "isPrivate": true,
-        "expiryDate": "2025-12-31",
-        "clientInfo": {
-            "name": "John & Sarah Smith",
-            "deliveryDate": "2025-09-26"
-        },
         "images": [
             {
-                "id": "sample-wedding-01",
-                "title": "First Dance",
-                "thumbnail": "assets/images/thumbnails/Mills Race 2023/Milpee08109947616.webp",
-                "full": "assets/images/full/Mills Race 2023/Milpee08109947616.webp",
-                "date": "2025-09-20",
+                "id": "DSiacidburn171403",
+                "title": "Acid Burn",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiacidburn171403.webp",
+                "full": "assets/images/full/DSi Early Work/DSiacidburn171403.webp",
+                "date": "2025-09-28",
                 "accessibility": {
-                    "altText": "Bride and groom sharing their first dance"
+                    "altText": "Photo: Acid Burn"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Acid Burn.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:51.460Z"
                 }
             },
             {
-                "id": "sample-wedding-02",
-                "title": "Ceremony Kiss",
-                "thumbnail": "assets/images/thumbnails/Mills Race 2023/Milpee08198947616.webp",
-                "full": "assets/images/full/Mills Race 2023/Milpee08198947616.webp",
-                "date": "2025-09-20",
+                "id": "DSibellybutto171403",
+                "title": "Bellybutton",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSibellybutto171403.webp",
+                "full": "assets/images/full/DSi Early Work/DSibellybutto171403.webp",
+                "date": "2025-09-28",
                 "accessibility": {
-                    "altText": "Couple's first kiss as married couple"
+                    "altText": "Photo: Bellybutton"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Bellybutton.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:51.503Z"
                 }
             },
             {
-                "id": "sample-wedding-03",
-                "title": "Reception Celebration",
-                "thumbnail": "assets/images/thumbnails/Mills Race 2023/Milpee08203947617.webp",
-                "full": "assets/images/full/Mills Race 2023/Milpee08203947617.webp",
-                "date": "2025-09-20",
+                "id": "DSibirthdaypa171403",
+                "title": "Birthday Party",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSibirthdaypa171403.webp",
+                "full": "assets/images/full/DSi Early Work/DSibirthdaypa171403.webp",
+                "date": "2025-09-28",
                 "accessibility": {
-                    "altText": "Wedding reception with guests celebrating"
+                    "altText": "Photo: Birthday Party"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Birthday Party.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:51.551Z"
+                }
+            },
+            {
+                "id": "DSibluefield171403",
+                "title": "Blue Field",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSibluefield171403.webp",
+                "full": "assets/images/full/DSi Early Work/DSibluefield171403.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Blue Field"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Blue Field.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:51.601Z"
+                }
+            },
+            {
+                "id": "DSibridalshow171403",
+                "title": "Bridal Shower",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSibridalshow171403.webp",
+                "full": "assets/images/full/DSi Early Work/DSibridalshow171403.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Bridal Shower"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Bridal Shower.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:51.738Z"
+                }
+            },
+            {
+                "id": "DSibrothers2171403",
+                "title": "Brothers 2",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSibrothers2171403.webp",
+                "full": "assets/images/full/DSi Early Work/DSibrothers2171403.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Brothers 2"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Brothers 2.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:51.863Z"
+                }
+            },
+            {
+                "id": "DSibrothers171403",
+                "title": "Brothers",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSibrothers171403.webp",
+                "full": "assets/images/full/DSi Early Work/DSibrothers171403.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Brothers"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Brothers.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:51.932Z"
+                }
+            },
+            {
+                "id": "DSiclassroom171403",
+                "title": "Classroom",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiclassroom171403.webp",
+                "full": "assets/images/full/DSi Early Work/DSiclassroom171403.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Classroom"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Classroom.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:51.979Z"
+                }
+            },
+            {
+                "id": "DSicomputer171403",
+                "title": "Computer",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSicomputer171403.webp",
+                "full": "assets/images/full/DSi Early Work/DSicomputer171403.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Computer"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Computer.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:52.026Z"
+                }
+            },
+            {
+                "id": "DSidad171403",
+                "title": "Dad",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSidad171403.webp",
+                "full": "assets/images/full/DSi Early Work/DSidad171403.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Dad"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Dad.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:52.073Z"
+                }
+            },
+            {
+                "id": "DSidean171403",
+                "title": "Dean",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSidean171403.webp",
+                "full": "assets/images/full/DSi Early Work/DSidean171403.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Dean"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Dean.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:52.125Z"
+                }
+            },
+            {
+                "id": "DSidots171404",
+                "title": "Dots",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSidots171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSidots171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Dots"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Dots.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:52.270Z"
+                }
+            },
+            {
+                "id": "DSidoubledean171404",
+                "title": "Double Dean",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSidoubledean171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSidoubledean171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Double Dean"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Double Dean.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:52.367Z"
+                }
+            },
+            {
+                "id": "DSiexit171404",
+                "title": "Exit",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiexit171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiexit171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Exit"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Exit.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:52.429Z"
+                }
+            },
+            {
+                "id": "DSifort1171404",
+                "title": "Fort 1",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSifort1171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSifort1171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Fort 1"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Fort 1.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:52.473Z"
+                }
+            },
+            {
+                "id": "DSifort2171404",
+                "title": "Fort 2",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSifort2171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSifort2171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Fort 2"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Fort 2.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:52.525Z"
+                }
+            },
+            {
+                "id": "DSifriendshou171404",
+                "title": "Friend'S House",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSifriendshou171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSifriendshou171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Friend'S House"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Friend's House.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:52.580Z"
+                }
+            },
+            {
+                "id": "DSigoldframeo171404",
+                "title": "Gold Frame On Black",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSigoldframeo171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSigoldframeo171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Gold Frame On Black"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Gold Frame on Black.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:52.637Z"
+                }
+            },
+            {
+                "id": "DSigreysky171404",
+                "title": "Grey Sky",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSigreysky171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSigreysky171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Grey Sky"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Grey Sky.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:52.779Z"
+                }
+            },
+            {
+                "id": "DSihni0009171404",
+                "title": "HNI 0009",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSihni0009171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSihni0009171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: HNI 0009"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "HNI_0009.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:52.872Z"
+                }
+            },
+            {
+                "id": "DSihappyharry171404",
+                "title": "Happy Harry",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSihappyharry171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSihappyharry171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Happy Harry"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Happy Harry.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:52.922Z"
+                }
+            },
+            {
+                "id": "DSiharrylabub171404",
+                "title": "Harry Labubu",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiharrylabub171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiharrylabub171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Harry Labubu"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Harry Labubu.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:52.969Z"
+                }
+            },
+            {
+                "id": "DSiharryteeth171404",
+                "title": "Harry Teeth",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiharryteeth171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiharryteeth171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Harry Teeth"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Harry Teeth.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:53.017Z"
+                }
+            },
+            {
+                "id": "DSihusbandand171404",
+                "title": "Husband And Wife",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSihusbandand171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSihusbandand171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Husband And Wife"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Husband and Wife.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:53.089Z"
+                }
+            },
+            {
+                "id": "DSijoyouscost171404",
+                "title": "Joyous Costco Cake",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSijoyouscost171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSijoyouscost171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Joyous Costco Cake"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Joyous Costco Cake.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:53.144Z"
+                }
+            },
+            {
+                "id": "DSilandscape171404",
+                "title": "Landscape",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSilandscape171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSilandscape171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Landscape"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Landscape.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:53.251Z"
+                }
+            },
+            {
+                "id": "DSilobby171404",
+                "title": "Lobby",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSilobby171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSilobby171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Lobby"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Lobby.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:53.389Z"
+                }
+            },
+            {
+                "id": "DSimariodean171404",
+                "title": "Mario Dean",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSimariodean171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSimariodean171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Mario Dean"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Mario Dean.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:53.462Z"
+                }
+            },
+            {
+                "id": "DSimenatwork171404",
+                "title": "Men At Work",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSimenatwork171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSimenatwork171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Men At Work"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Men at Work.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:53.513Z"
+                }
+            },
+            {
+                "id": "DSiminivanpor171404",
+                "title": "Minivan Portrait 2",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiminivanpor171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiminivanpor171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Minivan Portrait 2"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Minivan Portrait 2.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:53.562Z"
+                }
+            },
+            {
+                "id": "DSiminivanpor171404",
+                "title": "Minivan Portrait",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiminivanpor171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiminivanpor171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Minivan Portrait"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Minivan Portrait.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:53.609Z"
+                }
+            },
+            {
+                "id": "DSimunsonpark171404",
+                "title": "Munson Park",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSimunsonpark171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSimunsonpark171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Munson Park"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Munson Park.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:53.710Z"
+                }
+            },
+            {
+                "id": "DSinorthshore171404",
+                "title": "North Shores Gothic",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSinorthshore171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSinorthshore171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: North Shores Gothic"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "North Shores Gothic.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:53.824Z"
+                }
+            },
+            {
+                "id": "DSioffice171404",
+                "title": "Office",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSioffice171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSioffice171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Office"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Office.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:53.892Z"
+                }
+            },
+            {
+                "id": "DSiparkinglot171404",
+                "title": "Parking Lot",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiparkinglot171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiparkinglot171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Parking Lot"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Parking Lot.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:53.938Z"
+                }
+            },
+            {
+                "id": "DSipulpit171404",
+                "title": "Pulpit",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSipulpit171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSipulpit171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Pulpit"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Pulpit.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:53.986Z"
+                }
+            },
+            {
+                "id": "DSirabbitharr171404",
+                "title": "Rabbit Harry",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSirabbitharr171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSirabbitharr171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Rabbit Harry"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Rabbit Harry.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:54.036Z"
+                }
+            },
+            {
+                "id": "DSiredsky171404",
+                "title": "Red Sky",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiredsky171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiredsky171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Red Sky"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Red Sky.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:54.084Z"
+                }
+            },
+            {
+                "id": "DSireflection171404",
+                "title": "Reflection",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSireflection171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSireflection171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Reflection"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Reflection.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:54.144Z"
+                }
+            },
+            {
+                "id": "DSisanctuary171404",
+                "title": "Sanctuary",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSisanctuary171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSisanctuary171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Sanctuary"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Sanctuary.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:54.198Z"
+                }
+            },
+            {
+                "id": "DSiscreenedin171404",
+                "title": "Screened In",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiscreenedin171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiscreenedin171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Screened In"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Screened In.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:54.314Z"
+                }
+            },
+            {
+                "id": "DSiselfportai171404",
+                "title": "Self Portait #3",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiselfportai171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiselfportai171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Self Portait #3"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Self Portait #3.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:54.449Z"
+                }
+            },
+            {
+                "id": "DSiselfportra171404",
+                "title": "Self Portrait #1",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiselfportra171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiselfportra171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Self Portrait #1"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Self Portrait #1.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:54.496Z"
+                }
+            },
+            {
+                "id": "DSiselfportra171404",
+                "title": "Self Portrait #2",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiselfportra171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiselfportra171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Self Portrait #2"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Self Portrait #2.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:54.542Z"
+                }
+            },
+            {
+                "id": "DSiselfportra171404",
+                "title": "Self Portrait #4",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiselfportra171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiselfportra171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Self Portrait #4"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Self Portrait #4.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:54.593Z"
+                }
+            },
+            {
+                "id": "DSiselfportra171404",
+                "title": "Self Portrait #5",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiselfportra171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiselfportra171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Self Portrait #5"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Self Portrait #5.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:54.641Z"
+                }
+            },
+            {
+                "id": "DSiselfportra171404",
+                "title": "Self Portrait #6",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiselfportra171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiselfportra171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Self Portrait #6"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Self Portrait #6.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:54.758Z"
+                }
+            },
+            {
+                "id": "DSiselfportra171404",
+                "title": "Self Portrait #7",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiselfportra171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiselfportra171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Self Portrait #7"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Self Portrait #7.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:54.859Z"
+                }
+            },
+            {
+                "id": "DSiselfportra171404",
+                "title": "Self Portrait #8",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiselfportra171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiselfportra171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Self Portrait #8"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Self Portrait #8.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:54.926Z"
+                }
+            },
+            {
+                "id": "DSiselfportra171404",
+                "title": "Self Portrait #9",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSiselfportra171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSiselfportra171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Self Portrait #9"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Self Portrait #9.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:54.972Z"
+                }
+            },
+            {
+                "id": "DSishopping171404",
+                "title": "Shopping",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSishopping171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSishopping171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Shopping"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Shopping.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:55.022Z"
+                }
+            },
+            {
+                "id": "DSispringtime171404",
+                "title": "Springtime 2",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSispringtime171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSispringtime171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Springtime 2"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Springtime 2.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:55.070Z"
+                }
+            },
+            {
+                "id": "DSispringtime171404",
+                "title": "Springtime 3",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSispringtime171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSispringtime171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Springtime 3"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Springtime 3.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:55.152Z"
+                }
+            },
+            {
+                "id": "DSispringtime171404",
+                "title": "Springtime 4",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSispringtime171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSispringtime171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Springtime 4"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Springtime 4.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:55.207Z"
+                }
+            },
+            {
+                "id": "DSispringtime171404",
+                "title": "Springtime 5",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSispringtime171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSispringtime171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Springtime 5"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Springtime 5.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:55.281Z"
+                }
+            },
+            {
+                "id": "DSispringtime171404",
+                "title": "Springtime Dean",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSispringtime171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSispringtime171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Springtime Dean"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Springtime Dean.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:55.386Z"
+                }
+            },
+            {
+                "id": "DSispringtime171404",
+                "title": "Springtime",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSispringtime171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSispringtime171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Springtime"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Springtime.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:55.476Z"
+                }
+            },
+            {
+                "id": "DSistampede171404",
+                "title": "Stampede!!!",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSistampede171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSistampede171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Stampede!!!"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Stampede!!!.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:55.531Z"
+                }
+            },
+            {
+                "id": "DSistarry171404",
+                "title": "Starry",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSistarry171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSistarry171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Starry"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Starry.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:55.588Z"
+                }
+            },
+            {
+                "id": "DSistars171404",
+                "title": "Stars",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSistars171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSistars171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Stars"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Stars.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:55.635Z"
+                }
+            },
+            {
+                "id": "DSisurprise171404",
+                "title": "Surprise!",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSisurprise171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSisurprise171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Surprise!"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Surprise!.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:55.693Z"
+                }
+            },
+            {
+                "id": "DSisweaterdea171404",
+                "title": "Sweater Dean",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSisweaterdea171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSisweaterdea171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Sweater Dean"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Sweater Dean.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:55.808Z"
+                }
+            },
+            {
+                "id": "DSitoyhorse171404",
+                "title": "Toy Horse",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSitoyhorse171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSitoyhorse171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Toy Horse"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Toy Horse.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:55.906Z"
+                }
+            },
+            {
+                "id": "DSitraffic171404",
+                "title": "Traffic",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSitraffic171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSitraffic171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Traffic"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Traffic.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:55.974Z"
+                }
+            },
+            {
+                "id": "DSizinnias171404",
+                "title": "Zinnias",
+                "thumbnail": "assets/images/thumbnails/DSi Early Work/DSizinnias171404.webp",
+                "full": "assets/images/full/DSi Early Work/DSizinnias171404.webp",
+                "date": "2025-09-28",
+                "accessibility": {
+                    "altText": "Photo: Zinnias"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 640,
+                        "height": 480,
+                        "aspectRatio": 1.33
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "Zinnias.jpeg",
+                    "fileSize": null,
+                    "captureDate": null,
+                    "processingDate": "2025-09-28T20:42:56.060Z"
                 }
             }
         ]

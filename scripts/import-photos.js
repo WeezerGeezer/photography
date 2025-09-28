@@ -6,7 +6,7 @@ const sharp = require('sharp');
 const ImageAnalyzer = require('./image-analyzer.js');
 
 class PhotoImporter {
-    constructor() {
+    constructor(options = {}) {
         this.projectRoot = path.resolve(__dirname, '..');
         this.albumsJsonPath = path.join(this.projectRoot, 'data', 'albums.json');
         this.albumsDir = path.join(this.projectRoot, 'assets', 'images', 'albums');
@@ -26,12 +26,25 @@ class PhotoImporter {
             format: 'webp'
         };
 
-        // Initialize image analyzer
-        this.analyzer = new ImageAnalyzer();
-        this.analyzerInitialized = false;
+        // AI analysis settings
+        this.enableAI = !options.noAI;
+
+        // Initialize image analyzer only if AI is enabled
+        if (this.enableAI) {
+            this.analyzer = new ImageAnalyzer();
+            this.analyzerInitialized = false;
+        } else {
+            this.analyzer = null;
+            this.analyzerInitialized = false;
+            console.log('🚫 AI analysis disabled - processing will be faster');
+        }
     }
 
     async initializeAnalyzer() {
+        if (!this.enableAI) {
+            return; // Skip initialization if AI is disabled
+        }
+
         if (!this.analyzerInitialized) {
             try {
                 await this.analyzer.initialize();
@@ -280,13 +293,15 @@ class PhotoImporter {
 
         // Analyze original image for metadata (before processing)
         let analysisResult = null;
-        if (this.analyzerInitialized) {
+        if (this.enableAI && this.analyzerInitialized) {
             try {
                 console.log(`🔍 Analyzing ${filename} for enhanced metadata...`);
                 analysisResult = await this.analyzer.analyzeImage(sourcePath);
             } catch (error) {
                 console.warn(`⚠️  Analysis failed for ${filename}: ${error.message}`);
             }
+        } else if (!this.enableAI) {
+            console.log(`📸 Processing ${filename} (no AI analysis)...`);
         }
 
         // Process thumbnail
@@ -392,7 +407,7 @@ class PhotoImporter {
 
     async cleanup() {
         // Cleanup analyzer resources
-        if (this.analyzer) {
+        if (this.enableAI && this.analyzer) {
             try {
                 await this.analyzer.cleanup();
             } catch (error) {
@@ -413,8 +428,20 @@ class PhotoImporter {
 
 // CLI execution
 if (require.main === module) {
-    const albumName = process.argv[2];
-    const importer = new PhotoImporter();
+    const args = process.argv.slice(2);
+    let albumName = null;
+    let noAI = false;
+
+    // Parse command line arguments
+    for (const arg of args) {
+        if (arg === '--no-ai') {
+            noAI = true;
+        } else if (!arg.startsWith('--')) {
+            albumName = arg;
+        }
+    }
+
+    const importer = new PhotoImporter({ noAI });
 
     // Handle graceful shutdown
     process.on('SIGINT', async () => {
