@@ -93,19 +93,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 200);
 
-        // Initialize lightbox or DSi viewer for album images
-        console.log('🔍 DEBUG: Album ID:', albumId, 'DSi viewer available:', !!window.DSiViewer);
+        // Initialize layout and lightbox for album images
+        console.log('🔍 DEBUG: Album ID:', albumId);
         console.log('🔍 DEBUG: Album images array:', album.images?.length || 0, 'images');
 
-        if (albumId === 'DSi Early Work' && window.DSiViewer) {
-            console.log('🎮 DEBUG: Attempting to initialize DSi viewer for', albumId);
-            try {
-                initializeDSiViewer(album.images);
-                console.log('✅ DEBUG: DSi viewer initialized successfully');
-            } catch (error) {
-                console.error('🚨 DEBUG: DSi viewer failed, falling back to standard lightbox:', error);
-                initializeLightbox(album.images);
-            }
+        if (albumId === 'DSi Early Work') {
+            console.log('🎮 DEBUG: Using DSi-specific grid layout for', albumId);
+            initializeDSiGridLayout(album.images);
         } else {
             console.log('📸 DEBUG: Initializing standard lightbox for', albumId);
             initializeLightbox(album.images);
@@ -122,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const albumId = urlParams.get('id');
         if (albumId === 'DSi Early Work') {
             item.classList.add('dsi-photo');
+            // DSi photos get special grid treatment, not masonry
         }
 
         // Create img element with load handler for masonry layout
@@ -324,59 +319,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Initialize DSi viewer for DSi album
-    function initializeDSiViewer(images) {
-        console.log('🎮 DEBUG: Initializing DSi viewer with', images?.length || 0, 'images');
+    // Initialize DSi-specific grid layout for DSi album
+    function initializeDSiGridLayout(images) {
+        console.log('🎮 DEBUG: Initializing DSi grid layout with', images?.length || 0, 'images');
 
         if (!images || images.length === 0) {
-            console.error('🚨 DEBUG: No images provided to DSi viewer, falling back to standard lightbox');
-            initializeLightbox(images);
+            console.error('🚨 DEBUG: No images provided to DSi grid');
             return;
         }
 
-        let dsiViewer = null;
-
-        // Create DSi viewer instance
-        if (window.DSiViewer) {
-            try {
-                dsiViewer = new window.DSiViewer();
-                console.log('✅ DEBUG: DSi viewer instance created successfully');
-            } catch (error) {
-                console.error('🚨 DEBUG: Error creating DSi viewer:', error);
-                console.log('🔄 DEBUG: Falling back to standard lightbox');
-                initializeLightbox(images);
-                return;
-            }
-        } else {
-            console.error('🚨 DEBUG: DSiViewer class not available, falling back to standard lightbox');
-            initializeLightbox(images);
-            return;
+        // Apply DSi-specific CSS grid layout
+        const albumGrid = document.querySelector('.album-grid');
+        if (albumGrid) {
+            albumGrid.classList.add('dsi-grid-layout');
+            console.log('✅ DEBUG: Applied DSi grid layout class');
         }
 
-        // Open DSi viewer when gallery items are clicked
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        console.log('🔍 DEBUG: Found', galleryItems.length, 'gallery items for DSi viewer');
-
-        galleryItems.forEach((item, index) => {
-            item.addEventListener('click', (e) => {
-                e.preventDefault();
-                console.log('🎮 DEBUG: DSi photo clicked, index:', index);
-                if (dsiViewer) {
-                    try {
-                        dsiViewer.open(images, index);
-                        console.log('✅ DEBUG: DSi viewer opened successfully');
-                    } catch (error) {
-                        console.error('🚨 DEBUG: Error opening DSi viewer:', error);
-                        console.log('🔄 DEBUG: Attempting fallback to standard lightbox');
-                        // Fallback: manually trigger standard lightbox
-                        openStandardLightbox(images, index);
-                    }
-                } else {
-                    console.error('🚨 DEBUG: DSi viewer not available, using fallback');
-                    openStandardLightbox(images, index);
-                }
-            });
-        });
+        // Initialize standard lightbox for DSi photos (no special DSi viewer)
+        initializeLightbox(images);
+        console.log('✅ DEBUG: DSi grid layout initialized with standard lightbox');
     }
 
     // Share functionality
