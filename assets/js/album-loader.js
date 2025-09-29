@@ -23,18 +23,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load album data
     async function loadAlbumData() {
         try {
+            console.log('🔍 DEBUG: Loading album data for albumId:', albumId);
             showLoading(true);
             const response = await fetch('/data/albums.json');
             const data = await response.json();
-            
+
+            console.log('🔍 DEBUG: Available albums:', Object.keys(data));
+
             const album = data[albumId];
             if (!album) {
+                console.error('🚨 DEBUG: Album not found. Searched for:', albumId);
                 throw new Error('Album not found');
             }
 
+            console.log('✅ DEBUG: Album found:', {
+                title: album.title,
+                isPrivate: album.isPrivate,
+                imageCount: album.images?.length || 0,
+                hasImages: !!album.images
+            });
+
+            // Allow access to private albums when accessed directly via album URL
+            // Private filtering only applies to homepage gallery
             return album;
         } catch (error) {
-            console.error('Error loading album:', error);
+            console.error('🚨 DEBUG: Error loading album:', error);
             showError('Failed to load album');
         } finally {
             showLoading(false);
@@ -81,12 +94,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 200);
 
         // Initialize lightbox or DSi viewer for album images
-        console.log('Album ID:', albumId, 'DSi viewer available:', !!window.DSiViewer);
+        console.log('🔍 DEBUG: Album ID:', albumId, 'DSi viewer available:', !!window.DSiViewer);
+        console.log('🔍 DEBUG: Album images array:', album.images?.length || 0, 'images');
+
         if (albumId === 'DSi Early Work' && window.DSiViewer) {
-            console.log('Initializing DSi viewer for', albumId);
-            initializeDSiViewer(album.images);
+            console.log('🎮 DEBUG: Attempting to initialize DSi viewer for', albumId);
+            try {
+                initializeDSiViewer(album.images);
+                console.log('✅ DEBUG: DSi viewer initialized successfully');
+            } catch (error) {
+                console.error('🚨 DEBUG: DSi viewer failed, falling back to standard lightbox:', error);
+                initializeLightbox(album.images);
+            }
         } else {
-            console.log('Initializing standard lightbox for', albumId);
+            console.log('📸 DEBUG: Initializing standard lightbox for', albumId);
             initializeLightbox(album.images);
         }
     }
@@ -133,8 +154,48 @@ document.addEventListener('DOMContentLoaded', () => {
         return item;
     }
 
+    // Fallback function to open standard lightbox
+    function openStandardLightbox(images, startIndex = 0) {
+        console.log('🔄 DEBUG: Opening standard lightbox fallback, index:', startIndex);
+
+        if (!images || images.length === 0) {
+            console.error('🚨 DEBUG: No images available for lightbox');
+            return;
+        }
+
+        const lightbox = document.querySelector('.lightbox');
+        if (!lightbox) {
+            console.error('🚨 DEBUG: Lightbox element not found');
+            return;
+        }
+
+        // Set current index and open lightbox
+        window.currentLightboxImages = images;
+        window.currentLightboxIndex = startIndex;
+
+        const lightboxImg = lightbox.querySelector('.lightbox-img');
+        const imageInfo = lightbox.querySelector('.image-info');
+
+        if (lightboxImg && images[startIndex]) {
+            lightboxImg.src = images[startIndex].full;
+            lightboxImg.alt = images[startIndex].title;
+
+            if (imageInfo) {
+                imageInfo.innerHTML = `
+                    <h3 class="image-title">${images[startIndex].title || ''}</h3>
+                    <p class="image-date">${new Date(images[startIndex].date).toLocaleDateString()}</p>
+                `;
+            }
+
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            console.log('✅ DEBUG: Standard lightbox opened successfully');
+        }
+    }
+
     // Initialize lightbox for album images
     function initializeLightbox(images) {
+        console.log('📸 DEBUG: Initializing standard lightbox with', images?.length || 0, 'images');
         const lightbox = document.querySelector('.lightbox');
         const lightboxImg = lightbox.querySelector('.lightbox-img');
         const lightboxClose = lightbox.querySelector('.close');
@@ -265,30 +326,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize DSi viewer for DSi album
     function initializeDSiViewer(images) {
-        console.log('Initializing DSi viewer with', images.length, 'images');
+        console.log('🎮 DEBUG: Initializing DSi viewer with', images?.length || 0, 'images');
+
+        if (!images || images.length === 0) {
+            console.error('🚨 DEBUG: No images provided to DSi viewer, falling back to standard lightbox');
+            initializeLightbox(images);
+            return;
+        }
+
         let dsiViewer = null;
 
         // Create DSi viewer instance
         if (window.DSiViewer) {
             try {
                 dsiViewer = new window.DSiViewer();
-                console.log('DSi viewer instance created successfully');
+                console.log('✅ DEBUG: DSi viewer instance created successfully');
             } catch (error) {
-                console.error('Error creating DSi viewer:', error);
+                console.error('🚨 DEBUG: Error creating DSi viewer:', error);
+                console.log('🔄 DEBUG: Falling back to standard lightbox');
+                initializeLightbox(images);
+                return;
             }
         } else {
-            console.error('DSiViewer class not available');
+            console.error('🚨 DEBUG: DSiViewer class not available, falling back to standard lightbox');
+            initializeLightbox(images);
+            return;
         }
 
         // Open DSi viewer when gallery items are clicked
-        document.querySelectorAll('.gallery-item').forEach((item, index) => {
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        console.log('🔍 DEBUG: Found', galleryItems.length, 'gallery items for DSi viewer');
+
+        galleryItems.forEach((item, index) => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
-                console.log('DSi photo clicked, index:', index);
+                console.log('🎮 DEBUG: DSi photo clicked, index:', index);
                 if (dsiViewer) {
-                    dsiViewer.open(images, index);
+                    try {
+                        dsiViewer.open(images, index);
+                        console.log('✅ DEBUG: DSi viewer opened successfully');
+                    } catch (error) {
+                        console.error('🚨 DEBUG: Error opening DSi viewer:', error);
+                        console.log('🔄 DEBUG: Attempting fallback to standard lightbox');
+                        // Fallback: manually trigger standard lightbox
+                        openStandardLightbox(images, index);
+                    }
                 } else {
-                    console.error('DSi viewer not available');
+                    console.error('🚨 DEBUG: DSi viewer not available, using fallback');
+                    openStandardLightbox(images, index);
                 }
             });
         });
