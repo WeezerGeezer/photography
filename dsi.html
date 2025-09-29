@@ -37,8 +37,8 @@
         /* DSi Container */
         .dsi-container {
             position: relative;
-            width: 650px;
-            height: 975px;
+            width: 400px;
+            height: 600px;
             background-image: url('/assets/images/dsi/dsi-frame.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -50,13 +50,13 @@
         /* Top Screen (Photo Display) */
         .dsi-top-screen {
             position: absolute;
-            top: 27px;
-            left: 112px;
-            width: 216px;
-            height: 163px;
+            top: 16px;
+            left: 69px;
+            width: 133px;
+            height: 100px;
             background: #000;
             overflow: hidden;
-            border-radius: 2px;
+            border-radius: 1px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -71,12 +71,12 @@
         /* Bottom Screen (Navigation) */
         .dsi-bottom-screen {
             position: absolute;
-            top: 259px;
-            left: 112px;
-            width: 216px;
-            height: 163px;
+            top: 159px;
+            left: 69px;
+            width: 133px;
+            height: 100px;
             background: #000;
-            border-radius: 2px;
+            border-radius: 1px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -90,30 +90,30 @@
             height: 100%;
             align-items: center;
             justify-content: space-between;
-            padding: 15px;
+            padding: 8px;
         }
 
         .dsi-file-info {
             font-family: 'Press Start 2P', monospace;
-            font-size: 7px;
+            font-size: 4px;
             color: #87ceeb;
-            text-shadow: 0 0 4px #87ceeb;
+            text-shadow: 0 0 2px #87ceeb;
             text-align: center;
             line-height: 1.4;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .dsi-filename {
             color: #ffd700;
-            text-shadow: 0 0 4px #ffd700;
-            margin-bottom: 5px;
+            text-shadow: 0 0 2px #ffd700;
+            margin-bottom: 2px;
         }
 
         .dsi-details {
             color: #dda0dd;
-            text-shadow: 0 0 4px #dda0dd;
-            font-size: 6px;
-            margin-bottom: 3px;
+            text-shadow: 0 0 2px #dda0dd;
+            font-size: 3px;
+            margin-bottom: 1px;
         }
 
         .dsi-nav-controls {
@@ -121,16 +121,16 @@
             width: 100%;
             align-items: center;
             justify-content: space-between;
-            padding: 0 10%;
+            padding: 0 5%;
         }
 
         .dsi-nav-arrow {
             background: none;
             border: none;
             color: #4169e1;
-            font-size: 28px;
+            font-size: 16px;
             cursor: pointer;
-            padding: 20px;
+            padding: 8px;
             border-radius: 50%;
             background: rgba(65, 105, 225, 0.15);
             transition: all 0.2s ease;
@@ -138,8 +138,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 60px;
-            height: 60px;
+            width: 30px;
+            height: 30px;
         }
 
         .dsi-nav-arrow:hover {
@@ -159,9 +159,9 @@
 
         .dsi-counter {
             font-family: 'Press Start 2P', monospace;
-            font-size: 10px;
+            font-size: 6px;
             color: #20b2aa;
-            text-shadow: 0 0 4px #20b2aa;
+            text-shadow: 0 0 2px #20b2aa;
             text-align: center;
             line-height: 1.2;
         }
@@ -169,9 +169,9 @@
         /* Loading State */
         .loading {
             font-family: 'Press Start 2P', monospace;
-            font-size: 12px;
+            font-size: 6px;
             color: #87ceeb;
-            text-shadow: 0 0 8px #87ceeb;
+            text-shadow: 0 0 4px #87ceeb;
             animation: pulse 1.5s ease-in-out infinite;
         }
 
@@ -212,26 +212,41 @@
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .dsi-container {
-                width: 450px;
-                height: 675px;
+                width: 350px;
+                height: 525px;
+            }
+
+            .dsi-top-screen {
+                top: 14px;
+                left: 60px;
+                width: 116px;
+                height: 87px;
+            }
+
+            .dsi-bottom-screen {
+                top: 139px;
+                left: 60px;
+                width: 116px;
+                height: 87px;
             }
 
             .dsi-nav-arrow {
-                width: 45px;
-                height: 45px;
-                font-size: 20px;
+                width: 25px;
+                height: 25px;
+                font-size: 12px;
+                padding: 6px;
             }
 
             .dsi-counter {
-                font-size: 8px;
+                font-size: 5px;
             }
 
             .dsi-file-info {
-                font-size: 6px;
+                font-size: 3px;
             }
 
             .dsi-details {
-                font-size: 5px;
+                font-size: 2px;
             }
 
             .back-button {
@@ -242,26 +257,41 @@
 
         @media (max-width: 480px) {
             .dsi-container {
-                width: 320px;
-                height: 480px;
+                width: 280px;
+                height: 420px;
+            }
+
+            .dsi-top-screen {
+                top: 11px;
+                left: 48px;
+                width: 93px;
+                height: 70px;
+            }
+
+            .dsi-bottom-screen {
+                top: 111px;
+                left: 48px;
+                width: 93px;
+                height: 70px;
             }
 
             .dsi-nav-arrow {
-                width: 35px;
-                height: 35px;
-                font-size: 16px;
+                width: 20px;
+                height: 20px;
+                font-size: 10px;
+                padding: 4px;
             }
 
             .dsi-counter {
-                font-size: 6px;
+                font-size: 4px;
             }
 
             .dsi-file-info {
-                font-size: 5px;
+                font-size: 2px;
             }
 
             .dsi-details {
-                font-size: 4px;
+                font-size: 2px;
             }
         }
     </style>
