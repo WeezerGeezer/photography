@@ -53,14 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         title: album.title,
                         date: displayDate,
                         imageCount: album.images ? album.images.length : 0,
-                        description: album.description,
-                        isDsi: key === 'dsi-memories'
+                        description: album.description
                     };
                 })
                 .sort((a, b) => {
-                    // DSi memories always goes to bottom
-                    if (a.isDsi) return 1;
-                    if (b.isDsi) return -1;
                     return new Date(b.date) - new Date(a.date);
                 });
 
@@ -83,12 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const timelineItem = document.createElement('a');
         timelineItem.className = 'timeline-item';
 
-        // Special handling for DSi album - link to dedicated page
-        if (item.key === 'DSi Early Work') {
-            timelineItem.href = 'dsi.html';
-        } else {
-            timelineItem.href = `album.html?id=${encodeURIComponent(item.key)}`;
-        }
+        timelineItem.href = `album.html?id=${encodeURIComponent(item.key)}`;
 
         // Format date
         const date = new Date(item.date);
