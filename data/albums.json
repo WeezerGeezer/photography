@@ -421,6 +421,7 @@
         "description": "Nostalgic photos from my Nintendo DSi camera days - low resolution charm and experimental photography",
         "cover": "DSi Early Work/cover.jpg",
         "date": "2010-01-01",
+        "isPrivate": true,
         "images": [
             {
                 "id": "DSiacidburn171403",
