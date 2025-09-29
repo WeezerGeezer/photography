@@ -25,7 +25,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #000;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
             overflow: hidden;
             height: 100vh;
@@ -50,10 +50,10 @@
         /* Top Screen (Photo Display) */
         .dsi-top-screen {
             position: absolute;
-            top: 12%;
-            left: 12%;
-            width: 76%;
-            height: 32%;
+            top: 27px;
+            left: 112px;
+            width: 216px;
+            height: 163px;
             background: #000;
             overflow: hidden;
             border-radius: 2px;
@@ -71,10 +71,10 @@
         /* Bottom Screen (Navigation) */
         .dsi-bottom-screen {
             position: absolute;
-            top: 55%;
-            left: 18%;
-            width: 64%;
-            height: 32%;
+            top: 259px;
+            left: 112px;
+            width: 216px;
+            height: 163px;
             background: #000;
             border-radius: 2px;
             display: flex;
@@ -96,22 +96,22 @@
         .dsi-file-info {
             font-family: 'Press Start 2P', monospace;
             font-size: 7px;
-            color: #00ff00;
-            text-shadow: 0 0 4px #00ff00;
+            color: #87ceeb;
+            text-shadow: 0 0 4px #87ceeb;
             text-align: center;
             line-height: 1.4;
             margin-bottom: 10px;
         }
 
         .dsi-filename {
-            color: #ffffff;
-            text-shadow: 0 0 4px #ffffff;
+            color: #ffd700;
+            text-shadow: 0 0 4px #ffd700;
             margin-bottom: 5px;
         }
 
         .dsi-details {
-            color: #00ffff;
-            text-shadow: 0 0 4px #00ffff;
+            color: #dda0dd;
+            text-shadow: 0 0 4px #dda0dd;
             font-size: 6px;
             margin-bottom: 3px;
         }
@@ -127,12 +127,12 @@
         .dsi-nav-arrow {
             background: none;
             border: none;
-            color: #00ff00;
+            color: #4169e1;
             font-size: 28px;
             cursor: pointer;
             padding: 20px;
             border-radius: 50%;
-            background: rgba(0, 255, 0, 0.1);
+            background: rgba(65, 105, 225, 0.15);
             transition: all 0.2s ease;
             user-select: none;
             display: flex;
@@ -143,9 +143,9 @@
         }
 
         .dsi-nav-arrow:hover {
-            background: rgba(0, 255, 0, 0.2);
+            background: rgba(65, 105, 225, 0.3);
             transform: scale(1.1);
-            text-shadow: 0 0 10px #00ff00;
+            text-shadow: 0 0 10px #4169e1;
         }
 
         .dsi-nav-arrow:active {
@@ -160,8 +160,8 @@
         .dsi-counter {
             font-family: 'Press Start 2P', monospace;
             font-size: 10px;
-            color: #00ff00;
-            text-shadow: 0 0 4px #00ff00;
+            color: #20b2aa;
+            text-shadow: 0 0 4px #20b2aa;
             text-align: center;
             line-height: 1.2;
         }
@@ -170,8 +170,8 @@
         .loading {
             font-family: 'Press Start 2P', monospace;
             font-size: 12px;
-            color: #00ff00;
-            text-shadow: 0 0 8px #00ff00;
+            color: #87ceeb;
+            text-shadow: 0 0 8px #87ceeb;
             animation: pulse 1.5s ease-in-out infinite;
         }
 
@@ -186,8 +186,8 @@
             top: 20px;
             left: 20px;
             background: rgba(255, 255, 255, 0.1);
-            border: 2px solid #00ff00;
-            color: #00ff00;
+            border: 2px solid #87ceeb;
+            color: #87ceeb;
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
@@ -198,15 +198,15 @@
         }
 
         .back-button:hover {
-            background: rgba(0, 255, 0, 0.2);
+            background: rgba(135, 206, 235, 0.2);
             transform: scale(1.05);
-            text-shadow: 0 0 8px #00ff00;
+            text-shadow: 0 0 8px #87ceeb;
         }
 
         /* Error State */
         .error {
-            color: #ff4444;
-            text-shadow: 0 0 8px #ff4444;
+            color: #ff6b6b;
+            text-shadow: 0 0 8px #ff6b6b;
         }
 
         /* Mobile Responsiveness */
