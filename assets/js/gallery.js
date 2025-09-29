@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxClose = lightbox.querySelector('.close');
     const lightboxPrev = lightbox.querySelector('.prev');
     const lightboxNext = lightbox.querySelector('.next');
+    const lightboxLoading = lightbox.querySelector('.lightbox-loading');
     const loadMoreBtn = document.getElementById('load-more');
     const loadingIndicator = document.getElementById('loading-indicator');
     const filterBtns = document.querySelectorAll('.filter-btn');
@@ -239,13 +240,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update navigation visibility
         lightboxPrev.style.display = currentIndex > 0 ? 'block' : 'none';
-        lightboxNext.style.display = currentIndex < currentImages.length - 1 ? 'block' : 'none';
+        // Show next button if there are more images loaded OR if more images can be loaded
+        lightboxNext.style.display = (currentIndex < currentImages.length - 1 || hasMoreImages) ? 'block' : 'none';
     }
 
-    function nextImage() {
+    async function nextImage() {
         if (currentIndex < currentImages.length - 1) {
             currentIndex++;
             updateLightboxImage();
+
+            // Check if we're near the end and need to load more images
+            const threshold = 5; // Load more when within 5 images of the end
+            const remaining = currentImages.length - 1 - currentIndex;
+
+            if (remaining <= threshold && hasMoreImages && !loading) {
+                // Show loading indicator
+                if (lightboxLoading) lightboxLoading.style.display = 'flex';
+
+                // Load more images in the background
+                page++;
+                await renderGallery(currentFilter, true);
+
+                // Hide loading indicator
+                if (lightboxLoading) lightboxLoading.style.display = 'none';
+            }
+        } else if (hasMoreImages && !loading) {
+            // We're at the very end but more images are available
+            // Show loading indicator
+            if (lightboxLoading) lightboxLoading.style.display = 'flex';
+
+            page++;
+            await renderGallery(currentFilter, true);
+
+            // Hide loading indicator
+            if (lightboxLoading) lightboxLoading.style.display = 'none';
+
+            // After loading, move to the next image if it exists
+            if (currentIndex < currentImages.length - 1) {
+                currentIndex++;
+                updateLightboxImage();
+            }
         }
     }
 
