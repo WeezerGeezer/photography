@@ -77,22 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         albumGrid.appendChild(fragment);
 
-        // Initialize masonry layout
-        if (!masonry && window.MasonryLayout) {
-            masonry = new window.MasonryLayout(albumGrid, {
-                itemSelector: '.gallery-item',
-                columnWidth: 280,
-                gutter: 12
-            });
-        }
-        
-        // Layout the items with a delay to ensure images are added to DOM and start loading
-        setTimeout(() => {
-            if (masonry) {
-                masonry.layout();
-            }
-        }, 200);
-
         // Initialize layout and lightbox for album images
         console.log('🔍 DEBUG: Album ID:', albumId);
         console.log('🔍 DEBUG: Album images array:', album.images?.length || 0, 'images');
@@ -102,6 +86,23 @@ document.addEventListener('DOMContentLoaded', () => {
             initializeDSiGridLayout(album.images);
         } else {
             console.log('📸 DEBUG: Initializing standard lightbox for', albumId);
+
+            // Initialize masonry layout for non-DSi albums
+            if (!masonry && window.MasonryLayout) {
+                masonry = new window.MasonryLayout(albumGrid, {
+                    itemSelector: '.gallery-item',
+                    columnWidth: 280,
+                    gutter: 12
+                });
+            }
+
+            // Layout the items with a delay to ensure images are added to DOM and start loading
+            setTimeout(() => {
+                if (masonry) {
+                    masonry.layout();
+                }
+            }, 200);
+
             initializeLightbox(album.images);
         }
     }

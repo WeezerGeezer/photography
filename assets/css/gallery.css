@@ -108,6 +108,7 @@
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
+    height: auto !important; /* Override masonry height calculations */
 }
 
 .album-grid.dsi-grid-layout .gallery-item {
