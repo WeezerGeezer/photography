@@ -68,9 +68,22 @@ document.addEventListener('DOMContentLoaded', () => {
         albumDescription.textContent = album.description;
         albumName.textContent = album.title;
 
+        // Sort images by order field (if present), then by date
+        const sortedImages = [...album.images].sort((a, b) => {
+            // If both have order field, sort by order
+            if (a.order !== undefined && b.order !== undefined) {
+                return a.order - b.order;
+            }
+            // If only one has order, prioritize it
+            if (a.order !== undefined) return -1;
+            if (b.order !== undefined) return 1;
+            // Otherwise sort by date (newest first)
+            return new Date(b.date) - new Date(a.date);
+        });
+
         // Render images
         const fragment = document.createDocumentFragment();
-        album.images.forEach(image => {
+        sortedImages.forEach(image => {
             const item = createAlbumItem(image);
             fragment.appendChild(item);
         });

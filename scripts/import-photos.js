@@ -423,11 +423,36 @@ class PhotoImporter {
     }
 
     async updateAlbumsJson(albumName, albumsData, newPhotos) {
+        // Create a map of existing photos by ID to preserve order values
+        const existingPhotosById = new Map();
+        albumsData[albumName].images.forEach(photo => {
+            if (photo.order !== undefined) {
+                existingPhotosById.set(photo.id, photo.order);
+            }
+        });
+
         // Add new photos to the album
         albumsData[albumName].images.push(...newPhotos);
-        
-        // Sort images by date (newest first)
-        albumsData[albumName].images.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        // Sort images by order (if present), then by date (newest first)
+        albumsData[albumName].images.sort((a, b) => {
+            // If both have order field, sort by order
+            if (a.order !== undefined && b.order !== undefined) {
+                return a.order - b.order;
+            }
+            // If only one has order, prioritize it
+            if (a.order !== undefined) return -1;
+            if (b.order !== undefined) return 1;
+            // Otherwise sort by date (newest first)
+            return new Date(b.date) - new Date(a.date);
+        });
+
+        // Restore order values for existing photos
+        albumsData[albumName].images.forEach(photo => {
+            if (existingPhotosById.has(photo.id)) {
+                photo.order = existingPhotosById.get(photo.id);
+            }
+        });
 
         // Write updated data back to albums.json
         await fs.writeFile(
