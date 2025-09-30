@@ -325,7 +325,7 @@ class PhotoImporter {
         // Get basic image metadata from Sharp
         const sharpMetadata = await sharp(sourcePath).metadata();
 
-        // Use capture date from EXIF if available, otherwise fall back to processing date
+        // Use capture date from EXIF if available, otherwise fall back to file creation date
         const captureDate = analysisResult?.technical?.exif?.capture?.dateTime;
         let displayDate;
         if (captureDate) {
@@ -346,11 +346,15 @@ class PhotoImporter {
                     throw new Error('Unrecognized date format');
                 }
             } catch (error) {
-                console.warn(`Failed to parse capture date for ${filename}, using processing date:`, error.message);
-                displayDate = new Date().toISOString().split('T')[0];
+                console.warn(`Failed to parse capture date for ${filename}, using file creation date:`, error.message);
+                // Fall back to file creation date
+                const stats = await fs.stat(sourcePath);
+                displayDate = stats.birthtime.toISOString().split('T')[0];
             }
         } else {
-            displayDate = new Date().toISOString().split('T')[0];
+            // No EXIF data - use file creation date
+            const stats = await fs.stat(sourcePath);
+            displayDate = stats.birthtime.toISOString().split('T')[0];
         }
 
         // Build enhanced metadata structure
