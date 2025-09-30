@@ -262,12 +262,12 @@ class PhotoImporter {
         const albumPrefix = albumName.substring(0, 3);
         const baseName = path.parse(filename).name
             .toLowerCase()
-            .replace(/[^a-z0-9]/g, '')
-            .substring(0, 10);
-        
+            .replace(/[^a-z0-9]/g, '');
+
         // Add timestamp to ensure uniqueness
         const timestamp = Date.now().toString().slice(-6);
-        
+
+        // Use full basename (no length limit) to avoid collisions
         return `${albumPrefix}${baseName}${timestamp}`;
     }
 
