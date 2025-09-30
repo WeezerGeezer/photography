@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-09-29T22:45:38.146Z",
+  "imagePath": "/Users/mitchellcarter/Documents/Github/photography-portfolio-standalone/assets/images/albums/DSi Early Work/Gold Frame on Black.jpeg",
+  "analysisType": "exif",
+  "result": {
+    "camera": {
+      "make": "Nintendo",
+      "model": "NintendoDS",
+      "lens": null
+    },
+    "settings": {
+      "aperture": null,
+      "shutterSpeed": null,
+      "iso": null,
+      "focalLength": null,
+      "focalLengthIn35mm": null
+    },
+    "image": {
+      "width": 640,
+      "height": 480,
+      "orientation": 1,
+      "colorSpace": "sRGB",
+      "bitDepth": 8
+    },
+    "capture": {
+      "dateTime": {
+        "_ctor": "ExifDateTime",
+        "year": 2010,
+        "month": 1,
+        "day": 3,
+        "hour": 18,
+        "minute": 19,
+        "second": 38,
+        "tzoffsetMinutes": -360,
+        "rawValue": "2010:01:03 18:19:38",
+        "zoneName": "UTC-6",
+        "inferredZone": true
+      }
+    },
+    "location": null,
+    "file": {
+      "size": "96 kB",
+      "format": "JPEG",
+      "modified": {
+        "_ctor": "ExifDateTime",
+        "year": 2025,
+        "month": 9,
+        "day": 28,
+        "hour": 16,
+        "minute": 31,
+        "second": 12,
+        "tzoffsetMinutes": -240,
+        "rawValue": "2025:09:28 16:31:12-04:00",
+        "zoneName": "UTC-4",
+        "inferredZone": false
+      }
+    }
+  }
+}
