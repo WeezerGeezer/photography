@@ -258,17 +258,18 @@ class PhotoImporter {
     }
 
     generatePhotoId(filename, albumName) {
-        // Create ID from album prefix + filename without extension
+        // Create ID from album prefix + filename without extension + timestamp
         const albumPrefix = albumName.substring(0, 3);
-        const baseName = path.parse(filename).name
-            .toLowerCase()
-            .replace(/[^a-z0-9]/g, '');
+        const baseName = path.parse(filename).name;
 
         // Add timestamp to ensure uniqueness
         const timestamp = Date.now().toString().slice(-6);
 
-        // Use full basename (no length limit) to avoid collisions
-        return `${albumPrefix}${baseName}${timestamp}`;
+        // Preserve original filename case and characters (except spaces/special chars in middle)
+        const cleanBaseName = baseName.replace(/[^a-zA-Z0-9]/g, '');
+
+        // Use full basename with timestamp appended
+        return `${albumPrefix}${cleanBaseName}_${timestamp}`;
     }
 
     async ensureDirectories(albumName) {
