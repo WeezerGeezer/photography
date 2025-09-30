@@ -9,11 +9,13 @@ Node.js-based photo processing and management scripts for the photography portfo
 - **import.sh**: Bash wrapper with cleanup, sync, and batch processing options
 - **sync-albums.js**: Directory rename detection and JSON path synchronization
 - **cleanup-photos.js**: Removes orphaned JSON entries and unused files
+- **reorder-photos.js**: Interactive CLI tool for manual photo ordering within albums
 
 ### Utility Scripts
 - **image-analyzer.js**: Ollama-based AI analysis for categorization and alt-text
 - **analyze-existing.js**: Batch analysis for existing photo collections
 - **sync.sh**: Standalone directory sync tool
+- **reorder.sh**: Bash wrapper for reorder-photos.js
 
 ## Architecture
 
@@ -44,6 +46,19 @@ Node.js-based photo processing and management scripts for the photography portfo
 ./sync.sh --dry-run      # Preview changes
 node cleanup-photos.js --confirm  # Remove orphaned data
 ```
+
+### Photo Ordering
+```bash
+./reorder.sh             # Interactive photo reordering tool
+```
+**Features:**
+- Set sequential order (1, 2, 3...) for all photos in album
+- Move specific photo to new position
+- Swap two photos
+- Clear all order values (revert to date sorting)
+- Preview before saving changes
+
+Photos with `order` field sort first (ascending), then by date (newest first). Import script preserves existing order values on re-import.
 
 ## File Organization
 - Source photos: `../assets/images/albums/[album]/`
