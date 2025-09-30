@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-09-29T22:47:20.035Z",
+  "imagePath": "/Users/mitchellcarter/Documents/Github/photography-portfolio-standalone/assets/images/albums/DSi Early Work/Husband and Wife.jpeg",
+  "analysisType": "exif",
+  "result": {
+    "camera": {
+      "make": "Nintendo",
+      "model": "NintendoDS",
+      "lens": null
+    },
+    "settings": {
+      "aperture": null,
+      "shutterSpeed": null,
+      "iso": null,
+      "focalLength": null,
+      "focalLengthIn35mm": null
+    },
+    "image": {
+      "width": 640,
+      "height": 480,
+      "orientation": 1,
+      "colorSpace": "sRGB",
+      "bitDepth": 8
+    },
+    "capture": {
+      "dateTime": {
+        "_ctor": "ExifDateTime",
+        "year": 2009,
+        "month": 10,
+        "day": 3,
+        "hour": 2,
+        "minute": 58,
+        "second": 35,
+        "tzoffsetMinutes": -300,
+        "rawValue": "2009:10:03 02:58:35",
+        "zoneName": "UTC-5",
+        "inferredZone": true
+      }
+    },
+    "location": null,
+    "file": {
+      "size": "104 kB",
+      "format": "JPEG",
+      "modified": {
+        "_ctor": "ExifDateTime",
+        "year": 2025,
+        "month": 9,
+        "day": 28,
+        "hour": 16,
+        "minute": 31,
+        "second": 11,
+        "tzoffsetMinutes": -240,
+        "rawValue": "2025:09:28 16:31:11-04:00",
+        "zoneName": "UTC-4",
+        "inferredZone": false
+      }
+    }
+  }
+}

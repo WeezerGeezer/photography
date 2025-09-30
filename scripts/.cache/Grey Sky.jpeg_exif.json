@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-09-29T22:45:53.895Z",
+  "imagePath": "/Users/mitchellcarter/Documents/Github/photography-portfolio-standalone/assets/images/albums/DSi Early Work/Grey Sky.jpeg",
+  "analysisType": "exif",
+  "result": {
+    "camera": {
+      "make": "Nintendo",
+      "model": "NintendoDS",
+      "lens": null
+    },
+    "settings": {
+      "aperture": null,
+      "shutterSpeed": null,
+      "iso": null,
+      "focalLength": null,
+      "focalLengthIn35mm": null
+    },
+    "image": {
+      "width": 640,
+      "height": 480,
+      "orientation": 1,
+      "colorSpace": "sRGB",
+      "bitDepth": 8
+    },
+    "capture": {
+      "dateTime": {
+        "_ctor": "ExifDateTime",
+        "year": 2010,
+        "month": 4,
+        "day": 25,
+        "hour": 20,
+        "minute": 5,
+        "second": 6,
+        "tzoffsetMinutes": -300,
+        "rawValue": "2010:04:25 20:05:06",
+        "zoneName": "UTC-5",
+        "inferredZone": true
+      }
+    },
+    "location": null,
+    "file": {
+      "size": "49 kB",
+      "format": "JPEG",
+      "modified": {
+        "_ctor": "ExifDateTime",
+        "year": 2025,
+        "month": 9,
+        "day": 28,
+        "hour": 16,
+        "minute": 31,
+        "second": 12,
+        "tzoffsetMinutes": -240,
+        "rawValue": "2025:09:28 16:31:12-04:00",
+        "zoneName": "UTC-4",
+        "inferredZone": false
+      }
+    }
+  }
+}
