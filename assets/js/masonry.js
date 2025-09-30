@@ -132,8 +132,10 @@ class MasonryLayout {
                 const calculatedHeight = itemWidth * aspectRatio;
 
                 // Set a reasonable min/max height to prevent extreme ratios
+                // Use higher max height for portrait images to make them more prominent
                 const minHeight = 150;
-                const maxHeight = 600;
+                const isPortrait = aspectRatio > 1;
+                const maxHeight = isPortrait ? 900 : 600;
                 const constrainedHeight = Math.max(minHeight, Math.min(maxHeight, calculatedHeight));
 
                 img.style.height = `${constrainedHeight}px`;
@@ -155,8 +157,10 @@ class MasonryLayout {
                     const calculatedHeight = itemWidth * aspectRatio;
 
                     // Set a reasonable min/max height to prevent extreme ratios
+                    // Use higher max height for portrait images to make them more prominent
                     const minHeight = 150;
-                    const maxHeight = 600;
+                    const isPortrait = aspectRatio > 1;
+                    const maxHeight = isPortrait ? 900 : 600;
                     const constrainedHeight = Math.max(minHeight, Math.min(maxHeight, calculatedHeight));
 
                     img.style.height = `${constrainedHeight}px`;
