@@ -325,13 +325,41 @@ class PhotoImporter {
         // Get basic image metadata from Sharp
         const sharpMetadata = await sharp(sourcePath).metadata();
 
+        // Use capture date from EXIF if available, otherwise fall back to processing date
+        const captureDate = analysisResult?.technical?.exif?.capture?.dateTime;
+        let displayDate;
+        if (captureDate) {
+            try {
+                // Handle ExifDateTime object with year/month/day properties
+                if (captureDate.year && captureDate.month && captureDate.day) {
+                    const year = captureDate.year;
+                    const month = String(captureDate.month).padStart(2, '0');
+                    const day = String(captureDate.day).padStart(2, '0');
+                    displayDate = `${year}-${month}-${day}`;
+                }
+                // Handle ISO format (2023-05-15T10:30:00) and EXIF format (2023:05:15 10:30:00)
+                else if (typeof captureDate === 'string') {
+                    // Replace EXIF format colons with dashes for the date part
+                    const normalizedDate = captureDate.replace(/^(\d{4}):(\d{2}):(\d{2})/, '$1-$2-$3');
+                    displayDate = normalizedDate.split('T')[0].split(' ')[0]; // Get YYYY-MM-DD part
+                } else {
+                    throw new Error('Unrecognized date format');
+                }
+            } catch (error) {
+                console.warn(`Failed to parse capture date for ${filename}, using processing date:`, error.message);
+                displayDate = new Date().toISOString().split('T')[0];
+            }
+        } else {
+            displayDate = new Date().toISOString().split('T')[0];
+        }
+
         // Build enhanced metadata structure
         const photoData = {
             id,
             title: this.generateTitle(filename),
             thumbnail: `assets/images/thumbnails/${albumName}/${outputName}`,
             full: `assets/images/full/${albumName}/${outputName}`,
-            date: new Date().toISOString().split('T')[0], // Today's date in YYYY-MM-DD format
+            date: displayDate,
 
             // Enhanced metadata structure
             accessibility: {
