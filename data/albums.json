@@ -1908,7 +1908,8 @@
                         "inferredZone": true
                     },
                     "processingDate": "2025-09-30T16:08:00.868Z"
-                }
+                },
+                "order": 1
             },
             {
                 "id": "MilPEE08396_475481",
@@ -1949,212 +1950,8 @@
                         "inferredZone": true
                     },
                     "processingDate": "2025-09-30T16:07:59.527Z"
-                }
-            },
-            {
-                "id": "MilPEE08409_475481",
-                "title": "PEE08409",
-                "thumbnail": "assets/images/thumbnails/Mills Race 2023/MilPEE08409_475481.webp",
-                "full": "assets/images/full/Mills Race 2023/MilPEE08409_475481.webp",
-                "date": "2023-06-11",
-                "accessibility": {
-                    "altText": "A man standing inside a boat cabin, looking out through an open window."
                 },
-                "technical": {
-                    "camera": "SONY ILCE-6300",
-                    "lens": "30mm F1.4 DC DN | Contemporary 016",
-                    "settings": "1/125, f/4, ISO 320, 30.0 mmmm",
-                    "sceneAnalysis": "The image depicts a person inside an open boat hatch, looking out towards the viewer. Here's an analysis of the photograph's technical and compositional aspects:\n\n1. **Lighting Conditions:**\n   - Natural light is the primary source, as indicated by the brightness outside the boat and the shadow cast on the person inside.\n   - The lighting quality appears soft due to the overcast sky or diffused light from the windows of the boat.\n   - The direction of light seems to be coming from the left side of the image, suggesting it might be an overcast day with no direct sunlight.\n\n2. **Composition:**\n   - The rule of thirds is not strictly followed; however, the person's position inside the hatch creates a sense of balance in the composition.\n   - There is a strong vertical line created by the boat's structure and the person standing upright, which adds to the composition's visual interest.\n\n3. **Depth of Field:**\n   - The depth of field appears shallow, with only the person inside the hatch in focus, while the background is blurred. This effect draws attention to the person and creates a sense of isolation.\n\n4. **Camera Angle/Perspective:**\n   - The camera angle is from below looking up at the person, which gives a unique perspective and emphasizes the height of the hatch.\n   - The perspective also allows for an interesting view into the boat's interior, inviting curiosity about what lies inside.\n\n5. **Overall Mood/Atmosphere:**\n   - The mood of the image is somewhat melancholic or contemplative due to the overcast lighting and the person's solitary position in the boat.\n   - The composition, with its balance and vertical lines, contrasts with the subject's isolation, creating a sense of tension between the elements within the frame.\n\nOverall, this photograph is well-composed with an interesting perspective that draws the viewer into the scene. The shallow depth of field focuses attention on the person inside the boat while also inviting curiosity about their surroundings. The lighting conditions create a contemplative atmosphere, and the composition balances the vertical lines against the subject's isolation.",
-                    "summary": "SONY ILCE-6300 | 30mm F1.4 DC DN | Contemporary 016 | 1/125, f/4, ISO 320, 30.0 mmmm | 6000x4000",
-                    "dimensions": {
-                        "width": 6000,
-                        "height": 4000,
-                        "aspectRatio": 1.5
-                    }
-                },
-                "location": null,
-                "metadata": {
-                    "originalFilename": "PEE08409.jpg",
-                    "fileSize": "11 MB",
-                    "captureDate": {
-                        "_ctor": "ExifDateTime",
-                        "year": 2023,
-                        "month": 6,
-                        "day": 11,
-                        "hour": 14,
-                        "minute": 34,
-                        "second": 56,
-                        "tzoffsetMinutes": -240,
-                        "rawValue": "2023:06:11 14:34:56",
-                        "zoneName": "UTC-4",
-                        "inferredZone": true
-                    },
-                    "processingDate": "2025-09-30T16:07:59.961Z"
-                }
-            },
-            {
-                "id": "MilPEE08421_475481",
-                "title": "PEE08421",
-                "thumbnail": "assets/images/thumbnails/Mills Race 2023/MilPEE08421_475481.webp",
-                "full": "assets/images/full/Mills Race 2023/MilPEE08421_475481.webp",
-                "date": "2023-06-11",
-                "accessibility": {
-                    "altText": "A tall sailboat with a white sail. The boat is in focus against a blurred background."
-                },
-                "technical": {
-                    "camera": "SONY ILCE-6300",
-                    "lens": "30mm F1.4 DC DN | Contemporary 016",
-                    "settings": "1/4000, f/2.5, ISO 100, 30.0 mmmm",
-                    "sceneAnalysis": "The image depicts a sailboat in motion with its sails fully deployed. Here's an analysis of the photograph's technical and compositional aspects:\n\n1. **Lighting Conditions**: The lighting appears to be natural, with overcast skies suggesting diffused light. There is no visible artificial light, which gives the image a soft, even illumination without harsh shadows.\n\n2. **Composition**: The boat is positioned in the upper right quadrant of the rule of thirds grid, creating a sense of movement towards the right side of the frame. The sails are slightly off-center, adding dynamism to the composition.\n\n3. **Depth of Field**: The photograph has a shallow depth of field, with the boat in sharp focus and the background gradually blurring as it moves away from the camera. This effect emphasizes the boat as the main subject while also providing context for its environment.\n\n4. **Camera Angle/Perspective**: The camera angle is low, looking up towards the boat, which gives a sense of being under or in front of the sailboat. This perspective adds to the feeling of motion and speed.\n\n5. **Overall Mood/Atmosphere**: The overcast skies and the dynamic movement of the boat suggest a calm yet active marine environment. The soft lighting and the shallow depth of field create a serene yet engaging atmosphere, inviting viewers into the scene.\n\nIn summary, this photograph demonstrates careful consideration of lighting, composition, depth of field, and camera angle to convey a sense of motion and tranquility in a maritime setting.",
-                    "summary": "SONY ILCE-6300 | 30mm F1.4 DC DN | Contemporary 016 | 1/4000, f/2.5, ISO 100, 30.0 mmmm | 6000x4000",
-                    "dimensions": {
-                        "width": 6000,
-                        "height": 4000,
-                        "aspectRatio": 1.5
-                    }
-                },
-                "location": null,
-                "metadata": {
-                    "originalFilename": "PEE08421.jpg",
-                    "fileSize": "9.6 MB",
-                    "captureDate": {
-                        "_ctor": "ExifDateTime",
-                        "year": 2023,
-                        "month": 6,
-                        "day": 11,
-                        "hour": 14,
-                        "minute": 44,
-                        "second": 50,
-                        "tzoffsetMinutes": -240,
-                        "rawValue": "2023:06:11 14:44:50",
-                        "zoneName": "UTC-4",
-                        "inferredZone": true
-                    },
-                    "processingDate": "2025-09-30T16:08:00.357Z"
-                }
-            },
-            {
-                "id": "MilPEE08366_475481",
-                "title": "PEE08366",
-                "thumbnail": "assets/images/thumbnails/Mills Race 2023/MilPEE08366_475481.webp",
-                "full": "assets/images/full/Mills Race 2023/MilPEE08366_475481.webp",
-                "date": "2023-06-10",
-                "accessibility": {
-                    "altText": "The image features a serene scene of numerous sailboats docked in a marina at sunset, with the skyline visible in the background."
-                },
-                "technical": {
-                    "camera": "SONY ILCE-6300",
-                    "lens": "E PZ 18-105mm F4 G OSS",
-                    "settings": "1/80, f/6.3, ISO 100, 37.0 mmmm",
-                    "sceneAnalysis": "The image depicts a serene scene at dusk or dawn, as indicated by the soft lighting conditions. The natural light is diffused, creating a gentle gradient of colors in the sky from warm to cool tones. There are no artificial light sources visible in the photograph.\n\nCompositionally, the rule of thirds is applied with the masts of the sailboats positioned along the grid lines and the horizon at the intersection point. The symmetry of the boats adds a sense of balance to the image.\n\nThe depth of field is shallow, as evidenced by the blurred foreground and background, which helps isolate the main subject—the sailboats—and creates a bokeh effect with the out-of-focus masts. This selective focus draws attention to the boats in the middle ground.\n\nThe camera angle is low, looking up at the sailboats, which gives a sense of scale and grandeur to the scene. The perspective is slightly distorted due to the wide-angle lens used, which adds to the dramatic effect by creating a panoramic view of the marina.\n\nOverall, the mood of the photograph is calm and tranquil, with the soft light and stillness of the sailboats evoking a sense of peacefulness. The atmosphere is enhanced by the warm colors of the sky, which contrast with the cooler tones of the water and boats, adding depth and dimension to the image.",
-                    "summary": "SONY ILCE-6300 | E PZ 18-105mm F4 G OSS | 1/80, f/6.3, ISO 100, 37.0 mmmm | 6000x4000",
-                    "dimensions": {
-                        "width": 6000,
-                        "height": 4000,
-                        "aspectRatio": 1.5
-                    }
-                },
-                "location": null,
-                "metadata": {
-                    "originalFilename": "PEE08366.jpg",
-                    "fileSize": "11 MB",
-                    "captureDate": {
-                        "_ctor": "ExifDateTime",
-                        "year": 2023,
-                        "month": 6,
-                        "day": 10,
-                        "hour": 20,
-                        "minute": 49,
-                        "second": 52,
-                        "tzoffsetMinutes": -240,
-                        "rawValue": "2023:06:10 20:49:52",
-                        "zoneName": "UTC-4",
-                        "inferredZone": true
-                    },
-                    "processingDate": "2025-09-30T16:07:58.832Z"
-                }
-            },
-            {
-                "id": "MilPEE08089_475481",
-                "title": "PEE08089",
-                "thumbnail": "assets/images/thumbnails/Mills Race 2023/MilPEE08089_475481.webp",
-                "full": "assets/images/full/Mills Race 2023/MilPEE08089_475481.webp",
-                "date": "2023-06-09",
-                "accessibility": {
-                    "altText": "An older man in an orange shirt and a white bucket hat, standing by a boat, holding a sandwich, looking to his right."
-                },
-                "technical": {
-                    "camera": "SONY ILCE-6300",
-                    "lens": "16mm F1.4 DC DN | Contemporary 017",
-                    "settings": "1/200, f/7.1, ISO 100, 16.0 mmmm",
-                    "sceneAnalysis": "The image depicts a person standing in the interior of a boat, looking out through an open hatch. Here's a technical analysis:\n\n1. **Lighting Conditions**: The lighting appears to be natural, with ample light coming from the window or hatch above, suggesting it might be daytime. The quality of light seems soft and diffused, which is typical for outdoor environments. There are no visible artificial light sources.\n\n2. **Composition**: The subject is positioned off-center, following the rule of thirds, which creates a sense of balance in the composition. The symmetry of the boat's interior elements, such as the hatch and the person's position, adds to the visual harmony.\n\n3. **Depth of Field**: The depth of field appears shallow, with the subject in sharp focus while the background is blurred. This effect draws attention to the person and creates a bokeh effect that suggests a shallow depth of field was used.\n\n4. **Camera Angle/Perspective**: The camera angle is from below, looking up at the subject, which gives a sense of height or stature to the person. The perspective also allows for a view into the boat's interior and out through the hatch.\n\n5. **Mood/Atmosphere**: The overall mood of the image is calm and contemplative, with the subject seemingly at ease in their environment. The colors are natural and muted, contributing to the serene atmosphere.\n\n6. **Color Balance**: The color balance seems neutral, with no obvious signs of over-saturation or under-saturation. This suggests that the image was likely taken with a balanced white balance setting.\n\n7. **Exposure**: The exposure is well-balanced, with no areas significantly overexposed or underexposed. This indicates that the photographer has managed to capture the scene without any major issues related to lighting.\n\n8. **Sharpness and Resolution**: The image appears to be of high resolution, with sharp details in the subject's clothing and features. The clarity suggests a good-quality camera was used.\n\n9. **Distractions**: There are no significant distractions in the image; the focus is solely on the person and their immediate surroundings within the boat.\n\n10. **Background Elements**: Background elements, such as the hatch and the interior of the boat, provide context for the setting but do not detract from the subject.\n\nOverall, this photograph demonstrates a good understanding of composition, lighting, and camera technique, resulting in an image that captures a moment with a sense of tranquility and natural beauty.",
-                    "summary": "SONY ILCE-6300 | 16mm F1.4 DC DN | Contemporary 017 | 1/200, f/7.1, ISO 100, 16.0 mmmm | 4000x6000",
-                    "dimensions": {
-                        "width": 4000,
-                        "height": 6000,
-                        "aspectRatio": 0.67
-                    }
-                },
-                "location": null,
-                "metadata": {
-                    "originalFilename": "PEE08089.jpg",
-                    "fileSize": "12 MB",
-                    "captureDate": {
-                        "_ctor": "ExifDateTime",
-                        "year": 2023,
-                        "month": 6,
-                        "day": 9,
-                        "hour": 15,
-                        "minute": 56,
-                        "second": 56,
-                        "tzoffsetMinutes": -240,
-                        "rawValue": "2023:06:09 15:56:56",
-                        "zoneName": "UTC-4",
-                        "inferredZone": true
-                    },
-                    "processingDate": "2025-09-30T16:07:56.324Z"
-                }
-            },
-            {
-                "id": "MilPEE08109_475481",
-                "title": "PEE08109",
-                "thumbnail": "assets/images/thumbnails/Mills Race 2023/MilPEE08109_475481.webp",
-                "full": "assets/images/full/Mills Race 2023/MilPEE08109_475481.webp",
-                "date": "2023-06-09",
-                "accessibility": {
-                    "altText": "A man looking out a boat window."
-                },
-                "technical": {
-                    "camera": "SONY ILCE-6300",
-                    "lens": "E PZ 18-105mm F4 G OSS",
-                    "settings": "1/800, f/4, ISO 100, 18.0 mmmm",
-                    "sceneAnalysis": "This image depicts a candid moment inside a small boat or cabin. From a technical standpoint:\n\n1. **Lighting Conditions**: The lighting appears to be natural, with the source coming from outside the frame, likely from the sky or windows. The quality of light is soft and diffused, suggesting either overcast conditions or a diffuser used in the shot. There are no harsh shadows, indicating an even light distribution.\n\n2. **Composition**: The composition follows the rule of thirds with the subjects placed off-center, creating a dynamic and interesting visual. Symmetry is not strictly adhered to but rather used as a guideline for balance.\n\n3. **Depth of Field**: The depth of field is shallow, with the focus sharply on the central figure and gradually softening towards the edges of the frame. This effect draws attention to the main subject while still providing context about the location.\n\n4. **Camera Angle/Perspective**: The camera angle is from a low perspective, looking up at the subjects. This choice gives a sense of intimacy and immediacy to the scene.\n\n5. **Mood/Atmosphere**: The overall mood of the image is casual and relaxed. The subjects seem to be enjoying their time together in a private space. The color palette is muted, with earth tones dominating, which contributes to the informal and unpretentious atmosphere.\n\nThe photograph captures an authentic moment without staging or artificiality, making it a strong example of candid photography that focuses on composition, lighting, and subject interaction.",
-                    "summary": "SONY ILCE-6300 | E PZ 18-105mm F4 G OSS | 1/800, f/4, ISO 100, 18.0 mmmm | 6000x4000",
-                    "dimensions": {
-                        "width": 6000,
-                        "height": 4000,
-                        "aspectRatio": 1.5
-                    }
-                },
-                "location": null,
-                "metadata": {
-                    "originalFilename": "PEE08109.jpg",
-                    "fileSize": "8.8 MB",
-                    "captureDate": {
-                        "_ctor": "ExifDateTime",
-                        "year": 2023,
-                        "month": 6,
-                        "day": 9,
-                        "hour": 16,
-                        "minute": 21,
-                        "second": 2,
-                        "tzoffsetMinutes": -240,
-                        "rawValue": "2023:06:09 16:21:02",
-                        "zoneName": "UTC-4",
-                        "inferredZone": true
-                    },
-                    "processingDate": "2025-09-30T16:07:56.729Z"
-                }
+                "order": 2
             },
             {
                 "id": "MilPEE08198_475481",
@@ -2195,7 +1992,218 @@
                         "inferredZone": true
                     },
                     "processingDate": "2025-09-30T16:07:57.198Z"
-                }
+                },
+                "order": 3
+            },
+            {
+                "id": "MilPEE08421_475481",
+                "title": "PEE08421",
+                "thumbnail": "assets/images/thumbnails/Mills Race 2023/MilPEE08421_475481.webp",
+                "full": "assets/images/full/Mills Race 2023/MilPEE08421_475481.webp",
+                "date": "2023-06-11",
+                "accessibility": {
+                    "altText": "A tall sailboat with a white sail. The boat is in focus against a blurred background."
+                },
+                "technical": {
+                    "camera": "SONY ILCE-6300",
+                    "lens": "30mm F1.4 DC DN | Contemporary 016",
+                    "settings": "1/4000, f/2.5, ISO 100, 30.0 mmmm",
+                    "sceneAnalysis": "The image depicts a sailboat in motion with its sails fully deployed. Here's an analysis of the photograph's technical and compositional aspects:\n\n1. **Lighting Conditions**: The lighting appears to be natural, with overcast skies suggesting diffused light. There is no visible artificial light, which gives the image a soft, even illumination without harsh shadows.\n\n2. **Composition**: The boat is positioned in the upper right quadrant of the rule of thirds grid, creating a sense of movement towards the right side of the frame. The sails are slightly off-center, adding dynamism to the composition.\n\n3. **Depth of Field**: The photograph has a shallow depth of field, with the boat in sharp focus and the background gradually blurring as it moves away from the camera. This effect emphasizes the boat as the main subject while also providing context for its environment.\n\n4. **Camera Angle/Perspective**: The camera angle is low, looking up towards the boat, which gives a sense of being under or in front of the sailboat. This perspective adds to the feeling of motion and speed.\n\n5. **Overall Mood/Atmosphere**: The overcast skies and the dynamic movement of the boat suggest a calm yet active marine environment. The soft lighting and the shallow depth of field create a serene yet engaging atmosphere, inviting viewers into the scene.\n\nIn summary, this photograph demonstrates careful consideration of lighting, composition, depth of field, and camera angle to convey a sense of motion and tranquility in a maritime setting.",
+                    "summary": "SONY ILCE-6300 | 30mm F1.4 DC DN | Contemporary 016 | 1/4000, f/2.5, ISO 100, 30.0 mmmm | 6000x4000",
+                    "dimensions": {
+                        "width": 6000,
+                        "height": 4000,
+                        "aspectRatio": 1.5
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE08421.jpg",
+                    "fileSize": "9.6 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2023,
+                        "month": 6,
+                        "day": 11,
+                        "hour": 14,
+                        "minute": 44,
+                        "second": 50,
+                        "tzoffsetMinutes": -240,
+                        "rawValue": "2023:06:11 14:44:50",
+                        "zoneName": "UTC-4",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-09-30T16:08:00.357Z"
+                },
+                "order": 4
+            },
+            {
+                "id": "MilPEE08366_475481",
+                "title": "PEE08366",
+                "thumbnail": "assets/images/thumbnails/Mills Race 2023/MilPEE08366_475481.webp",
+                "full": "assets/images/full/Mills Race 2023/MilPEE08366_475481.webp",
+                "date": "2023-06-10",
+                "accessibility": {
+                    "altText": "The image features a serene scene of numerous sailboats docked in a marina at sunset, with the skyline visible in the background."
+                },
+                "technical": {
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/80, f/6.3, ISO 100, 37.0 mmmm",
+                    "sceneAnalysis": "The image depicts a serene scene at dusk or dawn, as indicated by the soft lighting conditions. The natural light is diffused, creating a gentle gradient of colors in the sky from warm to cool tones. There are no artificial light sources visible in the photograph.\n\nCompositionally, the rule of thirds is applied with the masts of the sailboats positioned along the grid lines and the horizon at the intersection point. The symmetry of the boats adds a sense of balance to the image.\n\nThe depth of field is shallow, as evidenced by the blurred foreground and background, which helps isolate the main subject—the sailboats—and creates a bokeh effect with the out-of-focus masts. This selective focus draws attention to the boats in the middle ground.\n\nThe camera angle is low, looking up at the sailboats, which gives a sense of scale and grandeur to the scene. The perspective is slightly distorted due to the wide-angle lens used, which adds to the dramatic effect by creating a panoramic view of the marina.\n\nOverall, the mood of the photograph is calm and tranquil, with the soft light and stillness of the sailboats evoking a sense of peacefulness. The atmosphere is enhanced by the warm colors of the sky, which contrast with the cooler tones of the water and boats, adding depth and dimension to the image.",
+                    "summary": "SONY ILCE-6300 | E PZ 18-105mm F4 G OSS | 1/80, f/6.3, ISO 100, 37.0 mmmm | 6000x4000",
+                    "dimensions": {
+                        "width": 6000,
+                        "height": 4000,
+                        "aspectRatio": 1.5
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE08366.jpg",
+                    "fileSize": "11 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2023,
+                        "month": 6,
+                        "day": 10,
+                        "hour": 20,
+                        "minute": 49,
+                        "second": 52,
+                        "tzoffsetMinutes": -240,
+                        "rawValue": "2023:06:10 20:49:52",
+                        "zoneName": "UTC-4",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-09-30T16:07:58.832Z"
+                },
+                "order": 5
+            },
+            {
+                "id": "MilPEE08089_475481",
+                "title": "PEE08089",
+                "thumbnail": "assets/images/thumbnails/Mills Race 2023/MilPEE08089_475481.webp",
+                "full": "assets/images/full/Mills Race 2023/MilPEE08089_475481.webp",
+                "date": "2023-06-09",
+                "accessibility": {
+                    "altText": "An older man in an orange shirt and a white bucket hat, standing by a boat, holding a sandwich, looking to his right."
+                },
+                "technical": {
+                    "camera": "SONY ILCE-6300",
+                    "lens": "16mm F1.4 DC DN | Contemporary 017",
+                    "settings": "1/200, f/7.1, ISO 100, 16.0 mmmm",
+                    "sceneAnalysis": "The image depicts a person standing in the interior of a boat, looking out through an open hatch. Here's a technical analysis:\n\n1. **Lighting Conditions**: The lighting appears to be natural, with ample light coming from the window or hatch above, suggesting it might be daytime. The quality of light seems soft and diffused, which is typical for outdoor environments. There are no visible artificial light sources.\n\n2. **Composition**: The subject is positioned off-center, following the rule of thirds, which creates a sense of balance in the composition. The symmetry of the boat's interior elements, such as the hatch and the person's position, adds to the visual harmony.\n\n3. **Depth of Field**: The depth of field appears shallow, with the subject in sharp focus while the background is blurred. This effect draws attention to the person and creates a bokeh effect that suggests a shallow depth of field was used.\n\n4. **Camera Angle/Perspective**: The camera angle is from below, looking up at the subject, which gives a sense of height or stature to the person. The perspective also allows for a view into the boat's interior and out through the hatch.\n\n5. **Mood/Atmosphere**: The overall mood of the image is calm and contemplative, with the subject seemingly at ease in their environment. The colors are natural and muted, contributing to the serene atmosphere.\n\n6. **Color Balance**: The color balance seems neutral, with no obvious signs of over-saturation or under-saturation. This suggests that the image was likely taken with a balanced white balance setting.\n\n7. **Exposure**: The exposure is well-balanced, with no areas significantly overexposed or underexposed. This indicates that the photographer has managed to capture the scene without any major issues related to lighting.\n\n8. **Sharpness and Resolution**: The image appears to be of high resolution, with sharp details in the subject's clothing and features. The clarity suggests a good-quality camera was used.\n\n9. **Distractions**: There are no significant distractions in the image; the focus is solely on the person and their immediate surroundings within the boat.\n\n10. **Background Elements**: Background elements, such as the hatch and the interior of the boat, provide context for the setting but do not detract from the subject.\n\nOverall, this photograph demonstrates a good understanding of composition, lighting, and camera technique, resulting in an image that captures a moment with a sense of tranquility and natural beauty.",
+                    "summary": "SONY ILCE-6300 | 16mm F1.4 DC DN | Contemporary 017 | 1/200, f/7.1, ISO 100, 16.0 mmmm | 4000x6000",
+                    "dimensions": {
+                        "width": 4000,
+                        "height": 6000,
+                        "aspectRatio": 0.67
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE08089.jpg",
+                    "fileSize": "12 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2023,
+                        "month": 6,
+                        "day": 9,
+                        "hour": 15,
+                        "minute": 56,
+                        "second": 56,
+                        "tzoffsetMinutes": -240,
+                        "rawValue": "2023:06:09 15:56:56",
+                        "zoneName": "UTC-4",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-09-30T16:07:56.324Z"
+                },
+                "order": 6
+            },
+            {
+                "id": "MilPEE08109_475481",
+                "title": "PEE08109",
+                "thumbnail": "assets/images/thumbnails/Mills Race 2023/MilPEE08109_475481.webp",
+                "full": "assets/images/full/Mills Race 2023/MilPEE08109_475481.webp",
+                "date": "2023-06-09",
+                "accessibility": {
+                    "altText": "A man looking out a boat window."
+                },
+                "technical": {
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/800, f/4, ISO 100, 18.0 mmmm",
+                    "sceneAnalysis": "This image depicts a candid moment inside a small boat or cabin. From a technical standpoint:\n\n1. **Lighting Conditions**: The lighting appears to be natural, with the source coming from outside the frame, likely from the sky or windows. The quality of light is soft and diffused, suggesting either overcast conditions or a diffuser used in the shot. There are no harsh shadows, indicating an even light distribution.\n\n2. **Composition**: The composition follows the rule of thirds with the subjects placed off-center, creating a dynamic and interesting visual. Symmetry is not strictly adhered to but rather used as a guideline for balance.\n\n3. **Depth of Field**: The depth of field is shallow, with the focus sharply on the central figure and gradually softening towards the edges of the frame. This effect draws attention to the main subject while still providing context about the location.\n\n4. **Camera Angle/Perspective**: The camera angle is from a low perspective, looking up at the subjects. This choice gives a sense of intimacy and immediacy to the scene.\n\n5. **Mood/Atmosphere**: The overall mood of the image is casual and relaxed. The subjects seem to be enjoying their time together in a private space. The color palette is muted, with earth tones dominating, which contributes to the informal and unpretentious atmosphere.\n\nThe photograph captures an authentic moment without staging or artificiality, making it a strong example of candid photography that focuses on composition, lighting, and subject interaction.",
+                    "summary": "SONY ILCE-6300 | E PZ 18-105mm F4 G OSS | 1/800, f/4, ISO 100, 18.0 mmmm | 6000x4000",
+                    "dimensions": {
+                        "width": 6000,
+                        "height": 4000,
+                        "aspectRatio": 1.5
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE08109.jpg",
+                    "fileSize": "8.8 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2023,
+                        "month": 6,
+                        "day": 9,
+                        "hour": 16,
+                        "minute": 21,
+                        "second": 2,
+                        "tzoffsetMinutes": -240,
+                        "rawValue": "2023:06:09 16:21:02",
+                        "zoneName": "UTC-4",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-09-30T16:07:56.729Z"
+                },
+                "order": 7
+            },
+            {
+                "id": "MilPEE08409_475481",
+                "title": "PEE08409",
+                "thumbnail": "assets/images/thumbnails/Mills Race 2023/MilPEE08409_475481.webp",
+                "full": "assets/images/full/Mills Race 2023/MilPEE08409_475481.webp",
+                "date": "2023-06-11",
+                "accessibility": {
+                    "altText": "A man standing inside a boat cabin, looking out through an open window."
+                },
+                "technical": {
+                    "camera": "SONY ILCE-6300",
+                    "lens": "30mm F1.4 DC DN | Contemporary 016",
+                    "settings": "1/125, f/4, ISO 320, 30.0 mmmm",
+                    "sceneAnalysis": "The image depicts a person inside an open boat hatch, looking out towards the viewer. Here's an analysis of the photograph's technical and compositional aspects:\n\n1. **Lighting Conditions:**\n   - Natural light is the primary source, as indicated by the brightness outside the boat and the shadow cast on the person inside.\n   - The lighting quality appears soft due to the overcast sky or diffused light from the windows of the boat.\n   - The direction of light seems to be coming from the left side of the image, suggesting it might be an overcast day with no direct sunlight.\n\n2. **Composition:**\n   - The rule of thirds is not strictly followed; however, the person's position inside the hatch creates a sense of balance in the composition.\n   - There is a strong vertical line created by the boat's structure and the person standing upright, which adds to the composition's visual interest.\n\n3. **Depth of Field:**\n   - The depth of field appears shallow, with only the person inside the hatch in focus, while the background is blurred. This effect draws attention to the person and creates a sense of isolation.\n\n4. **Camera Angle/Perspective:**\n   - The camera angle is from below looking up at the person, which gives a unique perspective and emphasizes the height of the hatch.\n   - The perspective also allows for an interesting view into the boat's interior, inviting curiosity about what lies inside.\n\n5. **Overall Mood/Atmosphere:**\n   - The mood of the image is somewhat melancholic or contemplative due to the overcast lighting and the person's solitary position in the boat.\n   - The composition, with its balance and vertical lines, contrasts with the subject's isolation, creating a sense of tension between the elements within the frame.\n\nOverall, this photograph is well-composed with an interesting perspective that draws the viewer into the scene. The shallow depth of field focuses attention on the person inside the boat while also inviting curiosity about their surroundings. The lighting conditions create a contemplative atmosphere, and the composition balances the vertical lines against the subject's isolation.",
+                    "summary": "SONY ILCE-6300 | 30mm F1.4 DC DN | Contemporary 016 | 1/125, f/4, ISO 320, 30.0 mmmm | 6000x4000",
+                    "dimensions": {
+                        "width": 6000,
+                        "height": 4000,
+                        "aspectRatio": 1.5
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE08409.jpg",
+                    "fileSize": "11 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2023,
+                        "month": 6,
+                        "day": 11,
+                        "hour": 14,
+                        "minute": 34,
+                        "second": 56,
+                        "tzoffsetMinutes": -240,
+                        "rawValue": "2023:06:11 14:34:56",
+                        "zoneName": "UTC-4",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-09-30T16:07:59.961Z"
+                },
+                "order": 8
             },
             {
                 "id": "MilPEE08203_475481",
@@ -2236,7 +2244,8 @@
                         "inferredZone": true
                     },
                     "processingDate": "2025-09-30T16:07:58.004Z"
-                }
+                },
+                "order": 9
             },
             {
                 "id": "MilPEE08229_475481",
@@ -2277,7 +2286,8 @@
                         "inferredZone": true
                     },
                     "processingDate": "2025-09-30T16:07:58.408Z"
-                }
+                },
+                "order": 10
             }
         ]
     }
