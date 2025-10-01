@@ -1,7 +1,7 @@
 /* Mobile First Approach */
 
-/* Mobile Styles */
-@media screen and (max-width: 768px) {
+/* Tablet and Mobile Styles - Hide sidebar, show mobile menu */
+@media screen and (max-width: 1024px) {
     /* Show mobile header and hide desktop sidebar */
     .mobile-header {
         display: block;
@@ -15,13 +15,27 @@
         display: none;
     }
 
-    /* Main content full width on mobile */
+    /* Main content full width on tablet/mobile */
     .main-content {
         margin-left: 0;
         width: 100%;
         padding-top: 60px; /* Account for fixed mobile header */
     }
 
+    .gallery-container {
+        padding: 1.5rem;
+    }
+}
+
+/* Reduce margins for medium screens */
+@media screen and (max-width: 1550px) and (min-width: 1025px) {
+    .gallery-container {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
     .gallery-container {
         padding: 1rem;
     }
