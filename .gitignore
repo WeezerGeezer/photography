@@ -1,6 +1,10 @@
 # Source images (JPEGs) - keep only processed WebP files in repo
 assets/images/albums/
 
+# Processed images now hosted on Cloudflare R2
+assets/images/full/
+assets/images/thumbnails/
+
 # OS files
 .DS_Store
 */.DS_Store
@@ -14,3 +18,4 @@ node_modules/
 
 # Logs
 *.log
+.wrangler/
