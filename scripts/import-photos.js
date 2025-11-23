@@ -505,7 +505,9 @@ class PhotoImporter {
             });
 
             await this.r2Client.send(command);
-            const publicUrl = `${this.r2PublicUrl}/${r2Key}`;
+            // URL-encode the path segments (but not the slashes) for the public URL
+            const encodedKey = r2Key.split('/').map(segment => encodeURIComponent(segment)).join('/');
+            const publicUrl = `${this.r2PublicUrl}/${encodedKey}`;
             console.log(`   ☁️  Uploaded to R2: ${r2Key}`);
             return publicUrl;
         } catch (error) {

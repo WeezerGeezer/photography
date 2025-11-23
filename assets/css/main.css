@@ -175,6 +175,9 @@ a:hover {
 }
 
 .mobile-header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
 }
 
@@ -364,6 +367,64 @@ a:hover {
 
 .mobile-social .social-links a:hover {
     color: var(--secondary-color);
+}
+
+/* Mobile Albums Timeline in Hamburger Menu */
+.mobile-albums-timeline {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.mobile-albums-timeline h3 {
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.mobile-albums-timeline .timeline-content {
+    max-height: 40vh;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.mobile-albums-timeline .timeline-year-group {
+    margin-bottom: 1rem;
+}
+
+.mobile-albums-timeline .timeline-year-header {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.mobile-albums-timeline .timeline-item {
+    display: block;
+    padding: 0.6rem 0.75rem;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.mobile-albums-timeline .timeline-item:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.mobile-albums-timeline .timeline-item .album-title {
+    display: block;
+    font-weight: 500;
+}
+
+.mobile-albums-timeline .timeline-item .photo-count {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.6);
 }
 
 /* App Container - Sidebar Layout */
