@@ -1,4 +1,9 @@
 # Cloudflare Pages redirects configuration
+
+# Admin routing
+/admin /admin.html 200
+/admin/* /admin.html 200
+
 # Handle album routing
 /album/* /album.html 200
 

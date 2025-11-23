@@ -1,6 +1,6 @@
 /**
  * Albums Timeline Component
- * Creates a chronological timeline of albums in the sidebar
+ * Creates a chronological timeline of albums in the sidebar, grouped by year
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!timelineContainer) {
         return; // Timeline component not present on this page
     }
+
+    // Track expanded state for each year
+    const expandedYears = new Set();
 
     // Show timeline skeleton
     function showTimelineSkeleton() {
@@ -60,13 +63,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     return new Date(b.date) - new Date(a.date);
                 });
 
+            // Group albums by year
+            const albumsByYear = {};
+            timelineItems.forEach(item => {
+                const year = new Date(item.date).getFullYear();
+                if (!albumsByYear[year]) {
+                    albumsByYear[year] = [];
+                }
+                albumsByYear[year].push(item);
+            });
+
+            // Get sorted years (most recent first)
+            const sortedYears = Object.keys(albumsByYear).sort((a, b) => b - a);
+
             // Clear existing timeline
             timelineContainer.innerHTML = '';
 
-            // Create timeline items
-            timelineItems.forEach(item => {
-                const timelineItem = createTimelineItem(item);
-                timelineContainer.appendChild(timelineItem);
+            // Create year groups
+            sortedYears.forEach((year, index) => {
+                const yearGroup = createYearGroup(year, albumsByYear[year], index === 0);
+                timelineContainer.appendChild(yearGroup);
             });
 
         } catch (error) {
@@ -75,17 +91,67 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function createYearGroup(year, albums, expandByDefault = false) {
+        const yearGroup = document.createElement('div');
+        yearGroup.className = 'timeline-year-group';
+
+        // Create year header with toggle
+        const yearHeader = document.createElement('button');
+        yearHeader.className = 'timeline-year-header';
+        if (expandByDefault) {
+            yearHeader.classList.add('expanded');
+            expandedYears.add(year);
+        }
+        yearHeader.innerHTML = `
+            <span class="timeline-year-arrow">&#9656;</span>
+            <span class="timeline-year-label">${year}</span>
+            <span class="timeline-year-count">${albums.length}</span>
+        `;
+
+        // Create albums container
+        const albumsContainer = document.createElement('div');
+        albumsContainer.className = 'timeline-year-albums';
+        if (expandByDefault) {
+            albumsContainer.classList.add('expanded');
+        }
+
+        // Add album items
+        albums.forEach(item => {
+            const albumItem = createTimelineItem(item);
+            albumsContainer.appendChild(albumItem);
+        });
+
+        // Toggle expand/collapse on click
+        yearHeader.addEventListener('click', () => {
+            const isExpanded = yearHeader.classList.contains('expanded');
+
+            if (isExpanded) {
+                yearHeader.classList.remove('expanded');
+                albumsContainer.classList.remove('expanded');
+                expandedYears.delete(year);
+            } else {
+                yearHeader.classList.add('expanded');
+                albumsContainer.classList.add('expanded');
+                expandedYears.add(year);
+            }
+        });
+
+        yearGroup.appendChild(yearHeader);
+        yearGroup.appendChild(albumsContainer);
+
+        return yearGroup;
+    }
+
     function createTimelineItem(item) {
         const timelineItem = document.createElement('a');
         timelineItem.className = 'timeline-item';
 
         timelineItem.href = `album.html?id=${encodeURIComponent(item.key)}`;
 
-        // Format date
+        // Format date (month only since year is in header)
         const date = new Date(item.date);
         const formattedDate = date.toLocaleDateString('en-US', {
-            month: 'short',
-            year: 'numeric'
+            month: 'short'
         });
 
         timelineItem.innerHTML = `

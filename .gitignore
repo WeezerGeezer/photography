@@ -19,3 +19,7 @@ node_modules/
 # Logs
 *.log
 .wrangler/
+
+# Environment files (secrets)
+.env
+scripts/.env

@@ -3,6 +3,12 @@
     margin-bottom: auto;
 }
 
+/* Hide filter UI elements (keep JS logic intact) */
+.gallery-filters,
+.mobile-filters {
+    display: none !important;
+}
+
 /* Filter Toggle Button */
 .filter-toggle-btn {
     width: 100%;
@@ -439,16 +445,77 @@
 .timeline-content {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.25rem;
 }
 
+/* Year Group Styles */
+.timeline-year-group {
+    margin-bottom: 0.25rem;
+}
+
+.timeline-year-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'Futura PT', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.timeline-year-header:hover {
+    background-color: var(--light-gray);
+}
+
+.timeline-year-arrow {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+    color: var(--medium-gray);
+}
+
+.timeline-year-header.expanded .timeline-year-arrow {
+    transform: rotate(90deg);
+}
+
+.timeline-year-label {
+    flex: 1;
+}
+
+.timeline-year-count {
+    font-size: 0.7rem;
+    color: var(--medium-gray);
+    font-weight: 500;
+    background: var(--light-gray);
+    padding: 0.15rem 0.4rem;
+    border-radius: 10px;
+}
+
+.timeline-year-albums {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding-left: 0.75rem;
+}
+
+.timeline-year-albums.expanded {
+    max-height: 1000px;
+}
+
+/* Timeline Item Styles (compact) */
 .timeline-item {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.5rem;
+    gap: 0.5rem;
+    padding: 0.35rem 0.5rem;
     border-radius: 0;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     cursor: pointer;
     text-decoration: none;
     color: inherit;
@@ -463,47 +530,44 @@
 }
 
 .timeline-item:hover .timeline-date,
-.timeline-item:hover .timeline-title {
+.timeline-item:hover .timeline-title,
+.timeline-item:hover .timeline-count {
     color: var(--white);
 }
 
 .timeline-date {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--medium-gray);
     font-weight: 500;
-    min-width: 60px;
+    min-width: 32px;
     text-align: right;
 }
 
 .timeline-details {
     flex: 1;
+    min-width: 0;
 }
 
 .timeline-title {
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.75rem;
+    font-weight: 500;
     color: var(--text-color);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0;
     line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .timeline-meta {
-    font-size: 0.7rem;
-    color: var(--medium-gray);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    display: none;
 }
 
 .timeline-count {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-}
-
-.timeline-count::before {
-    content: "📷";
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+    color: var(--medium-gray);
+    font-weight: 500;
+    flex-shrink: 0;
 }
 
 /* Load More Button */

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin - Photography Portfolio</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-screen">
+        <div class="login-container">
+            <h1>Admin Login</h1>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <p id="login-error" class="error-message" style="display: none;"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel (hidden until authenticated) -->
+    <div id="admin-panel" class="admin-panel" style="display: none;">
+        <!-- Admin Header -->
+        <header class="admin-header">
+            <div class="admin-header-content">
+                <h1>Portfolio Admin</h1>
+                <div class="admin-header-actions">
+                    <a href="index.html" class="btn btn-secondary">View Site</a>
+                    <button id="logout-btn" class="btn btn-outline">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Admin Navigation -->
+        <nav class="admin-nav">
+            <button class="admin-nav-btn active" data-tab="albums">Albums</button>
+            <button class="admin-nav-btn" data-tab="upload">Upload Photos</button>
+            <button class="admin-nav-btn" data-tab="settings">Settings</button>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="admin-main">
+            <!-- Albums Tab -->
+            <section id="tab-albums" class="admin-tab active">
+                <div class="admin-section">
+                    <div class="section-header">
+                        <h2>Manage Albums</h2>
+                        <button id="create-album-btn" class="btn btn-primary">+ New Album</button>
+                    </div>
+
+                    <!-- Album List -->
+                    <div id="albums-list" class="albums-grid">
+                        <!-- Albums will be loaded dynamically -->
+                        <div class="loading-placeholder">
+                            <div class="spinner"></div>
+                            <p>Loading albums...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upload Tab -->
+            <section id="tab-upload" class="admin-tab">
+                <div class="admin-section">
+                    <h2>Upload Photos</h2>
+
+                    <form id="upload-form" class="upload-form">
+                        <div class="form-group">
+                            <label for="upload-album">Select Album</label>
+                            <select id="upload-album" name="album" required>
+                                <option value="">-- Choose an album --</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Photos</label>
+                            <div id="dropzone" class="dropzone">
+                                <div class="dropzone-content">
+                                    <span class="dropzone-icon">+</span>
+                                    <p>Drag and drop photos here</p>
+                                    <p class="dropzone-hint">or click to browse</p>
+                                    <input type="file" id="photo-input" name="photos" multiple accept="image/*" hidden>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Selected Files Preview -->
+                        <div id="selected-files" class="selected-files" style="display: none;">
+                            <h3>Selected Photos (<span id="file-count">0</span>)</h3>
+                            <div id="file-preview" class="file-preview"></div>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="skip-ai" name="skip-ai">
+                                Skip AI analysis (faster upload)
+                            </label>
+                        </div>
+
+                        <button type="submit" id="upload-btn" class="btn btn-primary" disabled>
+                            Upload Photos
+                        </button>
+                    </form>
+
+                    <!-- Upload Progress -->
+                    <div id="upload-progress" class="upload-progress" style="display: none;">
+                        <h3>Upload Progress</h3>
+                        <div class="progress-bar">
+                            <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <p id="progress-text">Preparing upload...</p>
+                        <div id="upload-log" class="upload-log"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Tab -->
+            <section id="tab-settings" class="admin-tab">
+                <div class="admin-section">
+                    <h2>Settings</h2>
+
+                    <div class="settings-card">
+                        <h3>R2 Storage Status</h3>
+                        <div id="storage-status" class="storage-status">
+                            <div class="spinner"></div>
+                            <p>Checking connection...</p>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Cache Management</h3>
+                        <p>Clear the albums.json cache to force a refresh from the server.</p>
+                        <button id="clear-cache-btn" class="btn btn-secondary">Clear Cache</button>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Data Sync</h3>
+                        <p>Sync albums.json with R2 storage.</p>
+                        <button id="sync-data-btn" class="btn btn-secondary">Sync Data</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Create Album Modal -->
+    <div id="album-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Create New Album</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form id="album-form">
+                <input type="hidden" id="album-id" name="id">
+                <div class="form-group">
+                    <label for="album-title">Album Title</label>
+                    <input type="text" id="album-title" name="title" required placeholder="e.g., Summer 2024">
+                </div>
+                <div class="form-group">
+                    <label for="album-description">Description</label>
+                    <textarea id="album-description" name="description" rows="3" placeholder="A brief description of this album..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="album-date">Date</label>
+                    <input type="date" id="album-date" name="date">
+                </div>
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="album-private" name="isPrivate">
+                        Private album (hidden from public gallery)
+                    </label>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Album</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Album Modal (for managing photos) -->
+    <div id="edit-album-modal" class="modal" style="display: none;">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 id="edit-album-title">Edit Album</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div id="edit-album-content">
+                <!-- Album photos will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirm-modal" class="modal" style="display: none;">
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h2>Confirm Action</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <p id="confirm-message">Are you sure you want to proceed?</p>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
+                <button type="button" id="confirm-action-btn" class="btn btn-danger">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>
