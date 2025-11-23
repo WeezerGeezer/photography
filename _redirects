@@ -1,9 +1,5 @@
 # Cloudflare Pages redirects configuration
 
-# Admin routing
-/admin /admin.html 200
-/admin/* /admin.html 200
-
 # Handle album routing
 /album/* /album.html 200
 
@@ -14,6 +10,3 @@
 /album.html* /album.html 200
 /photo.html* /photo.html 200
 /dsi.html* /dsi.html 200
-
-# Fallback for any 404s - redirect to main gallery
-/* /index.html 404
