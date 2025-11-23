@@ -419,9 +419,11 @@ a:hover {
     background-color: rgba(255,255,255,0.1);
 }
 
-.mobile-albums-timeline .timeline-item .album-title {
+.mobile-albums-timeline .timeline-item .album-title,
+.mobile-albums-timeline .timeline-title {
     display: block;
     font-weight: 500;
+    color: #ffffff;
 }
 
 .mobile-albums-timeline .timeline-item .photo-count {
