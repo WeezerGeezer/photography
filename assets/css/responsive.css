@@ -261,4 +261,17 @@
         border-color: var(--medium-gray);
     }
 
+    /* Force lightbox text to always be white in dark mode */
+    .lightbox .image-info,
+    .lightbox .image-info h3,
+    .lightbox .image-info .exif-value,
+    .lightbox .image-info .tag,
+    .lightbox .image-title,
+    .lightbox .image-date {
+        color: #ffffff !important;
+    }
+
+    .lightbox .image-info .exif-label {
+        color: rgba(255,255,255,0.7) !important;
+    }
 } 
