@@ -4,18 +4,18 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const timelineContainer = document.querySelector('.timeline-content');
+    const timelineContainers = document.querySelectorAll('.timeline-content');
 
-    if (!timelineContainer) {
+    if (timelineContainers.length === 0) {
         return; // Timeline component not present on this page
     }
 
-    // Track expanded state for each year
+    // Track expanded state for each year (shared across all timelines)
     const expandedYears = new Set();
 
-    // Show timeline skeleton
+    // Show timeline skeleton in all containers
     function showTimelineSkeleton() {
-        timelineContainer.innerHTML = `
+        const skeletonHTML = `
             <div class="timeline-skeleton">
                 ${Array.from({length: 6}, () => `
                     <div class="timeline-skeleton-item">
@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 `).join('')}
             </div>
         `;
+        timelineContainers.forEach(container => {
+            container.innerHTML = skeletonHTML;
+        });
     }
 
     // Fetch albums and create timeline
@@ -76,18 +79,23 @@ document.addEventListener('DOMContentLoaded', () => {
             // Get sorted years (most recent first)
             const sortedYears = Object.keys(albumsByYear).sort((a, b) => b - a);
 
-            // Clear existing timeline
-            timelineContainer.innerHTML = '';
+            // Populate each timeline container
+            timelineContainers.forEach(container => {
+                // Clear existing timeline
+                container.innerHTML = '';
 
-            // Create year groups
-            sortedYears.forEach((year, index) => {
-                const yearGroup = createYearGroup(year, albumsByYear[year], index === 0);
-                timelineContainer.appendChild(yearGroup);
+                // Create year groups
+                sortedYears.forEach((year, index) => {
+                    const yearGroup = createYearGroup(year, albumsByYear[year], index === 0);
+                    container.appendChild(yearGroup);
+                });
             });
 
         } catch (error) {
             console.error('Error loading timeline:', error);
-            timelineContainer.innerHTML = '<p class="timeline-error">Unable to load timeline</p>';
+            timelineContainers.forEach(container => {
+                container.innerHTML = '<p class="timeline-error">Unable to load timeline</p>';
+            });
         }
     }
 
