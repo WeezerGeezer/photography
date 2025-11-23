@@ -179,6 +179,8 @@ a:hover {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .mobile-header .hamburger-menu {
