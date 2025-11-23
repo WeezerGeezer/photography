@@ -30,6 +30,8 @@ Node.js-based photo processing and management scripts for the photography portfo
 - **ExifTool-vendored**: Camera metadata extraction
 - **Ollama**: AI photo analysis
 - **Luxon**: Date/time handling with timezone support
+- **@aws-sdk/client-s3**: R2 upload support (S3-compatible API)
+- **dotenv**: Environment variable loading from `.env` file
 
 ## Usage Patterns
 
@@ -38,7 +40,19 @@ Node.js-based photo processing and management scripts for the photography portfo
 ./import.sh [album-name]  # Process specific album
 ./import.sh --cleanup     # Clean orphaned entries first
 ./import.sh --sync        # Sync directory renames
+node import-photos.js --no-ai   # Skip AI analysis
+node import-photos.js --no-r2   # Skip R2 upload
+node import-photos.js --help    # Show all options
 ```
+
+### R2 Upload Configuration
+Create `scripts/.env` with:
+```
+CLOUDFLARE_ACCOUNT_ID=your-account-id
+R2_ACCESS_KEY_ID=your-access-key
+R2_SECRET_ACCESS_KEY=your-secret-key
+```
+See `.env.example` for template. R2 uploads happen automatically after processing.
 
 ### Directory Management
 ```bash
