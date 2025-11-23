@@ -283,6 +283,33 @@ a:hover {
     color: var(--secondary-color);
 }
 
+/* Mobile Contact Info */
+.mobile-contact-info {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.mobile-contact-info p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.mobile-contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+.mobile-contact-info a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.mobile-contact-info a:hover {
+    color: var(--white);
+}
+
 .mobile-filters {
     margin-bottom: 3rem;
 }
@@ -382,13 +409,41 @@ a:hover {
 }
 
 .sidebar-nav {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+/* Sidebar Contact Info */
+.sidebar-contact-info {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.sidebar-contact-info p {
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.sidebar-contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-contact-info a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    word-break: break-all;
+}
+
+.sidebar-contact-info a:hover {
+    color: var(--primary-color);
 }
 
 .nav-links li {

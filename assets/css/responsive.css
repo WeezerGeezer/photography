@@ -261,17 +261,4 @@
         border-color: var(--medium-gray);
     }
 
-    /* Gallery hover tooltip - ensure white text on dark background */
-    .gallery-item-info {
-        color: #ffffff !important;
-    }
-
-    .gallery-item-info h3 {
-        color: #ffffff !important;
-    }
-
-    .gallery-item-info p,
-    .gallery-item-info .image-date {
-        color: rgba(255, 255, 255, 0.9) !important;
-    }
 } 

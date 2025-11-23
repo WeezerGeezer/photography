@@ -200,7 +200,7 @@
     bottom: 8px;
     left: 8px;
     background: rgba(0,0,0,0.8);
-    color: var(--white);
+    color: #ffffff;
     padding: 0.5rem 0.75rem;
     border-radius: 4px;
     opacity: 0;
@@ -215,7 +215,7 @@
     font-size: 0.85rem;
     font-weight: 500;
     margin: 0 0 0.25rem 0;
-    color: var(--white);
+    color: #ffffff;
 }
 
 .gallery-item-info p,
