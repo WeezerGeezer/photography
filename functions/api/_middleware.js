@@ -52,7 +52,7 @@ export async function onRequest(context) {
 
     // Public endpoints that don't require auth
     const url = new URL(request.url);
-    const publicPaths = ['/api/auth', '/api/debug'];
+    const publicPaths = ['/api/auth'];
     const isPublic = publicPaths.some(path => url.pathname === path);
 
     if (!isPublic) {
