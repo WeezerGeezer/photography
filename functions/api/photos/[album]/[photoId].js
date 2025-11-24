@@ -50,7 +50,9 @@ function extractR2Path(url) {
 
 export async function onRequestDelete(context) {
     const { params, env } = context;
-    const { album: albumKey, photoId } = params;
+    // URL-decode the parameters to handle spaces, commas, etc.
+    const albumKey = decodeURIComponent(params.album);
+    const photoId = decodeURIComponent(params.photoId);
 
     try {
         // Get current albums

@@ -441,7 +441,10 @@
 
     async function deletePhoto(albumKey, photoId) {
         try {
-            const response = await fetch(`${CONFIG.API_BASE}/photos/${albumKey}/${photoId}`, {
+            // URL-encode album key and photo ID to handle spaces, commas, etc.
+            const encodedAlbum = encodeURIComponent(albumKey);
+            const encodedPhotoId = encodeURIComponent(photoId);
+            const response = await fetch(`${CONFIG.API_BASE}/photos/${encodedAlbum}/${encodedPhotoId}`, {
                 method: 'DELETE',
                 headers: getAuthHeader()
             });
