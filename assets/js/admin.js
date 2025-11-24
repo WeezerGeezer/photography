@@ -196,7 +196,7 @@
 
     async function loadAlbums() {
         try {
-            const response = await fetch('/data/albums.json');
+            const response = await fetch('https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/data/albums.json');
             state.albums = await response.json();
             renderAlbumsList();
             populateAlbumSelect();

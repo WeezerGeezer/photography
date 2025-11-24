@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Show skeleton while loading
             showTimelineSkeleton();
 
-            const response = await fetch('/data/albums.json');
+            const response = await fetch('https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/data/albums.json');
             const data = await response.json();
 
             // Convert albums to timeline format and sort by most recent photo date
