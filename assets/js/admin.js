@@ -454,11 +454,14 @@
                 closeModal(elements.confirmModal);
                 showToast('Photo deleted', 'success');
             } else {
-                throw new Error('Failed to delete photo');
+                const errorData = await response.json().catch(() => ({}));
+                const errorMsg = errorData.error || `HTTP ${response.status}`;
+                console.error('Delete photo failed:', response.status, errorData);
+                throw new Error(errorMsg);
             }
         } catch (error) {
             console.error('Error deleting photo:', error);
-            showToast('Failed to delete photo', 'error');
+            showToast(`Failed to delete photo: ${error.message}`, 'error');
         }
     }
 
