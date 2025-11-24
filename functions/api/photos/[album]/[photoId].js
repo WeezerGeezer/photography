@@ -57,11 +57,15 @@ export async function onRequestDelete(context) {
     try {
         // Get current albums
         const albums = await getAlbumsData(env);
+        const albumKeys = Object.keys(albums);
 
         // Check if album exists
         if (!albums[albumKey]) {
             return new Response(JSON.stringify({
-                error: 'Album not found'
+                error: 'Album not found',
+                requestedKey: albumKey,
+                availableKeys: albumKeys,
+                r2BucketAvailable: !!env.R2_BUCKET
             }), {
                 status: 404,
                 headers: { 'Content-Type': 'application/json' }
