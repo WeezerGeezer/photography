@@ -9507,47 +9507,6 @@
                 }
             },
             {
-                "id": "NeaPEE08244_598900",
-                "title": "PEE08244",
-                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/Near%20Park%20Avenue%2C%20La%20Crosse%20WI/NeaPEE08244_598900.webp",
-                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/Near%20Park%20Avenue%2C%20La%20Crosse%20WI/NeaPEE08244_598900.webp",
-                "date": "2025-07-02",
-                "accessibility": {
-                    "altText": "Photo: PEE08244"
-                },
-                "technical": {
-                    "camera": "SONY ILCE-6300",
-                    "lens": "16mm F1.4 DC DN | Contemporary 017",
-                    "settings": "1/800, f/1.4, ISO 100, 16.0 mmmm",
-                    "sceneAnalysis": null,
-                    "summary": null,
-                    "dimensions": {
-                        "width": 6000,
-                        "height": 4000,
-                        "aspectRatio": 1.5
-                    }
-                },
-                "location": null,
-                "metadata": {
-                    "originalFilename": "PEE08244.jpeg",
-                    "fileSize": "4.8 MB",
-                    "captureDate": {
-                        "_ctor": "ExifDateTime",
-                        "year": 2025,
-                        "month": 7,
-                        "day": 2,
-                        "hour": 21,
-                        "minute": 4,
-                        "second": 48,
-                        "tzoffsetMinutes": -300,
-                        "rawValue": "2025:07:02 21:04:48",
-                        "zoneName": "UTC-5",
-                        "inferredZone": true
-                    },
-                    "processingDate": "2025-11-23T22:43:16.069Z"
-                }
-            },
-            {
                 "id": "NeaPEE08247_598900",
                 "title": "PEE08247",
                 "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/Near%20Park%20Avenue%2C%20La%20Crosse%20WI/NeaPEE08247_598900.webp",
@@ -11944,6 +11903,365 @@
                         "inferredZone": true
                     },
                     "processingDate": "2025-11-23T22:50:29.619Z"
+                }
+            }
+        ]
+    },
+    "cdmxwired": {
+        "title": "CDMX:Wired",
+        "description": "",
+        "cover": "cdmxwired/cover.jpg",
+        "date": "2025-03-26",
+        "isPrivate": false,
+        "images": [
+            {
+                "id": "cdmPEE07683_655967",
+                "title": "PEE07683",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07683_655967.jpeg",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07683_655967.jpeg",
+                "date": "2025-11-24",
+                "accessibility": {
+                    "altText": "Photo: PEE07683"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": null
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07683.jpeg",
+                    "fileSize": 6148659,
+                    "captureDate": null,
+                    "processingDate": "2025-11-24T05:37:37.258Z"
+                }
+            },
+            {
+                "id": "cdmPEE07675_693763",
+                "title": "PEE07675",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07675_693763.jpeg",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07675_693763.jpeg",
+                "date": "2025-11-24",
+                "accessibility": {
+                    "altText": "Photo: PEE07675"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": null
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07675.jpeg",
+                    "fileSize": 6120120,
+                    "captureDate": null,
+                    "processingDate": "2025-11-24T05:38:15.158Z"
+                }
+            },
+            {
+                "id": "cdmPEE07674_736084",
+                "title": "PEE07674",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07674_736084.jpeg",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07674_736084.jpeg",
+                "date": "2025-11-24",
+                "accessibility": {
+                    "altText": "Photo: PEE07674"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": null
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07674.jpeg",
+                    "fileSize": 5766371,
+                    "captureDate": null,
+                    "processingDate": "2025-11-24T05:38:57.554Z"
+                }
+            },
+            {
+                "id": "cdmPEE07672_813614",
+                "title": "PEE07672",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07672_813614.jpeg",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07672_813614.jpeg",
+                "date": "2025-11-24",
+                "accessibility": {
+                    "altText": "Photo: PEE07672"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": null
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07672.jpeg",
+                    "fileSize": 9276658,
+                    "captureDate": null,
+                    "processingDate": "2025-11-24T05:40:15.271Z"
+                }
+            },
+            {
+                "id": "cdmPEE07610_848470",
+                "title": "PEE07610",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07610_848470.jpeg",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07610_848470.jpeg",
+                "date": "2025-11-24",
+                "accessibility": {
+                    "altText": "Photo: PEE07610"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": null
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07610.jpeg",
+                    "fileSize": 6403673,
+                    "captureDate": null,
+                    "processingDate": "2025-11-24T05:40:49.932Z"
+                }
+            },
+            {
+                "id": "cdmPEE07608_903958",
+                "title": "PEE07608",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07608_903958.jpeg",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07608_903958.jpeg",
+                "date": "2025-11-24",
+                "accessibility": {
+                    "altText": "Photo: PEE07608"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": null
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07608.jpeg",
+                    "fileSize": 9943250,
+                    "captureDate": null,
+                    "processingDate": "2025-11-24T05:41:45.517Z"
+                }
+            },
+            {
+                "id": "cdmPEE07598_923536",
+                "title": "PEE07598",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07598_923536.jpeg",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07598_923536.jpeg",
+                "date": "2025-11-24",
+                "accessibility": {
+                    "altText": "Photo: PEE07598"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": null
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07598.jpeg",
+                    "fileSize": 3198257,
+                    "captureDate": null,
+                    "processingDate": "2025-11-24T05:42:04.685Z"
+                }
+            },
+            {
+                "id": "cdmPEE07595_957529",
+                "title": "PEE07595",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07595_957529.jpeg",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07595_957529.jpeg",
+                "date": "2025-11-24",
+                "accessibility": {
+                    "altText": "Photo: PEE07595"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": null
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07595.jpeg",
+                    "fileSize": 6376971,
+                    "captureDate": null,
+                    "processingDate": "2025-11-24T05:42:38.935Z"
+                }
+            },
+            {
+                "id": "cdmPEE07592_000824",
+                "title": "PEE07592",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07592_000824.jpeg",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07592_000824.jpeg",
+                "date": "2025-11-24",
+                "accessibility": {
+                    "altText": "Photo: PEE07592"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": null
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07592.jpeg",
+                    "fileSize": 8081345,
+                    "captureDate": null,
+                    "processingDate": "2025-11-24T05:43:23.138Z"
+                }
+            },
+            {
+                "id": "cdmPEE07582_023587",
+                "title": "PEE07582",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07582_023587.jpeg",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07582_023587.jpeg",
+                "date": "2025-11-24",
+                "accessibility": {
+                    "altText": "Photo: PEE07582"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": null
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07582.jpeg",
+                    "fileSize": 3580492,
+                    "captureDate": null,
+                    "processingDate": "2025-11-24T05:43:44.880Z"
+                }
+            },
+            {
+                "id": "cdmPEE07576_048753",
+                "title": "PEE07576",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07576_048753.jpeg",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07576_048753.jpeg",
+                "date": "2025-11-24",
+                "accessibility": {
+                    "altText": "Photo: PEE07576"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": null
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07576.jpeg",
+                    "fileSize": 4352585,
+                    "captureDate": null,
+                    "processingDate": "2025-11-24T05:44:10.117Z"
+                }
+            },
+            {
+                "id": "cdmPEE07561_076863",
+                "title": "PEE07561",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07561_076863.jpeg",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07561_076863.jpeg",
+                "date": "2025-11-24",
+                "accessibility": {
+                    "altText": "Photo: PEE07561"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": null
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07561.jpeg",
+                    "fileSize": 5330383,
+                    "captureDate": null,
+                    "processingDate": "2025-11-24T05:44:38.253Z"
+                }
+            },
+            {
+                "id": "cdmPEE07527_108417",
+                "title": "PEE07527",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07527_108417.jpeg",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07527_108417.jpeg",
+                "date": "2025-11-24",
+                "accessibility": {
+                    "altText": "Photo: PEE07527"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": null
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07527.jpeg",
+                    "fileSize": 6135030,
+                    "captureDate": null,
+                    "processingDate": "2025-11-24T05:45:09.795Z"
+                }
+            },
+            {
+                "id": "cdmPEE07758_120494",
+                "title": "PEE07758",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07758_120494.jpeg",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07758_120494.jpeg",
+                "date": "2025-11-24",
+                "accessibility": {
+                    "altText": "Photo: PEE07758"
+                },
+                "technical": {
+                    "camera": null,
+                    "lens": null,
+                    "settings": null,
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": null
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07758.jpeg",
+                    "fileSize": 1783910,
+                    "captureDate": null,
+                    "processingDate": "2025-11-24T05:45:21.710Z"
                 }
             }
         ]
