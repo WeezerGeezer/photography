@@ -26,7 +26,8 @@ cd scripts
 - **Pages**: `index.html`, `album.html`, `about.html`, `contact.html`
 - **Styles**: `assets/css/` - Modular CSS with masonry layout
 - **Scripts**: `assets/js/` - ES6 modules (gallery, masonry, timeline, mobile-menu)
-- **Data**: `data/albums.json` - Central metadata with AI tags
+- **Data**: R2 `data/albums.json` - Central metadata with AI tags (single source of truth)
+- **Data (local)**: `data/albums.json` - Backup/reference copy (not used by live site)
 - **Tools**: `scripts/` - Photo import and AI analysis utilities
 
 ### CSS Features
@@ -58,16 +59,57 @@ cd scripts
 **Node.js**: Sharp, ExifTool, Ollama (AI), Luxon (dates)
 **Requires**: Node.js ^18.17.0 || ^20.3.0 || >=21.0.0
 
-## Admin Panel (WIP)
+## Data Architecture
+
+### R2 as Single Source of Truth (Nov 2025)
+All frontend pages fetch album data from R2 instead of static files:
+- **R2 URL**: `https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/data/albums.json`
+- **CORS Enabled**: Allow all origins, GET/HEAD methods, 24hr cache
+- **Benefits**: Admin uploads appear instantly, no git sync required
+
+### Data Flow
+```
+Photo Upload (Admin) → R2 albums.json
+                          ↓
+    ┌─────────────────────┴─────────────────────┐
+    ↓                     ↓                     ↓
+Gallery (index.html)  Albums (album.html)  Timeline (sidebar)
+```
+
+### Syncing Local ↔ R2
+```bash
+# Download from R2 to local (for backup/reference)
+curl -o data/albums.json "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/data/albums.json"
+
+# Upload local to R2 (for bulk updates)
+source ~/.nvm/nvm.sh && nvm use 20
+wrangler r2 object put photography-portfolio/data/albums.json --file=data/albums.json --content-type="application/json"
+```
+
+## Admin Panel
 - **URL**: `/admin.html`
 - **Backend**: Cloudflare Pages Functions in `functions/api/`
-- **Auth**: Requires `ADMIN_PASSWORD` and `ADMIN_SECRET` secrets in Cloudflare Pages
-- **Status**: Authentication not yet working (env vars not being read by Functions)
+- **Auth**: Uses `ADMIN_PASSWORD` and `ADMIN_SECRET` environment variables
+- **Storage**: All operations read/write to R2 bucket
+
+### Admin Functions
+- ✅ **Albums**: Create, edit, delete albums
+- ✅ **Photos**: Upload, delete photos (instant visibility on public site)
+- ✅ **Upload**: Drag-and-drop upload with optional AI analysis
+- ⚠️ **Sync Data**: Button exists but incomplete implementation
+- ✅ **Storage Status**: R2 connection check
+
+### Important Notes
+- Album keys with spaces/special chars are URL-encoded automatically
+- Uploads bypass git - changes are immediate via R2
+- Local `data/albums.json` is just a backup (not used by live site)
 
 ## Recent Changes (Nov 2025)
+- **R2 Migration**: Switched all data fetching to R2 (instant admin updates)
+- **CORS Enabled**: Configured R2 bucket for cross-origin requests
+- **Admin Panel**: Fixed photo deletion, URL encoding for special characters
 - Timeline redesigned with collapsible year sections
 - Filter UI hidden (logic preserved)
 - Gallery hover text always white (fixed dark mode issue)
 - Sidebar updated: removed About/Contact nav, added contact info text
-- Import script now uploads to R2 automatically (requires `.env` config)
-- R2 public URL: `https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev`
+- Import script uploads to R2 automatically (requires `.env` config)
