@@ -11907,361 +11907,583 @@
             }
         ]
     },
-    "cdmxwired": {
-        "title": "CDMX:Wired",
-        "description": "",
-        "cover": "cdmxwired/cover.jpg",
-        "date": "2025-03-26",
-        "isPrivate": false,
+    "CDMX-Wired": {
+        "title": "CDMX Wired",
+        "description": "A collection of CDMX-Wired photography",
+        "cover": "CDMX-Wired/cover.jpg",
         "images": [
             {
-                "id": "cdmPEE07683_655967",
-                "title": "PEE07683",
-                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07683_655967.jpeg",
-                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07683_655967.jpeg",
-                "date": "2025-11-24",
-                "accessibility": {
-                    "altText": "Photo: PEE07683"
-                },
-                "technical": {
-                    "camera": null,
-                    "lens": null,
-                    "settings": null,
-                    "sceneAnalysis": null,
-                    "summary": null,
-                    "dimensions": null
-                },
-                "location": null,
-                "metadata": {
-                    "originalFilename": "PEE07683.jpeg",
-                    "fileSize": 6148659,
-                    "captureDate": null,
-                    "processingDate": "2025-11-24T05:37:37.258Z"
-                }
-            },
-            {
-                "id": "cdmPEE07675_693763",
-                "title": "PEE07675",
-                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07675_693763.jpeg",
-                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07675_693763.jpeg",
-                "date": "2025-11-24",
-                "accessibility": {
-                    "altText": "Photo: PEE07675"
-                },
-                "technical": {
-                    "camera": null,
-                    "lens": null,
-                    "settings": null,
-                    "sceneAnalysis": null,
-                    "summary": null,
-                    "dimensions": null
-                },
-                "location": null,
-                "metadata": {
-                    "originalFilename": "PEE07675.jpeg",
-                    "fileSize": 6120120,
-                    "captureDate": null,
-                    "processingDate": "2025-11-24T05:38:15.158Z"
-                }
-            },
-            {
-                "id": "cdmPEE07674_736084",
-                "title": "PEE07674",
-                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07674_736084.jpeg",
-                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07674_736084.jpeg",
-                "date": "2025-11-24",
-                "accessibility": {
-                    "altText": "Photo: PEE07674"
-                },
-                "technical": {
-                    "camera": null,
-                    "lens": null,
-                    "settings": null,
-                    "sceneAnalysis": null,
-                    "summary": null,
-                    "dimensions": null
-                },
-                "location": null,
-                "metadata": {
-                    "originalFilename": "PEE07674.jpeg",
-                    "fileSize": 5766371,
-                    "captureDate": null,
-                    "processingDate": "2025-11-24T05:38:57.554Z"
-                }
-            },
-            {
-                "id": "cdmPEE07672_813614",
+                "id": "CDMPEE07672_112031",
                 "title": "PEE07672",
-                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07672_813614.jpeg",
-                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07672_813614.jpeg",
-                "date": "2025-11-24",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/CDMX-Wired/CDMPEE07672_112031.webp",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/CDMX-Wired/CDMPEE07672_112031.webp",
+                "date": "2025-03-09",
                 "accessibility": {
                     "altText": "Photo: PEE07672"
                 },
                 "technical": {
-                    "camera": null,
-                    "lens": null,
-                    "settings": null,
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/200, f/5, ISO 100, 18.0 mmmm",
                     "sceneAnalysis": null,
                     "summary": null,
-                    "dimensions": null
+                    "dimensions": {
+                        "width": 4000,
+                        "height": 6000,
+                        "aspectRatio": 0.67
+                    }
                 },
                 "location": null,
                 "metadata": {
                     "originalFilename": "PEE07672.jpeg",
-                    "fileSize": 9276658,
-                    "captureDate": null,
-                    "processingDate": "2025-11-24T05:40:15.271Z"
+                    "fileSize": "9.3 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2025,
+                        "month": 3,
+                        "day": 9,
+                        "hour": 13,
+                        "minute": 58,
+                        "second": 6,
+                        "tzoffsetMinutes": -300,
+                        "rawValue": "2025:03:09 13:58:06",
+                        "zoneName": "UTC-5",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-12-01T03:02:50.966Z"
                 }
             },
             {
-                "id": "cdmPEE07610_848470",
-                "title": "PEE07610",
-                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07610_848470.jpeg",
-                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07610_848470.jpeg",
-                "date": "2025-11-24",
+                "id": "CDMPEE07674_112031",
+                "title": "PEE07674",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/CDMX-Wired/CDMPEE07674_112031.webp",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/CDMX-Wired/CDMPEE07674_112031.webp",
+                "date": "2025-03-09",
                 "accessibility": {
-                    "altText": "Photo: PEE07610"
+                    "altText": "Photo: PEE07674"
                 },
                 "technical": {
-                    "camera": null,
-                    "lens": null,
-                    "settings": null,
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/320, f/5, ISO 100, 18.0 mmmm",
                     "sceneAnalysis": null,
                     "summary": null,
-                    "dimensions": null
+                    "dimensions": {
+                        "width": 4000,
+                        "height": 6000,
+                        "aspectRatio": 0.67
+                    }
                 },
                 "location": null,
                 "metadata": {
-                    "originalFilename": "PEE07610.jpeg",
-                    "fileSize": 6403673,
-                    "captureDate": null,
-                    "processingDate": "2025-11-24T05:40:49.932Z"
+                    "originalFilename": "PEE07674.jpeg",
+                    "fileSize": "5.8 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2025,
+                        "month": 3,
+                        "day": 9,
+                        "hour": 14,
+                        "minute": 1,
+                        "second": 3,
+                        "tzoffsetMinutes": -300,
+                        "rawValue": "2025:03:09 14:01:03",
+                        "zoneName": "UTC-5",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-12-01T03:02:59.789Z"
                 }
             },
             {
-                "id": "cdmPEE07608_903958",
-                "title": "PEE07608",
-                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07608_903958.jpeg",
-                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07608_903958.jpeg",
-                "date": "2025-11-24",
+                "id": "CDMPEE07675_112031",
+                "title": "PEE07675",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/CDMX-Wired/CDMPEE07675_112031.webp",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/CDMX-Wired/CDMPEE07675_112031.webp",
+                "date": "2025-03-09",
                 "accessibility": {
-                    "altText": "Photo: PEE07608"
+                    "altText": "Photo: PEE07675"
                 },
                 "technical": {
-                    "camera": null,
-                    "lens": null,
-                    "settings": null,
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/800, f/5, ISO 100, 41.0 mmmm",
                     "sceneAnalysis": null,
                     "summary": null,
-                    "dimensions": null
+                    "dimensions": {
+                        "width": 6000,
+                        "height": 4000,
+                        "aspectRatio": 1.5
+                    }
                 },
                 "location": null,
                 "metadata": {
-                    "originalFilename": "PEE07608.jpeg",
-                    "fileSize": 9943250,
-                    "captureDate": null,
-                    "processingDate": "2025-11-24T05:41:45.517Z"
+                    "originalFilename": "PEE07675.jpeg",
+                    "fileSize": "6.1 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2025,
+                        "month": 3,
+                        "day": 9,
+                        "hour": 14,
+                        "minute": 1,
+                        "second": 36,
+                        "tzoffsetMinutes": -300,
+                        "rawValue": "2025:03:09 14:01:36",
+                        "zoneName": "UTC-5",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-12-01T03:03:04.038Z"
                 }
             },
             {
-                "id": "cdmPEE07598_923536",
-                "title": "PEE07598",
-                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07598_923536.jpeg",
-                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07598_923536.jpeg",
-                "date": "2025-11-24",
+                "id": "CDMPEE07683_112031",
+                "title": "PEE07683",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/CDMX-Wired/CDMPEE07683_112031.webp",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/CDMX-Wired/CDMPEE07683_112031.webp",
+                "date": "2025-03-09",
                 "accessibility": {
-                    "altText": "Photo: PEE07598"
+                    "altText": "Photo: PEE07683"
                 },
                 "technical": {
-                    "camera": null,
-                    "lens": null,
-                    "settings": null,
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/400, f/4.5, ISO 100, 18.0 mmmm",
                     "sceneAnalysis": null,
                     "summary": null,
-                    "dimensions": null
+                    "dimensions": {
+                        "width": 6000,
+                        "height": 4000,
+                        "aspectRatio": 1.5
+                    }
                 },
                 "location": null,
                 "metadata": {
-                    "originalFilename": "PEE07598.jpeg",
-                    "fileSize": 3198257,
-                    "captureDate": null,
-                    "processingDate": "2025-11-24T05:42:04.685Z"
+                    "originalFilename": "PEE07683.jpeg",
+                    "fileSize": "6.1 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2025,
+                        "month": 3,
+                        "day": 9,
+                        "hour": 14,
+                        "minute": 14,
+                        "second": 58,
+                        "tzoffsetMinutes": -300,
+                        "rawValue": "2025:03:09 14:14:58",
+                        "zoneName": "UTC-5",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-12-01T03:03:08.562Z"
                 }
             },
             {
-                "id": "cdmPEE07595_957529",
-                "title": "PEE07595",
-                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07595_957529.jpeg",
-                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07595_957529.jpeg",
-                "date": "2025-11-24",
-                "accessibility": {
-                    "altText": "Photo: PEE07595"
-                },
-                "technical": {
-                    "camera": null,
-                    "lens": null,
-                    "settings": null,
-                    "sceneAnalysis": null,
-                    "summary": null,
-                    "dimensions": null
-                },
-                "location": null,
-                "metadata": {
-                    "originalFilename": "PEE07595.jpeg",
-                    "fileSize": 6376971,
-                    "captureDate": null,
-                    "processingDate": "2025-11-24T05:42:38.935Z"
-                }
-            },
-            {
-                "id": "cdmPEE07592_000824",
-                "title": "PEE07592",
-                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07592_000824.jpeg",
-                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07592_000824.jpeg",
-                "date": "2025-11-24",
-                "accessibility": {
-                    "altText": "Photo: PEE07592"
-                },
-                "technical": {
-                    "camera": null,
-                    "lens": null,
-                    "settings": null,
-                    "sceneAnalysis": null,
-                    "summary": null,
-                    "dimensions": null
-                },
-                "location": null,
-                "metadata": {
-                    "originalFilename": "PEE07592.jpeg",
-                    "fileSize": 8081345,
-                    "captureDate": null,
-                    "processingDate": "2025-11-24T05:43:23.138Z"
-                }
-            },
-            {
-                "id": "cdmPEE07582_023587",
-                "title": "PEE07582",
-                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07582_023587.jpeg",
-                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07582_023587.jpeg",
-                "date": "2025-11-24",
-                "accessibility": {
-                    "altText": "Photo: PEE07582"
-                },
-                "technical": {
-                    "camera": null,
-                    "lens": null,
-                    "settings": null,
-                    "sceneAnalysis": null,
-                    "summary": null,
-                    "dimensions": null
-                },
-                "location": null,
-                "metadata": {
-                    "originalFilename": "PEE07582.jpeg",
-                    "fileSize": 3580492,
-                    "captureDate": null,
-                    "processingDate": "2025-11-24T05:43:44.880Z"
-                }
-            },
-            {
-                "id": "cdmPEE07576_048753",
-                "title": "PEE07576",
-                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07576_048753.jpeg",
-                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07576_048753.jpeg",
-                "date": "2025-11-24",
-                "accessibility": {
-                    "altText": "Photo: PEE07576"
-                },
-                "technical": {
-                    "camera": null,
-                    "lens": null,
-                    "settings": null,
-                    "sceneAnalysis": null,
-                    "summary": null,
-                    "dimensions": null
-                },
-                "location": null,
-                "metadata": {
-                    "originalFilename": "PEE07576.jpeg",
-                    "fileSize": 4352585,
-                    "captureDate": null,
-                    "processingDate": "2025-11-24T05:44:10.117Z"
-                }
-            },
-            {
-                "id": "cdmPEE07561_076863",
-                "title": "PEE07561",
-                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07561_076863.jpeg",
-                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07561_076863.jpeg",
-                "date": "2025-11-24",
-                "accessibility": {
-                    "altText": "Photo: PEE07561"
-                },
-                "technical": {
-                    "camera": null,
-                    "lens": null,
-                    "settings": null,
-                    "sceneAnalysis": null,
-                    "summary": null,
-                    "dimensions": null
-                },
-                "location": null,
-                "metadata": {
-                    "originalFilename": "PEE07561.jpeg",
-                    "fileSize": 5330383,
-                    "captureDate": null,
-                    "processingDate": "2025-11-24T05:44:38.253Z"
-                }
-            },
-            {
-                "id": "cdmPEE07527_108417",
-                "title": "PEE07527",
-                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07527_108417.jpeg",
-                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07527_108417.jpeg",
-                "date": "2025-11-24",
-                "accessibility": {
-                    "altText": "Photo: PEE07527"
-                },
-                "technical": {
-                    "camera": null,
-                    "lens": null,
-                    "settings": null,
-                    "sceneAnalysis": null,
-                    "summary": null,
-                    "dimensions": null
-                },
-                "location": null,
-                "metadata": {
-                    "originalFilename": "PEE07527.jpeg",
-                    "fileSize": 6135030,
-                    "captureDate": null,
-                    "processingDate": "2025-11-24T05:45:09.795Z"
-                }
-            },
-            {
-                "id": "cdmPEE07758_120494",
+                "id": "CDMPEE07758_112031",
                 "title": "PEE07758",
-                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/cdmxwired/cdmPEE07758_120494.jpeg",
-                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/cdmxwired/cdmPEE07758_120494.jpeg",
-                "date": "2025-11-24",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/CDMX-Wired/CDMPEE07758_112031.webp",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/CDMX-Wired/CDMPEE07758_112031.webp",
+                "date": "2025-03-09",
                 "accessibility": {
                     "altText": "Photo: PEE07758"
                 },
                 "technical": {
-                    "camera": null,
-                    "lens": null,
-                    "settings": null,
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/320, f/5, ISO 100, 18.0 mmmm",
                     "sceneAnalysis": null,
                     "summary": null,
-                    "dimensions": null
+                    "dimensions": {
+                        "width": 3097,
+                        "height": 4646,
+                        "aspectRatio": 0.67
+                    }
                 },
                 "location": null,
                 "metadata": {
                     "originalFilename": "PEE07758.jpeg",
-                    "fileSize": 1783910,
-                    "captureDate": null,
-                    "processingDate": "2025-11-24T05:45:21.710Z"
+                    "fileSize": "1784 kB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2025,
+                        "month": 3,
+                        "day": 9,
+                        "hour": 17,
+                        "minute": 50,
+                        "second": 21,
+                        "tzoffsetMinutes": -300,
+                        "rawValue": "2025:03:09 17:50:21",
+                        "zoneName": "UTC-5",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-12-01T03:03:12.284Z"
+                }
+            },
+            {
+                "id": "CDMPEE07608_112031",
+                "title": "PEE07608",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/CDMX-Wired/CDMPEE07608_112031.webp",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/CDMX-Wired/CDMPEE07608_112031.webp",
+                "date": "2025-03-08",
+                "accessibility": {
+                    "altText": "Photo: PEE07608"
+                },
+                "technical": {
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/160, f/5, ISO 100, 20.0 mmmm",
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 6000,
+                        "height": 4000,
+                        "aspectRatio": 1.5
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07608.jpeg",
+                    "fileSize": "9.9 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2025,
+                        "month": 3,
+                        "day": 8,
+                        "hour": 14,
+                        "minute": 48,
+                        "second": 56,
+                        "tzoffsetMinutes": -360,
+                        "rawValue": "2025:03:08 14:48:56",
+                        "zoneName": "UTC-6",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-12-01T03:02:34.938Z"
+                }
+            },
+            {
+                "id": "CDMPEE07610_112031",
+                "title": "PEE07610",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/CDMX-Wired/CDMPEE07610_112031.webp",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/CDMX-Wired/CDMPEE07610_112031.webp",
+                "date": "2025-03-08",
+                "accessibility": {
+                    "altText": "Photo: PEE07610"
+                },
+                "technical": {
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/200, f/4.5, ISO 100, 26.0 mmmm",
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 6000,
+                        "height": 4000,
+                        "aspectRatio": 1.5
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07610.jpeg",
+                    "fileSize": "6.4 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2025,
+                        "month": 3,
+                        "day": 8,
+                        "hour": 14,
+                        "minute": 51,
+                        "second": 5,
+                        "tzoffsetMinutes": -360,
+                        "rawValue": "2025:03:08 14:51:05",
+                        "zoneName": "UTC-6",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-12-01T03:02:38.334Z"
+                }
+            },
+            {
+                "id": "CDMPEE07527_112030",
+                "title": "PEE07527",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/CDMX-Wired/CDMPEE07527_112030.webp",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/CDMX-Wired/CDMPEE07527_112030.webp",
+                "date": "2025-03-07",
+                "accessibility": {
+                    "altText": "Photo: PEE07527"
+                },
+                "technical": {
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/640, f/5, ISO 100, 32.0 mmmm",
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 4000,
+                        "height": 6000,
+                        "aspectRatio": 0.67
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07527.jpeg",
+                    "fileSize": "6.1 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2025,
+                        "month": 3,
+                        "day": 7,
+                        "hour": 14,
+                        "minute": 27,
+                        "second": 2,
+                        "tzoffsetMinutes": -360,
+                        "rawValue": "2025:03:07 14:27:02",
+                        "zoneName": "UTC-6",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-12-01T03:01:59.266Z"
+                }
+            },
+            {
+                "id": "CDMPEE07561_112030",
+                "title": "PEE07561",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/CDMX-Wired/CDMPEE07561_112030.webp",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/CDMX-Wired/CDMPEE07561_112030.webp",
+                "date": "2025-03-07",
+                "accessibility": {
+                    "altText": "Photo: PEE07561"
+                },
+                "technical": {
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/640, f/5, ISO 100, 31.0 mmmm",
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 4000,
+                        "height": 6000,
+                        "aspectRatio": 0.67
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07561.jpeg",
+                    "fileSize": "5.3 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2025,
+                        "month": 3,
+                        "day": 7,
+                        "hour": 15,
+                        "minute": 59,
+                        "second": 35,
+                        "tzoffsetMinutes": -360,
+                        "rawValue": "2025:03:07 15:59:35",
+                        "zoneName": "UTC-6",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-12-01T03:02:04.448Z"
+                }
+            },
+            {
+                "id": "CDMPEE07576_112030",
+                "title": "PEE07576",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/CDMX-Wired/CDMPEE07576_112030.webp",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/CDMX-Wired/CDMPEE07576_112030.webp",
+                "date": "2025-03-07",
+                "accessibility": {
+                    "altText": "Photo: PEE07576"
+                },
+                "technical": {
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/1000, f/5, ISO 100, 41.0 mmmm",
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 6000,
+                        "height": 4000,
+                        "aspectRatio": 1.5
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07576.jpeg",
+                    "fileSize": "4.4 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2025,
+                        "month": 3,
+                        "day": 7,
+                        "hour": 16,
+                        "minute": 9,
+                        "second": 41,
+                        "tzoffsetMinutes": -360,
+                        "rawValue": "2025:03:07 16:09:41",
+                        "zoneName": "UTC-6",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-12-01T03:02:07.180Z"
+                }
+            },
+            {
+                "id": "CDMPEE07582_112030",
+                "title": "PEE07582",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/CDMX-Wired/CDMPEE07582_112030.webp",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/CDMX-Wired/CDMPEE07582_112030.webp",
+                "date": "2025-03-07",
+                "accessibility": {
+                    "altText": "Photo: PEE07582"
+                },
+                "technical": {
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/800, f/5, ISO 100, 26.0 mmmm",
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 5219,
+                        "height": 3648,
+                        "aspectRatio": 1.43
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07582.jpeg",
+                    "fileSize": "3.6 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2025,
+                        "month": 3,
+                        "day": 7,
+                        "hour": 16,
+                        "minute": 14,
+                        "second": 4,
+                        "tzoffsetMinutes": -360,
+                        "rawValue": "2025:03:07 16:14:04",
+                        "zoneName": "UTC-6",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-12-01T03:02:10.585Z"
+                }
+            },
+            {
+                "id": "CDMPEE07592_112030",
+                "title": "PEE07592",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/CDMX-Wired/CDMPEE07592_112030.webp",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/CDMX-Wired/CDMPEE07592_112030.webp",
+                "date": "2025-03-07",
+                "accessibility": {
+                    "altText": "Photo: PEE07592"
+                },
+                "technical": {
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/400, f/5, ISO 100, 38.0 mmmm",
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 6000,
+                        "height": 4000,
+                        "aspectRatio": 1.5
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07592.jpeg",
+                    "fileSize": "8.1 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2025,
+                        "month": 3,
+                        "day": 7,
+                        "hour": 16,
+                        "minute": 26,
+                        "second": 18,
+                        "tzoffsetMinutes": -360,
+                        "rawValue": "2025:03:07 16:26:18",
+                        "zoneName": "UTC-6",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-12-01T03:02:19.192Z"
+                }
+            },
+            {
+                "id": "CDMPEE07595_112031",
+                "title": "PEE07595",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/CDMX-Wired/CDMPEE07595_112031.webp",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/CDMX-Wired/CDMPEE07595_112031.webp",
+                "date": "2025-03-07",
+                "accessibility": {
+                    "altText": "Photo: PEE07595"
+                },
+                "technical": {
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/60, f/4, ISO 400, 22.0 mmmm",
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 4000,
+                        "height": 6000,
+                        "aspectRatio": 0.67
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07595.jpeg",
+                    "fileSize": "6.4 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2025,
+                        "month": 3,
+                        "day": 7,
+                        "hour": 20,
+                        "minute": 39,
+                        "second": 11,
+                        "tzoffsetMinutes": -360,
+                        "rawValue": "2025:03:07 20:39:11",
+                        "zoneName": "UTC-6",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-12-01T03:02:28.874Z"
+                }
+            },
+            {
+                "id": "CDMPEE07598_112031",
+                "title": "PEE07598",
+                "thumbnail": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/thumbnails/CDMX-Wired/CDMPEE07598_112031.webp",
+                "full": "https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/full/CDMX-Wired/CDMPEE07598_112031.webp",
+                "date": "2025-03-07",
+                "accessibility": {
+                    "altText": "Photo: PEE07598"
+                },
+                "technical": {
+                    "camera": "SONY ILCE-6300",
+                    "lens": "E PZ 18-105mm F4 G OSS",
+                    "settings": "1/60, f/4, ISO 160, 20.0 mmmm",
+                    "sceneAnalysis": null,
+                    "summary": null,
+                    "dimensions": {
+                        "width": 5889,
+                        "height": 3926,
+                        "aspectRatio": 1.5
+                    }
+                },
+                "location": null,
+                "metadata": {
+                    "originalFilename": "PEE07598.jpeg",
+                    "fileSize": "3.2 MB",
+                    "captureDate": {
+                        "_ctor": "ExifDateTime",
+                        "year": 2025,
+                        "month": 3,
+                        "day": 7,
+                        "hour": 20,
+                        "minute": 49,
+                        "second": 0,
+                        "tzoffsetMinutes": -360,
+                        "rawValue": "2025:03:07 20:49:00",
+                        "zoneName": "UTC-6",
+                        "inferredZone": true
+                    },
+                    "processingDate": "2025-12-01T03:02:30.985Z"
                 }
             }
         ]

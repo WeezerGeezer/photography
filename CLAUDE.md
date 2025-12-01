@@ -46,10 +46,12 @@ cd scripts
 **Maritime**, **Golden Hour**, **Candid**, **Action**, **Nature**, **Events**, **Portraits**
 
 ### Processing Pipeline
-1. Place photos in album directories
-2. Run `./import.sh` - Sharp optimization + AI analysis
+1. Place photos in `assets/images/albums/[album-name]/` directory
+2. Run `./import.sh [album-name]` - Sharp optimization + AI analysis
 3. Generates WebP + thumbnails, updates JSON with tags/metadata
 4. Albums accessible at `/album.html?id=[album-key]`
+
+**IMPORTANT**: Source album photos are always in `~/Documents/Github/photography-portfolio-standalone/assets/images/albums/[album-name]/`
 
 ### Directory Sync
 - Rename folders in Finder → Run `./sync.sh` to update JSON paths
@@ -104,7 +106,25 @@ wrangler r2 object put photography-portfolio/data/albums.json --file=data/albums
 - Uploads bypass git - changes are immediate via R2
 - Local `data/albums.json` is just a backup (not used by live site)
 
-## Recent Changes (Nov 2025)
+## Recent Changes (Nov-Dec 2025)
+
+### Performance Optimization (Dec 2025)
+- **Admin Upload Fixed**: Added WebP processing to admin panel uploads using @cf-wasm/photon
+  - Thumbnails: 800px width, 85% quality WebP
+  - Full-size: 2000px width, 90% quality WebP
+  - Matches local import script settings
+- **Caching Headers**: Added `_headers` file for optimal Cloudflare caching
+  - Images: 1 year cache with immutable flag
+  - CSS/JS: 1 year cache
+  - HTML: 1 hour cache with revalidation
+- **Safari Pagination**: Automatic detection disables infinite scroll for Safari users
+  - Shows "Load More" button instead of auto-loading
+  - Reduces memory usage and improves performance on Safari
+  - Other browsers continue using infinite scroll
+- **AI Analysis**: Disabled by default in import scripts for faster processing
+- **CDMX-Wired Album**: Reprocessed from raw JPEGs to WebP (85% size reduction)
+
+### R2 Migration (Nov 2025)
 - **R2 Migration**: Switched all data fetching to R2 (instant admin updates)
 - **CORS Enabled**: Configured R2 bucket for cross-origin requests
 - **Admin Panel**: Fixed photo deletion, URL encoding for special characters

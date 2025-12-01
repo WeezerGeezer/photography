@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Detect Safari browser
+    function isSafari() {
+        const ua = navigator.userAgent.toLowerCase();
+        // Check for Safari but exclude Chrome and other Chromium-based browsers
+        return ua.indexOf('safari') !== -1 &&
+               ua.indexOf('chrome') === -1 &&
+               ua.indexOf('chromium') === -1 &&
+               ua.indexOf('android') === -1;
+    }
+
+    const useSafariPagination = isSafari();
+
+    if (useSafariPagination) {
+        console.log('Safari detected - using button pagination instead of infinite scroll');
+    }
+
     // Elements
     const galleryGrid = document.querySelector('.gallery-grid');
     const lightbox = document.querySelector('.lightbox');
@@ -172,6 +188,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 500);
             }
         }, 100);
+
+        // Update load more button visibility for Safari
+        updateLoadMoreButton();
     }
 
     // Lightbox functionality
@@ -385,13 +404,29 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', throttledCheckScroll);
     }
 
-    // Legacy load more button (hidden by default now)
+    // Load more button - show for Safari, hide for other browsers
     if (loadMoreBtn) {
-        loadMoreBtn.style.display = 'none'; // Hide the load more button
-        loadMoreBtn.addEventListener('click', () => {
+        // Show button for Safari users, hide for others
+        loadMoreBtn.style.display = useSafariPagination ? 'block' : 'none';
+
+        loadMoreBtn.addEventListener('click', async () => {
+            if (loading || !hasMoreImages) return;
+
             page++;
-            renderGallery(currentFilter, true);
+            await renderGallery(currentFilter, true);
+
+            // Hide button if no more images
+            if (!hasMoreImages) {
+                loadMoreBtn.style.display = 'none';
+            }
         });
+    }
+
+    // Update button visibility after rendering
+    function updateLoadMoreButton() {
+        if (loadMoreBtn && useSafariPagination) {
+            loadMoreBtn.style.display = hasMoreImages ? 'block' : 'none';
+        }
     }
 
     // Skeleton loader functions
@@ -426,9 +461,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Initialize gallery and infinite scroll
+    // Initialize gallery and setup appropriate pagination
     renderGallery();
-    setupInfiniteScroll();
+
+    // Only setup infinite scroll for non-Safari browsers
+    if (!useSafariPagination) {
+        setupInfiniteScroll();
+    } else {
+        // For Safari, ensure button is visible initially if there are more images
+        updateLoadMoreButton();
+    }
 
     // Lazy loading for gallery images
     if ('IntersectionObserver' in window) {

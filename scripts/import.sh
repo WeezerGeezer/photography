@@ -107,11 +107,8 @@ if [ -z "$ALBUM_NAME" ]; then
     read -p "Would you like to scan and import all albums? (y/n): " response
     if [[ "$response" =~ ^[Yy]$ ]]; then
         echo "🔍 Scanning all album folders..."
-        if [ "$NO_AI_FLAG" = "true" ]; then
-            node import-photos.js --no-ai
-        else
-            node import-photos.js
-        fi
+        # AI disabled by default for performance
+        node import-photos.js --no-ai
     else
         echo "Operation cancelled."
         exit 0
@@ -119,9 +116,6 @@ if [ -z "$ALBUM_NAME" ]; then
 else
     # Import specific album
     echo "🚀 Starting photo import for album: $ALBUM_NAME"
-    if [ "$NO_AI_FLAG" = "true" ]; then
-        node import-photos.js "$ALBUM_NAME" --no-ai
-    else
-        node import-photos.js "$ALBUM_NAME"
-    fi
+    # AI disabled by default for performance (use explicit flag if needed)
+    node import-photos.js "$ALBUM_NAME" --no-ai
 fi
