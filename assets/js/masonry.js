@@ -25,8 +25,7 @@ class MasonryLayout {
             console.error('Masonry: Container not found');
             return;
         }
-        
-        console.log('Masonry: Initializing with container:', this.container);
+
         this.calculateColumns();
         this.bindEvents();
     }
@@ -51,26 +50,24 @@ class MasonryLayout {
 
     layout() {
         if (!this.container) return;
-        
+
         this.calculateColumns();
-        
+
         const items = this.container.querySelectorAll(this.options.itemSelector);
-        console.log(`Masonry: Laying out ${items.length} items in ${this.columnCount} columns`);
-        
+
         // Mark container as masonry initialized
         this.container.classList.add('masonry-initialized');
-        
+
         // Reset container and columns
         this.columns = new Array(this.columnCount).fill(0);
-        
+
         items.forEach((item, index) => {
             this.positionItem(item, index);
         });
-        
+
         // Set container height to tallest column
         const maxHeight = Math.max(...this.columns);
         this.container.style.height = `${maxHeight}px`;
-        console.log(`Masonry: Container height set to ${maxHeight}px`);
     }
 
     positionItem(item, index) {
