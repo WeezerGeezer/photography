@@ -61,6 +61,13 @@ cd scripts
 **Node.js**: Sharp, ExifTool, Ollama (AI), Luxon (dates)
 **Requires**: Node.js ^18.17.0 || ^20.3.0 || >=21.0.0
 
+## Performance Testing
+See **PERFORMANCE.md** for modern performance metrics and testing guide.
+- Core Web Vitals (LCP, FID/INP, CLS)
+- Google Lighthouse testing
+- Target: 85+ performance score, < 2.5s LCP
+- Industry benchmarks for photography portfolios
+
 ## Data Architecture
 
 ### R2 as Single Source of Truth (Nov 2025)
