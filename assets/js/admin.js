@@ -722,6 +722,199 @@
         });
     }
 
+    // ==================== Gallery Order Management ====================
+
+    let galleryPhotos = [];
+    let orderModified = false;
+
+    async function loadGalleryOrder() {
+        try {
+            const response = await fetch('https://pub-5824bb858aa94e4b8c091ec16ed5c3c0.r2.dev/data/albums.json');
+            const albums = await response.json();
+
+            // Flatten all images from non-private albums
+            galleryPhotos = [];
+            Object.entries(albums).forEach(([albumKey, album]) => {
+                if (album.isPrivate) return;
+
+                album.images.forEach((img, idx) => {
+                    galleryPhotos.push({
+                        ...img,
+                        albumKey: albumKey,
+                        albumTitle: album.title,
+                        originalIndex: idx
+                    });
+                });
+            });
+
+            // Sort by existing order field (if present), then by date
+            galleryPhotos.sort((a, b) => {
+                if (a.order !== undefined && b.order !== undefined) {
+                    return a.order - b.order;
+                }
+                if (a.order !== undefined) return -1;
+                if (b.order !== undefined) return 1;
+                return new Date(b.date) - new Date(a.date);
+            });
+
+            renderGalleryOrder();
+        } catch (error) {
+            console.error('Error loading gallery order:', error);
+            showToast('Failed to load gallery photos', 'error');
+        }
+    }
+
+    function renderGalleryOrder() {
+        const grid = document.getElementById('gallery-order-grid');
+        if (!grid) return;
+
+        if (galleryPhotos.length === 0) {
+            grid.innerHTML = `
+                <div class="loading-placeholder">
+                    <p>No photos found in public albums.</p>
+                </div>
+            `;
+            return;
+        }
+
+        grid.innerHTML = galleryPhotos.map((photo, index) => `
+            <div class="gallery-order-item"
+                 draggable="true"
+                 data-photo-id="${photo.id}"
+                 data-album-key="${photo.albumKey}"
+                 data-index="${index}">
+                <img src="${photo.thumbnail}" alt="${photo.title}" loading="lazy">
+                <div class="gallery-order-item-drag-handle">⋮⋮</div>
+                <div class="gallery-order-item-info">
+                    <div class="gallery-order-item-album">${photo.albumTitle}</div>
+                    <div class="gallery-order-item-order">Position: ${index + 1}</div>
+                </div>
+            </div>
+        `).join('');
+
+        setupDragAndDrop();
+    }
+
+    function setupDragAndDrop() {
+        const items = document.querySelectorAll('.gallery-order-item');
+        let draggedElement = null;
+        let draggedIndex = null;
+
+        items.forEach(item => {
+            item.addEventListener('dragstart', (e) => {
+                draggedElement = item;
+                draggedIndex = parseInt(item.dataset.index);
+                item.classList.add('dragging');
+                e.dataTransfer.effectAllowed = 'move';
+            });
+
+            item.addEventListener('dragend', (e) => {
+                item.classList.remove('dragging');
+                items.forEach(i => i.classList.remove('drag-over'));
+                draggedElement = null;
+                draggedIndex = null;
+            });
+
+            item.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                e.dataTransfer.dropEffect = 'move';
+
+                if (draggedElement && draggedElement !== item) {
+                    item.classList.add('drag-over');
+                }
+            });
+
+            item.addEventListener('dragleave', (e) => {
+                item.classList.remove('drag-over');
+            });
+
+            item.addEventListener('drop', (e) => {
+                e.preventDefault();
+                item.classList.remove('drag-over');
+
+                if (draggedElement && draggedElement !== item) {
+                    const dropIndex = parseInt(item.dataset.index);
+
+                    // Reorder the galleryPhotos array
+                    const draggedPhoto = galleryPhotos[draggedIndex];
+                    galleryPhotos.splice(draggedIndex, 1);
+                    galleryPhotos.splice(dropIndex, 0, draggedPhoto);
+
+                    // Mark as modified
+                    orderModified = true;
+                    document.getElementById('save-order-btn').disabled = false;
+
+                    // Re-render
+                    renderGalleryOrder();
+                }
+            });
+        });
+    }
+
+    async function saveGalleryOrder() {
+        if (!orderModified) return;
+
+        const saveBtn = document.getElementById('save-order-btn');
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Saving...';
+
+        try {
+            // Assign order values to each photo
+            const orderUpdates = galleryPhotos.map((photo, index) => ({
+                albumKey: photo.albumKey,
+                photoId: photo.id,
+                order: index
+            }));
+
+            const response = await fetch(`${CONFIG.API_BASE}/gallery-order`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    ...getAuthHeader()
+                },
+                body: JSON.stringify({ orderUpdates })
+            });
+
+            if (response.ok) {
+                orderModified = false;
+                showToast('Gallery order saved successfully', 'success');
+                saveBtn.textContent = 'Save Order';
+            } else {
+                throw new Error('Failed to save order');
+            }
+        } catch (error) {
+            console.error('Error saving gallery order:', error);
+            showToast('Failed to save gallery order', 'error');
+            saveBtn.textContent = 'Save Order';
+            saveBtn.disabled = false;
+        }
+    }
+
+    async function resetGalleryOrder() {
+        if (!confirm('Reset all photos to date order? This will clear any custom ordering.')) {
+            return;
+        }
+
+        try {
+            const response = await fetch(`${CONFIG.API_BASE}/gallery-order/reset`, {
+                method: 'POST',
+                headers: getAuthHeader()
+            });
+
+            if (response.ok) {
+                orderModified = false;
+                document.getElementById('save-order-btn').disabled = true;
+                showToast('Gallery order reset to date order', 'success');
+                await loadGalleryOrder();
+            } else {
+                throw new Error('Failed to reset order');
+            }
+        } catch (error) {
+            console.error('Error resetting gallery order:', error);
+            showToast('Failed to reset gallery order', 'error');
+        }
+    }
+
     // ==================== Initialization ====================
 
     function init() {
@@ -739,6 +932,23 @@
         setupDropzone();
         setupModals();
         setupSettings();
+
+        // Gallery order event listeners
+        const saveOrderBtn = document.getElementById('save-order-btn');
+        const resetOrderBtn = document.getElementById('reset-order-btn');
+        if (saveOrderBtn) saveOrderBtn.addEventListener('click', saveGalleryOrder);
+        if (resetOrderBtn) resetOrderBtn.addEventListener('click', resetGalleryOrder);
+
+        // Load gallery order when tab is clicked
+        document.querySelectorAll('.admin-nav-btn').forEach(btn => {
+            if (btn.dataset.tab === 'gallery-order') {
+                btn.addEventListener('click', () => {
+                    if (galleryPhotos.length === 0) {
+                        loadGalleryOrder();
+                    }
+                });
+            }
+        });
 
         // Check session
         checkSession();

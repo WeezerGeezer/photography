@@ -40,6 +40,7 @@
         <!-- Admin Navigation -->
         <nav class="admin-nav">
             <button class="admin-nav-btn active" data-tab="albums">Albums</button>
+            <button class="admin-nav-btn" data-tab="gallery-order">Gallery Order</button>
             <button class="admin-nav-btn" data-tab="upload">Upload Photos</button>
             <button class="admin-nav-btn" data-tab="settings">Settings</button>
         </nav>
@@ -60,6 +61,29 @@
                         <div class="loading-placeholder">
                             <div class="spinner"></div>
                             <p>Loading albums...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Order Tab -->
+            <section id="tab-gallery-order" class="admin-tab">
+                <div class="admin-section">
+                    <div class="section-header">
+                        <h2>Gallery Order</h2>
+                        <div class="gallery-order-actions">
+                            <button id="reset-order-btn" class="btn btn-outline">Reset to Date Order</button>
+                            <button id="save-order-btn" class="btn btn-primary" disabled>Save Order</button>
+                        </div>
+                    </div>
+                    <p class="section-description">Drag and drop photos to customize the order they appear in the main gallery. Photos at the top will appear first.</p>
+
+                    <!-- Gallery Order Grid -->
+                    <div id="gallery-order-grid" class="gallery-order-grid">
+                        <!-- Photos will be loaded dynamically -->
+                        <div class="loading-placeholder">
+                            <div class="spinner"></div>
+                            <p>Loading photos...</p>
                         </div>
                     </div>
                 </div>
