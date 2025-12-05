@@ -785,6 +785,9 @@
                  data-index="${index}">
                 <img src="${photo.thumbnail}" alt="${photo.title}" loading="lazy">
                 <div class="gallery-order-item-drag-handle">⋮⋮</div>
+                <button class="gallery-order-item-top-btn" data-index="${index}" title="Move to top">
+                    ↑
+                </button>
                 <div class="gallery-order-item-info">
                     <div class="gallery-order-item-album">${photo.albumTitle}</div>
                     <div class="gallery-order-item-order">Position: ${index + 1}</div>
@@ -793,6 +796,7 @@
         `).join('');
 
         setupDragAndDrop();
+        setupMoveToTop();
     }
 
     function setupDragAndDrop() {
@@ -847,6 +851,36 @@
                     // Re-render
                     renderGalleryOrder();
                 }
+            });
+        });
+    }
+
+    function setupMoveToTop() {
+        const topButtons = document.querySelectorAll('.gallery-order-item-top-btn');
+
+        topButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const index = parseInt(btn.dataset.index);
+
+                if (index === 0) return; // Already at top
+
+                // Remove photo from current position and add to top
+                const photo = galleryPhotos.splice(index, 1)[0];
+                galleryPhotos.unshift(photo);
+
+                // Mark as modified
+                orderModified = true;
+                document.getElementById('save-order-btn').disabled = false;
+
+                // Re-render
+                renderGalleryOrder();
+
+                // Scroll to top to show the moved photo
+                document.getElementById('gallery-order-grid').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             });
         });
     }
