@@ -105,6 +105,7 @@ wrangler r2 object put photography-portfolio/data/albums.json --file=data/albums
 - ✅ **Albums**: Create, edit, delete albums
 - ✅ **Photos**: Upload, delete photos (instant visibility on public site)
 - ✅ **Upload**: Drag-and-drop upload with optional AI analysis
+- ✅ **Gallery Order**: Drag-and-drop photo ordering for main gallery (cross-album)
 - ⚠️ **Sync Data**: Button exists but incomplete implementation
 - ✅ **Storage Status**: R2 connection check
 
@@ -114,6 +115,20 @@ wrangler r2 object put photography-portfolio/data/albums.json --file=data/albums
 - Local `data/albums.json` is just a backup (not used by live site)
 
 ## Recent Changes (Nov-Dec 2025)
+
+### Gallery Order Feature (Dec 2025)
+- **Drag-and-Drop Ordering**: New "Gallery Order" tab in admin panel
+  - Visual grid showing all photos across all albums
+  - Drag-and-drop interface to customize main gallery order
+  - Position numbers update in real-time during reordering
+- **Order Persistence**: Photos store `order` field (0-indexed) in albums.json
+  - Lower values appear first in main gallery
+  - Falls back to date sorting for photos without `order` field
+- **API Endpoints**:
+  - `POST /api/gallery-order` - Save custom photo positions
+  - `POST /api/gallery-order/reset` - Clear all custom ordering
+- **Cross-Album Support**: Order photos regardless of which album they belong to
+- **Instant Updates**: Changes saved directly to R2, visible immediately on live site
 
 ### Performance Optimization (Dec 2025)
 - **Admin Upload Fixed**: Added WebP processing to admin panel uploads using @cf-wasm/photon
