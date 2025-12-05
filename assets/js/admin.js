@@ -875,12 +875,6 @@
 
                 // Re-render
                 renderGalleryOrder();
-
-                // Scroll to top to show the moved photo
-                document.getElementById('gallery-order-grid').scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
             });
         });
     }
