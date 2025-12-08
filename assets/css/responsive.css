@@ -232,46 +232,4 @@
     }
 }
 
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text-color: #f5f6fa;
-        --light-gray: #2c3e50;
-        --medium-gray: #7f8c8d;
-        --dark-gray: #1a252f;
-        --white: #1a1a1a;
-    }
-
-    body {
-        background-color: var(--white);
-        color: var(--text-color);
-    }
-
-    header {
-        background-color: var(--dark-gray);
-    }
-
-    .nav-links a {
-        color: var(--text-color);
-    }
-
-    input, textarea, select {
-        background-color: var(--dark-gray);
-        color: var(--text-color);
-        border-color: var(--medium-gray);
-    }
-
-    /* Force lightbox text to always be white in dark mode */
-    .lightbox .image-info,
-    .lightbox .image-info h3,
-    .lightbox .image-info .exif-value,
-    .lightbox .image-info .tag,
-    .lightbox .image-title,
-    .lightbox .image-date {
-        color: #ffffff !important;
-    }
-
-    .lightbox .image-info .exif-label {
-        color: rgba(255,255,255,0.7) !important;
-    }
-} 
+/* Dark Mode Support removed - users can manually toggle dark mode via the theme toggle button */ 
