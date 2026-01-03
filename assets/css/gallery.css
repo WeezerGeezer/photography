@@ -250,7 +250,7 @@
 
 .lightbox-img {
     max-width: 90%;
-    max-height: 90vh;
+    max-height: calc(90vh - 280px); /* Reserve space for image-info bar */
     object-fit: contain;
 }
 
@@ -376,6 +376,10 @@
 
 /* Mobile responsive */
 @media (max-width: 768px) {
+    .lightbox-img {
+        max-height: calc(90vh - 320px); /* More space for mobile image-info */
+    }
+
     .image-info {
         bottom: 10px;
         left: 10px;
