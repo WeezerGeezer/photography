@@ -250,8 +250,9 @@
 
 .lightbox-img {
     max-width: 90%;
-    max-height: calc(90vh - 280px); /* Reserve space for image-info bar */
+    max-height: 80vh;
     object-fit: contain;
+    margin-bottom: 100px; /* Push image up to leave room for info bar */
 }
 
 .lightbox .close {
@@ -377,7 +378,8 @@
 /* Mobile responsive */
 @media (max-width: 768px) {
     .lightbox-img {
-        max-height: calc(90vh - 320px); /* More space for mobile image-info */
+        max-height: 70vh;
+        margin-bottom: 120px; /* More space for mobile info bar */
     }
 
     .image-info {
