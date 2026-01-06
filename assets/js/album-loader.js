@@ -136,7 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create img element with load handler for masonry layout
         const img = document.createElement('img');
         img.src = image.thumbnail;
-        img.alt = image.title;
+        // Filter out camera-generated filenames (e.g., PEE0000)
+        img.alt = image.title && image.title.startsWith('PEE') ? '' : (image.title || '');
         img.loading = 'lazy';
         img.setAttribute('data-full', image.full);
         
@@ -187,11 +188,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (lightboxImg && images[startIndex]) {
             lightboxImg.src = images[startIndex].full;
-            lightboxImg.alt = images[startIndex].title;
+            // Filter out camera-generated filenames (e.g., PEE0000)
+            const imgTitle = images[startIndex].title;
+            const displayAlt = imgTitle && imgTitle.startsWith('PEE') ? '' : (imgTitle || '');
+            lightboxImg.alt = displayAlt;
 
             if (imageInfo) {
                 imageInfo.innerHTML = `
-                    <h3 class="image-title">${images[startIndex].title || ''}</h3>
+                    ${displayAlt ? `<h3 class="image-title">${displayAlt}</h3>` : ''}
                     <p class="image-date">${new Date(images[startIndex].date).toLocaleDateString()}</p>
                 `;
             }
@@ -228,8 +232,9 @@ document.addEventListener('DOMContentLoaded', () => {
         function updateLightboxImage() {
             const image = images[currentIndex];
             lightboxImg.src = image.full;
-            lightboxImg.alt = image.title;
-            
+            // Filter out camera-generated filenames (e.g., PEE0000)
+            lightboxImg.alt = image.title && image.title.startsWith('PEE') ? '' : (image.title || '');
+
             // Build EXIF data display
             let exifHTML = '';
             if (image.technical) {

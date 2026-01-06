@@ -97,7 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create img element with load handler for masonry layout
         const img = document.createElement('img');
         img.src = image.thumbnail;
-        img.alt = image.title;
+        // Filter out camera-generated filenames (e.g., PEE0000)
+        img.alt = image.title && image.title.startsWith('PEE') ? '' : (image.title || '');
         img.loading = 'lazy';
         img.setAttribute('data-full', image.full);
         
@@ -199,6 +200,16 @@ document.addEventListener('DOMContentLoaded', () => {
         updateLightboxImage();
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
+
+        // Track image view with PostHog
+        if (window.posthog) {
+            posthog.capture('image_viewed', {
+                image_title: image.title,
+                album: image.album,
+                tags: image.tags || [],
+                has_technical_data: !!image.technical
+            });
+        }
     }
 
     function closeLightbox() {
@@ -209,7 +220,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateLightboxImage() {
         const image = currentImages[currentIndex];
         lightboxImg.src = image.full;
-        lightboxImg.alt = image.title;
+        // Filter out camera-generated filenames (e.g., PEE0000)
+        lightboxImg.alt = image.title && image.title.startsWith('PEE') ? '' : (image.title || '');
         
         // Update image info with EXIF data
         const imageInfo = lightbox.querySelector('.image-info');
@@ -364,6 +376,13 @@ document.addEventListener('DOMContentLoaded', () => {
         currentFilter = filter;
         hasMoreImages = true;
         renderGallery(filter);
+
+        // Track filter usage with PostHog
+        if (window.posthog) {
+            posthog.capture('filter_applied', {
+                filter_type: filter
+            });
+        }
     }
 
     // Listen for mobile filter changes
